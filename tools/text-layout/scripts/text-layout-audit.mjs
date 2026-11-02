@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const SOURCE_ROOTS = ['_projects', '_library', '_infrastructure', '_core/skills', '_docs', 'docs', 'Configuracion'];
 const STYLE_EXTENSIONS = new Set(['.css', '.scss', '.sass', '.less', '.html', '.htm', '.vue', '.svelte', '.astro', '.jsx', '.tsx']);
-const SKIP_DIRECTORIES = new Set(['.git', '.agents', 'node_modules', 'vendor', 'dist', 'build', 'coverage', 'htmlcov', 'artifacts', 'test-results', 'playwright-report', 'target', '.next', '.cache', '.turbo', '.pytest_cache', '.venv', 'venv', 'venv_win', 'venv_linux', '__pycache__', 'archive', '_archive', '_backups', 'backups', '_to_delete', 'generated', 'output', 'outputs']);
+const SKIP_DIRECTORIES = new Set(['.git', '.agents', 'node_modules', 'vendor', 'dist', 'build', 'coverage', 'htmlcov', 'artifacts', 'test-results', 'playwright-report', 'target', 'kits', '.next', '.cache', '.turbo', '.pytest_cache', '.venv', 'venv', 'venv_win', 'venv_linux', '__pycache__', 'archive', '_archive', '_backups', 'backups', '_to_delete', 'generated', 'output', 'outputs']);
 
 export function stripComments(source) {
   return source.replace(/\/\*[\s\S]*?\*\//g, comment => comment.replace(/[^\r\n]/g, ' '));

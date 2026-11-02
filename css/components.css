@@ -209,6 +209,7 @@ html[data-theme="oscuro"] .btn-primary { color: #0F172A; }
   background-color: var(--bg-surface); border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-card);
 }
+/* text-layout-exception: bloque de previsualizacion tecnica de archivos con desplazamiento seguro */
 .file-preview-content {
   max-height: 22rem; overflow: auto; font-family: var(--font-mono);
   font-size: 0.82rem; padding: 1rem; border-radius: var(--radius-md);

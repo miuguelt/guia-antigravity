@@ -6,7 +6,7 @@ const GENERATED_DIRECTORIES = new Set([
   '.git', '.agents', '.cache', '.codex', '.cursor', '.next', '.opencode', '.pytest_cache', '.ruff_cache',
   '.venv', '.vscode', '.windsurf', '__pycache__', 'archive', '_archive', '_backups', '_to_delete', 'artifacts',
   'backups', 'build', 'coverage', 'dist', 'generated', 'htmlcov', 'logs', 'node_modules', 'output',
-  'outputs', 'playwright-report', 'target', 'test-results', 'tmp', 'vendor', 'venv', 'venv_linux', 'venv_win'
+  'outputs', 'playwright-report', 'target', 'kits', 'test-results', 'tmp', 'vendor', 'venv', 'venv_linux', 'venv_win'
 ]);
 const DEFAULT_VIEWPORTS = [
   { label: '320px', width: 320 },
