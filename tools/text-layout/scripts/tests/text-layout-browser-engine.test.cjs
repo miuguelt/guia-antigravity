@@ -136,6 +136,23 @@ test('resuelve recursos locales de prosa en plantillas Flask sin iniciar el serv
     assert.deepEqual(resolveTemplateAssets(ordinaryPage, root), { styles: [], scripts: [] });
     fs.writeFileSync(page, `<link data-devbrain-prose href="{{ url_for('static', filename='css/missing.css') }}">`);
     assert.deepEqual(resolveTemplateAssets(page, root), { styles: [], scripts: [] });
+    const viteApp = path.join(root, '_projects', 'vite-app');
+    const vitePublicCss = path.join(viteApp, 'public', 'prose.css');
+    const vitePublicJs = path.join(viteApp, 'public', 'runtime.js');
+    fs.mkdirSync(path.dirname(vitePublicCss), { recursive: true });
+    fs.writeFileSync(path.join(viteApp, 'package.json'), JSON.stringify({ devDependencies: { vite: '^6.0.0' } }));
+    fs.writeFileSync(vitePublicCss, 'main { width: 100%; }');
+    fs.writeFileSync(vitePublicJs, 'console.log(1);');
+    const viteHtml = path.join(viteApp, 'index.html');
+    fs.writeFileSync(viteHtml, '<!doctype html><link data-devbrain-prose href="/prose.css"><script data-devbrain-prose-runtime src="runtime.js"></script>');
+    const viteResolved = resolveTemplateAssets(viteHtml, root);
+    assert.equal(viteResolved.styles.length, 1);
+    assert.equal(viteResolved.scripts.length, 1);
+    const relativeHtml = path.join(app, 'templates', 'relative.html');
+    fs.writeFileSync(relativeHtml, '<!doctype html><link data-devbrain-prose href="../static/css/devbrain-prose.css"><script data-devbrain-prose-runtime src="../static/js/devbrain-prose.js"></script>');
+    const relResolved = resolveTemplateAssets(relativeHtml, root);
+    assert.equal(relResolved.styles.length, 1);
+    assert.equal(relResolved.scripts.length, 1);
   } finally {
     fs.rmSync(root, { recursive: true, force: true });
   }
