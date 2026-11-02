@@ -1,0 +1,13 @@
+{
+  "proyecto": "Apertura Nueva Planta Tostadora Vélez",
+  "formulaPert": "(Optimista + 4 * Mas_Probable + Pesimista) / 6",
+  "casoTestigoEtapa1": {
+    "etapa": "Permisos y Licencias Ambientales",
+    "optimista": 5,
+    "masProbable": 8,
+    "pesimista": 20,
+    "calculoNumerador": 57,
+    "duracionEsperadaPertDias": 9.5
+  },
+  "iteracionesMonteCarlo": 5000
+}

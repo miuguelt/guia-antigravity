@@ -1,0 +1,13 @@
+{
+  "empresa": "Soluciones Integrales Andinas S.A.S.",
+  "nit": "901.482.391-4",
+  "sede": "Vélez, Santander, Colombia",
+  "tesoreriaMesActual": {
+    "ingresosCobradosCOP": 12000000,
+    "egresosOperativosCOP": 7800000,
+    "utilidadOperativaCOP": 4200000,
+    "reservaImpositivaPct": 15,
+    "reservaImpositivaCOP": 630000,
+    "flujoCajaNetoDisponibleCOP": 3570000
+  }
+}

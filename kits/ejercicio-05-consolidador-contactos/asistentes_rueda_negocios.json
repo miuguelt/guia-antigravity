@@ -1,0 +1,23 @@
+{
+  "evento": "Rueda de Negocios Santander Compra Santander 2026",
+  "registros": [
+    {
+      "idEvento": "EVT-01",
+      "correo": "ana.lopez@empresa.co",
+      "ciudadRescatada": "Bucaramanga",
+      "interes": "Compra Mayorista"
+    },
+    {
+      "idEvento": "HIS-01",
+      "correo": "cperez@logistica.co",
+      "cargoActualizado": "Gerente de Operaciones",
+      "interes": "Contrato Anual"
+    },
+    {
+      "idEvento": "EVT-02",
+      "correo": "lgomez@clinica.co",
+      "cargoActualizado": "Coordinadora Médica",
+      "interes": "Dotación Sedes"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+pesos_oficiales:
+  precio_competitivo: 0.40
+  calidad_y_garantia: 0.35
+  rapidez_entrega: 0.25
+puntaje_minimo_aprobacion: 7.0
+ganador_esperado_id: "PROV-B"
+puntaje_ganador_esperado: 7.95

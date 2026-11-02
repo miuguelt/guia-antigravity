@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es-CO" data-theme="claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual de Google Antigravity y Soluciones Complejas — Guía Progresiva</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="devbrain-prose.css" data-devbrain-prose>
+  <script defer src="devbrain-prose.js" data-devbrain-prose-runtime></script>
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-block">
+        <span class="brand-icon" aria-hidden="true">AG</span>
+        <div>
+          <strong>Academia Gemini &amp; Google Antigravity</strong>
+          <div style="font-size:0.76rem;color:var(--text-secondary);">Manual de las 12 Herramientas · Protocolo de 6 Pasos</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal del portal">
+        <a href="index.html" class="nav-link">1. Hub Principal</a>
+        <a href="ruta-antigravity.html" class="nav-link">2. Ruta Antigravity (20)</a>
+        <a href="manual-antigravity.html" class="nav-link is-active">3. Manual Antigravity</a>
+        <a href="laboratorio-prompts.html" class="nav-link">4. Laboratorio Prompts</a>
+        <a href="ruta-canvas.html" class="nav-link">5. Ruta Canvas (20)</a>
+      </nav>
+
+      <div class="flex-row-wrap no-print">
+        <span class="badge">AG: <strong id="header-ag-count">0/20</strong></span>
+        <span class="badge">Canvas: <strong id="header-canvas-count">0/20</strong></span>
+        <button type="button" id="shortcuts-help-btn" class="btn" title="Ver atajos de teclado (F1 o ?)">⌨️ Atajos</button>
+        <button type="button" id="theme-toggle-btn" class="btn">Modo Oscuro (Noche Apacible)</button>
+        <button type="button" id="print-page-btn" class="btn">Imprimir Manual</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="study-timer-bar" class="study-timer-bar no-print" role="region" aria-label="Temporizador de estudio conceptual">
+    <div class="study-timer-inner flex-between flex-row-wrap" style="align-items:center;gap:0.75rem;">
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span class="badge badge-l2">⏱️ Tarea Conceptual</span>
+        <strong id="study-timer-topic">Estudio Conceptual</strong>
+      </div>
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span id="study-timer-display" class="study-timer-display" role="timer" aria-live="off" aria-valuenow="180">03:00</span>
+        <button type="button" id="study-timer-toggle-btn" class="btn btn-sm btn-primary">Iniciar</button>
+        <button type="button" id="study-timer-reset-btn" class="btn btn-sm">Reiniciar</button>
+        <button type="button" id="study-timer-close-btn" class="btn btn-sm" aria-label="Ocultar temporizador">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenido-principal" class="page-shell stack-lg">
+    <nav aria-label="Migas de pan" class="breadcrumbs no-print"><ol><li><a href="index.html">Inicio</a></li><li><span>Manual de Operaciones</span></li></ol></nav>
+    <section class="card stack-md">
+      <span class="badge badge-l2">Manual de Referencia Operativa</span>
+      <h1>Cómo Dominar Google Antigravity y Resolver Problemas Complejos sin Perder el Control</h1>
+      <p class="prose-copy">
+        Google Antigravity integra dos superficies complementarias: el <strong>Agent Manager (Mission Control)</strong> para delegar tareas completas y coordinar subagentes, y el <strong>Editor View</strong> para inspeccionar archivos, usar autocompletado predictivo con <code>Tab</code> y realizar ediciones puntuales con <code>Ctrl+I</code>. En este manual tienes el catálogo de las 12 herramientas oficiales, el protocolo de 6 pasos y la matriz de diagnóstico de errores frecuentes.
+      </p>
+    </section>
+
+    <section class="card stack-md" aria-labelledby="svg-arch-title">
+      <h2 id="svg-arch-title">Arquitectura Visual del Flujo de Trabajo en Google Antigravity</h2>
+      <div style="width:100%;overflow-x:auto;">
+        <svg viewBox="0 0 920 190" role="img" aria-label="Diagrama de los 4 pasos del ciclo de trabajo en Google Antigravity" style="width:100%;min-width:44rem;height:auto;">
+          <rect x="10" y="25" width="200" height="135" rx="12" fill="#E0F2FE" stroke="#0284C7" stroke-width="2"></rect>
+          <text x="25" y="55" fill="#0F172A" font-weight="bold" font-size="14">1. Contexto y Descubrimiento</text>
+          <text x="25" y="82" fill="#334155" font-size="12">• /grill-me (preguntas)</text>
+          <text x="25" y="104" fill="#334155" font-size="12">• @archivos (.csv / .json)</text>
+          <text x="25" y="126" fill="#334155" font-size="12">• GEMINI.md + AI-MEMORY</text>
+
+          <line x1="210" y1="92" x2="245" y2="92" stroke="#0F766E" stroke-width="3"></line>
+
+          <rect x="245" y="25" width="200" height="135" rx="12" fill="#DCFCE7" stroke="#0F766E" stroke-width="2"></rect>
+          <text x="260" y="55" fill="#0F172A" font-weight="bold" font-size="14">2. Plan y Tarea Conceptual</text>
+          <text x="260" y="82" fill="#334155" font-size="12">• /plan (Implementation Plan)</text>
+          <text x="260" y="104" fill="#334155" font-size="12">• Comentarios Inline</text>
+          <text x="260" y="126" fill="#334155" font-size="12">• Cálculo de Caso Testigo</text>
+
+          <line x1="445" y1="92" x2="480" y2="92" stroke="#0F766E" stroke-width="3"></line>
+
+          <rect x="480" y="25" width="200" height="135" rx="12" fill="#FEF3C7" stroke="#B45309" stroke-width="2"></rect>
+          <text x="495" y="55" fill="#0F172A" font-weight="bold" font-size="14">3. Construcción y /browser</text>
+          <text x="495" y="82" fill="#334155" font-size="12">• Módulos &lt; 250 líneas</text>
+          <text x="495" y="104" fill="#334155" font-size="12">• /browser prueba 4 estados</text>
+          <text x="495" y="126" fill="#334155" font-size="12">• Tab y Ctrl+I en Editor</text>
+
+          <line x1="680" y1="92" x2="715" y2="92" stroke="#0F766E" stroke-width="3"></line>
+
+          <rect x="715" y="25" width="195" height="135" rx="12" fill="#FFE4E6" stroke="#BE123C" stroke-width="2"></rect>
+          <text x="730" y="55" fill="#0F172A" font-weight="bold" font-size="14">4. Diffs, Skills y Memoria</text>
+          <text x="730" y="82" fill="#334155" font-size="12">• Auditoría de Visual Diffs</text>
+          <text x="730" y="104" fill="#334155" font-size="12">• /learn -&gt; SKILL.md</text>
+          <text x="730" y="126" fill="#334155" font-size="12">• Portafolio de Evidencias</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="stack-md" aria-labelledby="tools-cat-title">
+      <div class="flex-between">
+        <h2 id="tools-cat-title">Catálogo Interactivo de las 12 Herramientas de Google Antigravity</h2>
+        <div class="flex-row-wrap no-print">
+          <label for="manual-category-filter"><strong>Filtrar por categoría:</strong></label>
+          <select id="manual-category-filter" class="select-control" style="width:auto;">
+            <option value="all">Todas las categorías (12)</option>
+            <option value="Vistas del Sistema">Vistas del Sistema</option>
+            <option value="Control de Calidad">Control de Calidad</option>
+            <option value="Comandos Slash">Comandos Slash</option>
+            <option value="Contexto y Memoria">Contexto y Memoria</option>
+            <option value="Extensibilidad y Seguridad">Extensibilidad y Seguridad</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="manual-tools-grid" class="bento-grid-2"></div>
+    </section>
+
+    <section class="stack-md" aria-labelledby="protocol-title">
+      <h2 id="protocol-title">Protocolo de 6 Pasos para Soluciones Complejas sin Regresiones</h2>
+      <p class="prose-copy">
+        Cuando enfrentes un problema empresarial que involucre múltiples tablas, reglas financieras o varios módulos, sigue siempre esta secuencia de 6 pasos para garantizar que el resultado sea exacto al primer intento:
+      </p>
+      <div id="protocol-steps-grid" class="bento-grid-3"></div>
+    </section>
+
+    <section class="card stack-md" aria-labelledby="diag-title">
+      <h2 id="diag-title">Matriz de Diagnóstico y Solución de Problemas Frecuentes</h2>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Síntoma Observado por el Aprendiz</th>
+              <th>Causa Raíz Técnica</th>
+              <th>Acción Correctiva en Google Antigravity</th>
+            </tr>
+          </thead>
+          <tbody id="diagnostic-matrix-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="flex-between" style="max-width:92rem;margin-inline:auto;">
+      <div><strong>Manual Operativo de Google Antigravity</strong> · 12 Herramientas + Protocolo de 6 Pasos</div>
+      <div><a href="laboratorio-prompts.html">Ir al Laboratorio Constructor de Prompts →</a></div>
+    </div>
+  </footer>
+
+  <script src="js/data/antigravity-tools-map.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/ui/nav-theme.js"></script>
+  <script src="js/ui/study-timer.js"></script>
+  <script src="js/ui/ui-enhancements.js"></script>
+  <script src="js/ui/render-dashboard.js"></script>
+</body>
+</html>

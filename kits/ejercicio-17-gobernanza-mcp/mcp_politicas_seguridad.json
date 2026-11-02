@@ -1,0 +1,42 @@
+{
+  "reglaHumanInTheLoop": "Retener pedidos cuyos clientes superen 15 días de mora en cartera.",
+  "umbralMoraDias": 15,
+  "lotePedidosBodega": [
+    {
+      "pedido": "PED-901",
+      "cliente": "Comercial del Valle S.A.S.",
+      "montoCOP": 4800000,
+      "diasMora": 22,
+      "requiereFirmaHumana": true
+    },
+    {
+      "pedido": "PED-902",
+      "cliente": "Distribuidora Andina Ltda.",
+      "montoCOP": 1950000,
+      "diasMora": 0,
+      "requiereFirmaHumana": false
+    },
+    {
+      "pedido": "PED-903",
+      "cliente": "Insumos del Caribe S.A.S.",
+      "montoCOP": 6200000,
+      "diasMora": 30,
+      "requiereFirmaHumana": true
+    },
+    {
+      "pedido": "PED-904",
+      "cliente": "Logística Central S.A.",
+      "montoCOP": 1100000,
+      "diasMora": 5,
+      "requiereFirmaHumana": false
+    },
+    {
+      "pedido": "PED-905",
+      "cliente": "Grupo Santandereano S.A.S.",
+      "montoCOP": 3400000,
+      "diasMora": 19,
+      "requiereFirmaHumana": true
+    }
+  ],
+  "pedidosRetenidosEsperados": 3
+}

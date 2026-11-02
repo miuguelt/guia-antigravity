@@ -1,0 +1,11 @@
+normalizacion:
+  correo: "convertir a minúsculas y eliminar espacios extremos"
+  telefono: "conservar únicamente los 10 dígitos numéricos móviles de Colombia"
+regla_supervivencia:
+  nombre: "conservar la cadena con mayor longitud y tildes completas"
+  ciudad: "rescatar el valor no vacío entre las fichas fusionadas"
+  cargo: "priorizar el cargo más específico o reciente"
+resultado_esperado:
+  filas_brutas_entrada: 10
+  duplicados_detectados: 3
+  contactos_unicos_maestros: 7

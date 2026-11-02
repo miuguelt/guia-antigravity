@@ -1,0 +1,7 @@
+From: despachos@solucionesandinas.co
+To: ventas@solucionesandinas.co
+Subject: Regla obligatoria para liberar órdenes de despacho
+Date: Wed, 14 Oct 2026 07:30:00 -0500
+
+Equipo comercial:
+Recuerden que ningún pedido puede pasar a camión si no tiene: (1) Teléfono normalizado a 10 dígitos, (2) Valor numérico limpio sin símbolos de pesos ni puntos, y (3) Dirección física de entrega confirmada. Si falta la dirección, marquen Dato_Faltante = "Falta Dirección de Entrega".

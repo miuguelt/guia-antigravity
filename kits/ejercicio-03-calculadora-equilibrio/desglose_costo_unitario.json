@@ -1,0 +1,22 @@
+{
+  "producto": "Kit Café Especial Origen Santander 500g",
+  "costoVariableTotalCOP": 20000,
+  "componentes": [
+    {
+      "insumo": "Grano pergamino seleccionado y tostión media",
+      "costoCOP": 14500
+    },
+    {
+      "insumo": "Empaque trilaminado con válvula desgasificadora",
+      "costoCOP": 3200
+    },
+    {
+      "insumo": "Etiqueta de origen y sello de seguridad",
+      "costoCOP": 1100
+    },
+    {
+      "insumo": "Comisión de recaudo electrónico",
+      "costoCOP": 1200
+    }
+  ]
+}

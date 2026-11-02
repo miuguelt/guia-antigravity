@@ -1,0 +1,44 @@
+{
+  "empresas": [
+    {
+      "idEmpresa": "EMP-01",
+      "nit": "900.412.880-1",
+      "nombre": "Clínica del Norte S.A.S.",
+      "ciudad": "Bogotá",
+      "sector": "Salud"
+    },
+    {
+      "idEmpresa": "EMP-02",
+      "nit": "901.205.331-7",
+      "nombre": "Agroexportadora del Oriente S.A.S.",
+      "ciudad": "Bucaramanga",
+      "sector": "Agroindustria"
+    }
+  ],
+  "oportunidades": [
+    {
+      "idNegocio": "OP-101",
+      "idEmpresa": "EMP-01",
+      "titulo": "Renovación Equipos Diagnóstico",
+      "valorCOP": 10000000,
+      "probabilidadPct": 50,
+      "valorPonderadoCOP": 5000000,
+      "etapa": "Propuesta Enviada",
+      "proximoContacto": "2026-11-05"
+    },
+    {
+      "idNegocio": "OP-102",
+      "idEmpresa": "EMP-01",
+      "titulo": "Licencia Telemedicina Anual",
+      "valorCOP": 4000000,
+      "probabilidadPct": 25,
+      "valorPonderadoCOP": 1000000,
+      "etapa": "Diagnóstico",
+      "proximoContacto": ""
+    }
+  ],
+  "resumenCasoTestigo": {
+    "valorNominalTotalCOP": 14000000,
+    "valorPonderadoTotalCOP": 6000000
+  }
+}

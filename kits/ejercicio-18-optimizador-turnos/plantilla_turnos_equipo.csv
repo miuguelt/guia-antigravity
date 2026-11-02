@@ -1,0 +1,6 @@
+ID_Colaborador,Nombre,Rol,Max_Horas_Ordinarias_Semana,Tarifa_Hora_Ordinaria_COP,Restriccion_Dura
+COL-01,Andrea Castellanos,Supervisora,44,25000,No_Noche_Seguido_Manana
+COL-02,Camilo Duarte,Supervisora,44,25000,No_Noche_Seguido_Manana
+COL-03,Diana Patiño,Especialista,44,19000,No_Noche_Seguido_Manana
+COL-04,Esteban Mora,Auxiliar,44,15000,No_Noche_Seguido_Manana
+COL-05,Fernanda Ríos,Auxiliar,44,15000,No_Noche_Seguido_Manana

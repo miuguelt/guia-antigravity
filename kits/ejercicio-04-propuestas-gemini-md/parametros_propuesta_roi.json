@@ -1,0 +1,14 @@
+{
+  "cliente": "Distribuidora Agroindustrial del Carare S.A.S.",
+  "nit": "900.741.258-9",
+  "costoProblemaMensualCOP": 2500000,
+  "inversionProyectoCOP": 5000000,
+  "ahorroMensualEstimadoCOP": 2500000,
+  "mesesRecuperacionPayback": 2,
+  "roiMensualPct": 50,
+  "entregables": [
+    "Estandarización de captura",
+    "Validador automático de cartera",
+    "Tablero gerencial"
+  ]
+}

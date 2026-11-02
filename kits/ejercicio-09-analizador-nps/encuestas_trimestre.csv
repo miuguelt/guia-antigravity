@@ -1,0 +1,21 @@
+ID,Sede,Nota_0_a_10,Segmento_Esperado,Motivo,Comentario
+1,Bogotá,10,Promotor,Atención,Entrega inmediata y clara
+2,Bogotá,9,Promotor,Calidad,Excelente aroma y empaque
+3,Medellín,10,Promotor,Atención,Muy buen soporte comercial
+4,Medellín,9,Promotor,Calidad,Cumplió lo prometido
+5,Cali,10,Promotor,Precio,Justo para la calidad del café
+6,Cali,9,Promotor,Atención,Asesoría oportuna
+7,Bogotá,10,Promotor,Calidad,Sin fallos en el lote
+8,Medellín,9,Promotor,Rapidez,Llegó antes de tiempo
+9,Bucaramanga,10,Promotor,Atención,Personal muy amable
+10,Barranquilla,9,Promotor,Calidad,Totalmente recomendado
+11,Bogotá,8,Pasivo,Precio,Bueno pero podría incluir envío
+12,Medellín,7,Pasivo,Tiempo de espera,Tardó un día más de lo habitual
+13,Cali,8,Pasivo,Atención,Servicio normal
+14,Bogotá,7,Pasivo,Precio,Un poco costoso el flete
+15,Bucaramanga,8,Pasivo,Calidad,Cumple lo básico
+16,Barranquilla,7,Pasivo,Tiempo de espera,Fila moderada en punto físico
+17,Bogotá,4,Detractor,Tiempo de espera,Demora de 48 horas en despacho
+18,Medellín,5,Detractor,Tiempo de espera,Nadie contestó el teléfono de soporte
+19,Cali,3,Detractor,Tiempo de espera,El pedido llegó incompleto
+20,Bogotá,6,Detractor,Facturación,Error en el NIT de la factura electrónica

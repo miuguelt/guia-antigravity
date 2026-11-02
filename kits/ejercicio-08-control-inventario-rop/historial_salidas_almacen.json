@@ -1,0 +1,14 @@
+{
+  "bodega": "Centro de Distribución Vélez",
+  "casoTestigo": {
+    "sku": "CAF-500",
+    "ventaPromedioDiaria": 10,
+    "ventaMaximaDiaria": 14,
+    "tiempoEntregaDias": 5,
+    "consumoEnEspera": 50,
+    "stockSeguridad": 20,
+    "puntoReordenROP": 70,
+    "stockActual": 68,
+    "estadoAlerta": "¡PEDIR HOY! (Stock 68 <= ROP 70)"
+  }
+}

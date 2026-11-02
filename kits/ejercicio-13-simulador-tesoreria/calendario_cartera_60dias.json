@@ -1,0 +1,9 @@
+{
+  "saldoInicialEneroCOP": 50000000,
+  "ventasMensualesFacturadasCOP": 60000000,
+  "egresosMensualesContadoCOP": 40000000,
+  "utilidadContableMensualCOP": 20000000,
+  "plazoCarteraDias": 60,
+  "brechaLiquidezFebreroCOP": -30000000,
+  "explicacion": "En enero y febrero entran $0 de las nuevas ventas pero salen $80.000.000 de contado ($50M - $80M = -$30M)."
+}

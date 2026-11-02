@@ -1,0 +1,4 @@
+formulas:
+  stock_seguridad: "(Venta_Diaria_Maxima - Venta_Diaria_Promedio) * Tiempo_Entrega_Dias"
+  punto_reorden_rop: "(Venta_Diaria_Promedio * Tiempo_Entrega_Dias) + Stock_Seguridad"
+regla_alerta_roja: "Stock_Actual <= Punto_Reorden_ROP"

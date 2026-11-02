@@ -1,0 +1,5 @@
+ID_Recibo,Empleado,Fecha,NIT_Proveedor,Proveedor,Categoria,Valor_COP,Observacion
+REC-801,Julián Mendoza,2026-10-15,900555111-2,Suministros Eléctricos Andinos,Materiales,175000,Compra cableado turno mañana
+REC-802,Julián Mendoza,2026-10-15,900555111-2,Suministros Eléctricos Andinos,Materiales,175000,Compra conectores turno tarde (Mismo día y NIT)
+REC-803,Laura Gómez,2026-10-16,901222333-4,Restaurante El Mirador,Alimentacion,65000,Almuerzo visita cliente dentro del tope
+REC-804,Carlos Ruiz,2026-10-16,901222333-4,Restaurante El Mirador,Alimentacion,115000,Excede tope individual de $90.000 COP

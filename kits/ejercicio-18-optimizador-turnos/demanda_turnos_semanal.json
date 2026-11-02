@@ -1,0 +1,22 @@
+{
+  "equipoTotalColaboradores": 5,
+  "maxHorasOrdinariasPorPersona": 44,
+  "capacidadTotalOrdinariaEquipoHoras": 220,
+  "franjas": [
+    {
+      "codigo": "MANANA",
+      "horario": "06:00 a 14:00",
+      "duracionHoras": 8
+    },
+    {
+      "codigo": "TARDE",
+      "horario": "14:00 a 22:00",
+      "duracionHoras": 8
+    },
+    {
+      "codigo": "NOCHE",
+      "horario": "22:00 a 06:00",
+      "duracionHoras": 8
+    }
+  ]
+}

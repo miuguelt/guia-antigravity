@@ -1,0 +1,40 @@
+{
+  "evaluacion": "Criterio Operativo y Servicio al Cliente",
+  "resultadosCasoTestigo": [
+    100,
+    100,
+    100,
+    60
+  ],
+  "promedioEsperado": 90,
+  "escenarios": [
+    {
+      "id": "ESC-01",
+      "titulo": "Cliente corporativo reclama lote húmedo",
+      "optima100": "Activar garantía inmediata con lote de respaldo y auditar transporte",
+      "aceptable60": "Pedir fotos y esperar 48h al comité de calidad",
+      "riesgosa0": "Negar el reclamo sin verificar trazabilidad"
+    },
+    {
+      "id": "ESC-02",
+      "titulo": "Caída temporal de facturación electrónica DIAN",
+      "optima100": "Activar contingencia numerada y sincronizar XML al restablecer",
+      "aceptable60": "Detener despachos hasta que vuelva el portal",
+      "riesgosa0": "Entregar mercancía sin soporte documental"
+    },
+    {
+      "id": "ESC-03",
+      "titulo": "Solicitud de descuento que rompe margen mínimo",
+      "optima100": "Mantener margen ofreciendo valor agregado o ajuste de volumen",
+      "aceptable60": "Escalar a gerencia retrasando la oferta 2 días",
+      "riesgosa0": "Aprobar descuento a pérdida para cerrar rápido"
+    },
+    {
+      "id": "ESC-04",
+      "titulo": "Diferencia de inventario en conteo cíclico",
+      "optima100": "Cruzar kárdex de remisiones antes de ajustar",
+      "aceptable60": "Programar reconteo general el fin de semana",
+      "riesgosa0": "Borrar la diferencia manualmente en el sistema"
+    }
+  ]
+}

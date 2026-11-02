@@ -1,0 +1,29 @@
+{
+  "totalEncuestas": 20,
+  "promotores": {
+    "rango": [
+      9,
+      10
+    ],
+    "cantidad": 10,
+    "porcentaje": 50
+  },
+  "pasivos": {
+    "rango": [
+      7,
+      8
+    ],
+    "cantidad": 6,
+    "porcentaje": 30
+  },
+  "detractores": {
+    "rango": [
+      0,
+      6
+    ],
+    "cantidad": 4,
+    "porcentaje": 20
+  },
+  "npsEsperado": 30,
+  "causaPrincipalDetractores": "Tiempo de espera (75 % de las quejas críticas)"
+}

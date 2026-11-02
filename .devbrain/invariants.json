@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "ratchet": {
+    "min_test_count": 18,
+    "min_function_coverage": 100,
+    "forbid_skip_xfail": true
+  },
+  "modules": {
+    "js/core/store.js": { "max_lines": 250, "deterministic": true },
+    "js/core/simulator-engine.js": { "max_lines": 250, "deterministic": true },
+    "js/core/zip-builder.js": { "max_lines": 250, "deterministic": true },
+    "js/core/kit-generator.js": { "max_lines": 250, "deterministic": true },
+    "js/core/prompt-builder.js": { "max_lines": 250, "deterministic": true },
+    "js/ui/ui-enhancements.js": { "max_lines": 250, "deterministic": true }
+  }
+}

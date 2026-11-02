@@ -1,0 +1,25 @@
+{
+  "moneda": "COP",
+  "referencias": [
+    {
+      "sku": "MOB-SIL-01",
+      "nombre": "Silla Ergonómica Malla Lumbar",
+      "precioUnitarioCOP": 300000
+    },
+    {
+      "sku": "MOB-ESC-02",
+      "nombre": "Escritorio Ejecutivo Melamina 150cm",
+      "precioUnitarioCOP": 225000
+    },
+    {
+      "sku": "MOB-LAM-03",
+      "nombre": "Lámpara LED Escritorio Brazo Articulado",
+      "precioUnitarioCOP": 40000
+    },
+    {
+      "sku": "MOB-ARC-04",
+      "nombre": "Archivador Metálico 3 Gavetas con Llave",
+      "precioUnitarioCOP": 160000
+    }
+  ]
+}

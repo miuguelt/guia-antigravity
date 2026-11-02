@@ -1,0 +1,40 @@
+{
+  "licitacion": "Adquisición de Servidores y Red Local Sede Vélez",
+  "criterios": {
+    "precio": 0.4,
+    "calidad": 0.35,
+    "rapidez": 0.25
+  },
+  "proveedores": [
+    {
+      "id": "PROV-A",
+      "nombre": "Suministros Básicos del Norte",
+      "precioCOP": 14200000,
+      "garantiaMeses": 6,
+      "entregaDias": 12,
+      "notaPrecio": 9,
+      "notaCalidad": 4,
+      "notaRapidez": 5
+    },
+    {
+      "id": "PROV-B",
+      "nombre": "Tecnología Empresarial Certificada S.A.S.",
+      "precioCOP": 16800000,
+      "garantiaMeses": 24,
+      "entregaDias": 5,
+      "notaPrecio": 7,
+      "notaCalidad": 9,
+      "notaRapidez": 8
+    },
+    {
+      "id": "PROV-C",
+      "nombre": "Importadora Global High-End",
+      "precioCOP": 22500000,
+      "garantiaMeses": 36,
+      "entregaDias": 9,
+      "notaPrecio": 4,
+      "notaCalidad": 10,
+      "notaRapidez": 6
+    }
+  ]
+}

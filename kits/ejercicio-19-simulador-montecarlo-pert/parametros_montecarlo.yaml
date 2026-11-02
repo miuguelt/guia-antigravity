@@ -1,0 +1,6 @@
+simulacion:
+  iteraciones: 5000
+  distribucion: "PERT / Triangular Asimétrica"
+  percentiles_reporte:
+    compromiso_gerencial: "P85 (85% de probabilidad de cumplir a tiempo)"
+    reserva_contingencia: "P90 - P50"

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es-CO" data-theme="claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruta Google Antigravity (20 Ejercicios) — Guía Progresiva con Gemini</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="devbrain-prose.css" data-devbrain-prose>
+  <script defer src="devbrain-prose.js" data-devbrain-prose-runtime></script>
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-block">
+        <span class="brand-icon" aria-hidden="true">AG</span>
+        <div>
+          <strong>Academia Gemini &amp; Google Antigravity</strong>
+          <div style="font-size:0.76rem;color:var(--text-secondary);">Ruta Principal: 20 Ejercicios con Kit Semilla y Caso Testigo</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal del portal">
+        <a href="index.html" class="nav-link">1. Hub Principal</a>
+        <a href="ruta-antigravity.html" class="nav-link is-active">2. Ruta Antigravity (20)</a>
+        <a href="manual-antigravity.html" class="nav-link">3. Manual Antigravity</a>
+        <a href="laboratorio-prompts.html" class="nav-link">4. Laboratorio Prompts</a>
+        <a href="ruta-canvas.html" class="nav-link">5. Ruta Canvas (20)</a>
+      </nav>
+
+      <div class="flex-row-wrap no-print">
+        <span class="badge">AG: <strong id="header-ag-count">0/20</strong></span>
+        <span class="badge">Canvas: <strong id="header-canvas-count">0/20</strong></span>
+        <button type="button" id="shortcuts-help-btn" class="btn" title="Ver atajos de teclado (F1 o ?)">⌨️ Atajos</button>
+        <button type="button" id="theme-toggle-btn" class="btn">Modo Oscuro (Noche Apacible)</button>
+        <button type="button" id="print-page-btn" class="btn">Imprimir Ejercicio</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="study-timer-bar" class="study-timer-bar no-print" role="region" aria-label="Temporizador de estudio conceptual">
+    <div class="study-timer-inner flex-between flex-row-wrap" style="align-items:center;gap:0.75rem;">
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span class="badge badge-l2">⏱️ Tarea Conceptual</span>
+        <strong id="study-timer-topic">Estudio Conceptual</strong>
+      </div>
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span id="study-timer-display" class="study-timer-display" role="timer" aria-live="off" aria-valuenow="180">03:00</span>
+        <button type="button" id="study-timer-toggle-btn" class="btn btn-sm btn-primary">Iniciar</button>
+        <button type="button" id="study-timer-reset-btn" class="btn btn-sm">Reiniciar</button>
+        <button type="button" id="study-timer-close-btn" class="btn btn-sm" aria-label="Ocultar temporizador">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenido-principal" class="page-shell stack-lg">
+    <nav aria-label="Migas de pan" class="breadcrumbs no-print"><ol><li><a href="index.html">Inicio</a></li><li><span>Ruta Antigravity</span></li></ol></nav>
+    <section class="card stack-sm">
+      <div class="flex-between">
+        <div>
+          <span class="badge badge-l1">Currículo Progresivo Guiado (Ejercicios 01 al 20)</span>
+          <h1 style="margin-top:0.35rem;">20 Proyectos Progresivos en Google Antigravity para No-Desarrolladores y Equipos</h1>
+        </div>
+        <a href="index.html#portafolio-evidencias" class="btn btn-secondary no-print">Registrar en Portafolio de Evidencias</a>
+      </div>
+      <p class="prose-copy">
+        Selecciona cualquier ejercicio en la columna izquierda. En cada proyecto cuentas con: (1) el botón para descargar con un clic el <strong>Kit de Archivos Semilla Completo (<code>.zip</code>)</strong> o cada documento por separado (<code>.sql</code>, <code>.xml</code>, <code>.json</code>, <code>.csv</code>, <code>.md</code>, <code>.yaml</code>, <code>.log</code>, <code>.html</code>), (2) el <strong>Prompt Inicial con <code>/plan</code></strong>, (3) la <strong>Tarea Conceptual Activa</strong> y (4) el <strong>Simulador Determinista de Caso Testigo</strong>. <em>Nota: Todos los casos, empresas y archivos de esta guía fueron preparados con fines didácticos y no contienen registros personales reales.</em>
+      </p>
+      <div class="progress-track"><div id="ag-route-bar" class="progress-fill" style="width:0%;"></div></div>
+      <small id="ag-route-summary">0 de 20 completados (0 %) · 0 Casos Testigo verificados</small>
+    </section>
+
+    <div class="master-detail-layout">
+      <aside class="card stack-md no-print" aria-label="Filtros y lista de los 20 ejercicios">
+        <div class="stack-sm">
+          <label for="ag-search-input"><strong>Buscar ejercicio o perfil:</strong></label>
+          <input id="ag-search-input" type="search" class="input-control" placeholder="Ej: inventario, CRM, NPS, GEMINI.md...">
+        </div>
+
+        <div class="bento-grid-2">
+          <div class="stack-sm">
+            <label for="ag-level-filter"><strong>Nivel:</strong></label>
+            <select id="ag-level-filter" class="select-control">
+              <option value="all">Todos (1 a 4)</option>
+              <option value="1">Nivel 1: Fundamentos (1-5)</option>
+              <option value="2">Nivel 2: Negocio (6-10)</option>
+              <option value="3">Nivel 3: Sistemas y Skills (11-15)</option>
+              <option value="4">Nivel 4: Maestría (16-20)</option>
+            </select>
+          </div>
+          <div class="stack-sm">
+            <label for="ag-status-filter"><strong>Estado:</strong></label>
+            <select id="ag-status-filter" class="select-control">
+              <option value="all">Todos</option>
+              <option value="pending">Pendientes</option>
+              <option value="done">Completados</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="ag-list-container" class="stack-sm" style="max-height:46rem;overflow-y:auto;padding-right:0.25rem;"></div>
+      </aside>
+
+      <section id="ag-detail-container" aria-live="polite"></section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="flex-between" style="max-width:92rem;margin-inline:auto;">
+      <div><strong>Ruta Google Antigravity</strong> · 20 Ejercicios Progresivos con Casos Testigo Deterministas</div>
+      <div><a href="manual-antigravity.html">Consultar Manual de las 12 Herramientas →</a></div>
+    </div>
+  </footer>
+
+  <script src="js/data/ag-exercises-n1-n2.js"></script>
+  <script src="js/data/ag-exercises-n3-n4.js"></script>
+  <script src="js/data/kits-n1.js"></script>
+  <script src="js/data/kits-n2.js"></script>
+  <script src="js/data/kits-n3.js"></script>
+  <script src="js/data/kits-n4.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/core/simulator-engine.js"></script>
+  <script src="js/core/zip-builder.js"></script>
+  <script src="js/core/kit-generator.js"></script>
+  <script src="js/ui/nav-theme.js"></script>
+  <script src="js/ui/study-timer.js"></script>
+  <script src="js/ui/ui-enhancements.js"></script>
+  <script src="js/ui/render-antigravity.js"></script>
+</body>
+</html>

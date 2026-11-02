@@ -1,0 +1,27 @@
+{
+  "semanaActual": "2026-W44",
+  "idempotencyKey": "CIERRE-2026-W44-SIA",
+  "controlCuadre": {
+    "ventasRegistradasCOP": 12500000,
+    "ingresosBancosCOP": 9000000,
+    "cuentasPorCobrarCOP": 3500000,
+    "diferenciaCOP": 0
+  },
+  "historicoSemanas": [
+    {
+      "semana": "2026-W41",
+      "ventasCOP": 11200000,
+      "estado": "CERRADO_AUDITADO"
+    },
+    {
+      "semana": "2026-W42",
+      "ventasCOP": 11800000,
+      "estado": "CERRADO_AUDITADO"
+    },
+    {
+      "semana": "2026-W43",
+      "ventasCOP": 12100000,
+      "estado": "CERRADO_AUDITADO"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+APUNTES COMITÉ OPERATIVO DEL LUNES
+Fecha: 09-03-2026
+Asistentes: Gerencia, Bodega, Comercial
+1. Unificar el archivo digital antes del cierre de trimestre aplicando norma ISO-8601.
+2. Ninguna factura debe guardarse con el día primero en el nombre.
+3. Revisar cotización de estanterías antes del viernes.

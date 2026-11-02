@@ -1,0 +1,10 @@
+mcp_governance_version: "1.0"
+servers:
+  cartera_erp:
+    mode: "read_only"
+    allowed_tools: ["get_customer_balance", "list_overdue_invoices"]
+  bodega_wms:
+    mode: "controlled_write"
+    human_in_the_loop_condition: "dias_mora > 15"
+  notificaciones_externas:
+    mode: "require_explicit_approval"

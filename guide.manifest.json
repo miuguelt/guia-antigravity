@@ -1,0 +1,173 @@
+{
+  "standard": {
+    "id": "devbrain.educational-guide",
+    "version": "2.4.0"
+  },
+  "guide": {
+    "id": "adso-guia-gemini-antigravity-2026",
+    "title": "Academia Pro Gemini y Google Antigravity — 40 Proyectos Progresivos de Automatización e Ingeniería",
+    "format": "web",
+    "entrypoint": "./index.html",
+    "language": "es-CO",
+    "version": "2.0.0",
+    "servicePort": 8181,
+    "summary": "Portal educativo multipágina offline-first con 20 ejercicios progresivos en Google Antigravity (con Kits Semilla y simuladores de Caso Testigo) y 20 ejercicios de ingeniería en Gemini Canvas, integrado con el Portafolio de Evidencias SENA."
+  },
+  "curricularAlignment": {
+    "program": {
+      "code": "228118",
+      "name": "Tecnólogo en Análisis y Desarrollo de Software (ADSO) — Centro de Gestión Agroempresarial del Oriente (CGAO - Subsede Vélez)"
+    },
+    "competency": {
+      "code": "220501096",
+      "name": "Desarrollar la solución de software de acuerdo con el diseño y metodologías de desarrollo"
+    },
+    "learningResults": [
+      {
+        "code": "RAP-01",
+        "name": "Dirigir agentes autónomos en Google Antigravity y construir soluciones verificables mediante planes estructurados (/plan), memoria persistente (GEMINI.md), habilidades reutilizables (Skills) y auditoría en navegador (/browser)."
+      },
+      {
+        "code": "RAP-02",
+        "name": "Validar la exactitud matemática, algorítmica y de arquitectura de soluciones asistidas por IA mediante Casos Testigo deterministas y pruebas automatizadas."
+      }
+    ]
+  },
+  "duration": {
+    "recommendedTotalHours": "24 horas",
+    "hours": 24
+  },
+  "platform": {
+    "sdk": "devbrain-learner-sdk",
+    "bootstrap": "window.DevBrainEvidence.montar()",
+    "storagePrefix": "guia_gemini_antigravity",
+    "modules": 5,
+    "xpTotal": 1000
+  },
+  "project": {
+    "caseStudy": "Transformación Digital y Automatización Operativa de una PyME Comercial y de Servicios mediante Agentes en Google Antigravity",
+    "challenge": "Construir, auditar con Casos Testigo matemáticos y documentar progresivamente desde herramientas de organización documental y normalización de datos hasta una Suite Operativa Integral (ERP) multi-módulo gobernada con GEMINI.md y Skills.",
+    "finalProduct": "Portafolio de Evidencias SENA consolidado con los 5 entregables verificables (MG-A01 a MG-A05), repositorio con memoria Multi-IDE activa y soluciones auditadas en /browser.",
+    "deliverablesRegistry": "deliverables.registry.json",
+    "checkpoints": [
+      {
+        "id": "CP-01",
+        "name": "Fundamentos de Antigravity y Datos Limpios (Nivel 1: Ejercicios 1 al 5)",
+        "evidence": "MG-A01",
+        "criterion": "Domina el Agent Manager, /plan, @archivos, GEMINI.md, comentarios en Artifacts y normalización 1NF con prueba de Punto de Equilibrio en /browser."
+      },
+      {
+        "id": "CP-02",
+        "name": "Herramientas de Negocio, /browser y /schedule (Nivel 2: Ejercicios 6 al 10)",
+        "evidence": "MG-A02",
+        "criterion": "Implementa y audita cotizadores con semáforo de margen bruto, matrices ponderadas, punto de reorden (ROP), analítica NPS y cierres Poka-Yoke idempotentes."
+      },
+      {
+        "id": "CP-03",
+        "name": "Sistemas Relacionales, Servidores Locales y Skills (Nivel 3: Ejercicios 11 al 15)",
+        "evidence": "MG-A03",
+        "criterion": "Construye sistemas con bases de datos relacionales (CRM), empaqueta procedimientos en .agents/skills/SKILL.md y valida conciliaciones bancarias con tolerancia."
+      },
+      {
+        "id": "CP-04",
+        "name": "Orquestación Multi-Agente, MCP y Riesgo Estocástico (Nivel 4: Ejercicios 16 al 19)",
+        "evidence": "MG-A04",
+        "criterion": "Coordina agentes en paralelo mediante contratos de datos sin colisión, aplica gobernanza MCP con menor privilegio y audita simulaciones de turnos y Monte Carlo."
+      },
+      {
+        "id": "CP-05",
+        "name": "Proyecto Cumbre ERP y Transferencia a Ingeniería (Ejercicio 20 + Ruta Canvas)",
+        "evidence": "MG-A05",
+        "criterion": "Integra los 4 módulos de la Suite Operativa (Comercial, Inventario, Tesorería y Copiloto Auditor) con memoria Multi-IDE y verificación de extremo a extremo."
+      }
+    ]
+  },
+  "learningSequence": [
+    {
+      "phase": "reflection",
+      "name": "Reflexión inicial y Fundamentos de Dirección de Agentes",
+      "purpose": "Comprender el cambio de rol hacia Director de Proyecto en Google Antigravity y dominar la normalización de datos, /plan y GEMINI.md.",
+      "hours": 4
+    },
+    {
+      "phase": "contextualization",
+      "name": "Contextualización de Reglas de Negocio y Autoverificación con /browser",
+      "purpose": "Traducir reglas financieras, logísticas y de servicio al cliente en especificaciones verificables mediante Casos Testigo y pruebas en navegador.",
+      "hours": 6
+    },
+    {
+      "phase": "appropriation",
+      "name": "Apropiación de Sistemas Relacionales, Skills, MCP y Orquestación Multi-Agente",
+      "purpose": "Construir sistemas persistentes, automatizar auditorías con Skills y coordinar múltiples agentes bajo contratos de datos y principios de seguridad.",
+      "hours": 10
+    },
+    {
+      "phase": "transfer",
+      "name": "Transferencia al Proyecto Cumbre ERP y Consolidación del Portafolio de Evidencias",
+      "purpose": "Integrar una suite empresarial completa de extremo a extremo y consolidar las evidencias verificadas para evaluación del instructor.",
+      "hours": 4
+    }
+  ],
+  "evidence": {
+    "knowledge": [
+      "MG-A01"
+    ],
+    "performance": [
+      "MG-A02",
+      "MG-A03",
+      "MG-A04"
+    ],
+    "product": [
+      "MG-A05"
+    ]
+  },
+  "assessment": {
+    "instruments": [
+      "Lista de chequeo técnica de fundamentos y normalización (MG-A01)",
+      "Rúbrica de validación de reglas de negocio y /browser (MG-A02 y MG-A03)",
+      "Rúbrica de arquitectura multi-agente, MCP y Proyecto Cumbre (MG-A04 y MG-A05)"
+    ]
+  },
+  "glossary": [
+    {
+      "term": "Artifact (Artefacto de Antigravity)",
+      "meaning": "Documento estructurado generado por Google Antigravity (Task List, Implementation Plan o Walkthrough) que permite supervisar y comentar el trabajo del agente sin necesidad de leer código fuente."
+    },
+    {
+      "term": "Caso Testigo",
+      "meaning": "Cálculo manual sencillo y determinista con números conocidos que el aprendiz resuelve durante la Tarea Conceptual para auditar si la aplicación generada por la IA calcula con exactitud."
+    },
+    {
+      "term": "GEMINI.md / AI-PROJECT-MEMORY.md",
+      "meaning": "Archivos de memoria persistente en la raíz del proyecto que instruyen a los agentes sobre las reglas de negocio, arquitectura, estado actual y prohibiciones para evitar retrocesos entre sesiones o IDEs."
+    },
+    {
+      "term": "Idempotencia",
+      "meaning": "Propiedad de un proceso o transacción por la cual ejecutarlo múltiples veces con la misma entrada produce exactamente el mismo resultado sin duplicar cobros ni registros."
+    },
+    {
+      "term": "MCP (Model Context Protocol)",
+      "meaning": "Estándar abierto que conecta de forma controlada a los agentes de IA con bases de datos, APIs y herramientas empresariales bajo el principio de menor privilegio."
+    },
+    {
+      "term": "Portafolio de Evidencias",
+      "meaning": "Registro oficial e integral del SENA donde se consolidan las evidencias de conocimiento, desempeño y producto desarrolladas a lo largo de las estaciones de la guía."
+    },
+    {
+      "term": "Skill (.agents/skills/)",
+      "meaning": "Paquete reutilizable compuesto por un archivo SKILL.md y scripts opcionales que enseña al agente un Procedimiento Operativo Estándar (SOP) repetible con un solo comando."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Documentación Oficial de Google Antigravity (IDE, 2.0, CLI y Skills)",
+      "locator": "https://antigravity.google/docs",
+      "use": "Referencia técnica de comandos slash (/plan, /browser, /schedule, /grill-me, /goal), Artifacts, GEMINI.md, Skills y MCP."
+    },
+    {
+      "title": "Estándar Educativo y de Calidad Web DevBrain v8.10",
+      "locator": "_core/knowledge_base/EDUCATIONAL_GUIDE_STANDARD.md",
+      "use": "Contrato curricular SENA ADSO, distribución de evidencias por estación y reglas de legibilidad."
+    }
+  ]
+}

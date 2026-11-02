@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es-CO" data-theme="claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio de Prompts, GEMINI.md y SKILL.md — Guía Progresiva</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="devbrain-prose.css" data-devbrain-prose>
+  <script defer src="devbrain-prose.js" data-devbrain-prose-runtime></script>
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-block">
+        <span class="brand-icon" aria-hidden="true">AG</span>
+        <div>
+          <strong>Academia Gemini &amp; Google Antigravity</strong>
+          <div style="font-size:0.76rem;color:var(--text-secondary);">Constructor en Vivo de Prompts, GEMINI.md y SKILL.md</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal del portal">
+        <a href="index.html" class="nav-link">1. Hub Principal</a>
+        <a href="ruta-antigravity.html" class="nav-link">2. Ruta Antigravity (20)</a>
+        <a href="manual-antigravity.html" class="nav-link">3. Manual Antigravity</a>
+        <a href="laboratorio-prompts.html" class="nav-link is-active">4. Laboratorio Prompts</a>
+        <a href="ruta-canvas.html" class="nav-link">5. Ruta Canvas (20)</a>
+      </nav>
+
+      <div class="flex-row-wrap no-print">
+        <span class="badge">AG: <strong id="header-ag-count">0/20</strong></span>
+        <span class="badge">Canvas: <strong id="header-canvas-count">0/20</strong></span>
+        <button type="button" id="shortcuts-help-btn" class="btn" title="Ver atajos de teclado (F1 o ?)">⌨️ Atajos</button>
+        <button type="button" id="theme-toggle-btn" class="btn">Modo Oscuro (Noche Apacible)</button>
+        <button type="button" id="print-page-btn" class="btn">Imprimir Laboratorio</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="study-timer-bar" class="study-timer-bar no-print" role="region" aria-label="Temporizador de estudio conceptual">
+    <div class="study-timer-inner flex-between flex-row-wrap" style="align-items:center;gap:0.75rem;">
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span class="badge badge-l2">⏱️ Tarea Conceptual</span>
+        <strong id="study-timer-topic">Estudio Conceptual</strong>
+      </div>
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span id="study-timer-display" class="study-timer-display" role="timer" aria-live="off" aria-valuenow="180">03:00</span>
+        <button type="button" id="study-timer-toggle-btn" class="btn btn-sm btn-primary">Iniciar</button>
+        <button type="button" id="study-timer-reset-btn" class="btn btn-sm">Reiniciar</button>
+        <button type="button" id="study-timer-close-btn" class="btn btn-sm" aria-label="Ocultar temporizador">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenido-principal" class="page-shell stack-lg">
+    <nav aria-label="Migas de pan" class="breadcrumbs no-print"><ol><li><a href="index.html">Inicio</a></li><li><span>Laboratorio de Prompts</span></li></ol></nav>
+    <section class="card stack-md">
+      <span class="badge badge-l3">Taller Interactivo de Ingeniería de Instrucciones</span>
+      <h1>Constructor en Vivo de Prompts, Reglas GEMINI.md y Habilidades SKILL.md</h1>
+      <p class="prose-copy">
+        La diferencia entre un resultado improvisado que requiere diez correcciones y un sistema empresarial que funciona a la primera radica en la estructura de tu petición y en cómo aprovechas el tiempo mientras el agente construye. Explora primero el <strong>Ejemplo Maestro Comparado</strong> y luego utiliza el constructor interactivo para generar tus propios artefactos listos para copiar en Antigravity.
+      </p>
+    </section>
+
+    <section class="stack-md" aria-labelledby="compare-title">
+      <h2 id="compare-title">Ejemplo Maestro Guiado: Petición Improvisada vs. Flujo Profesional en Antigravity</h2>
+      <div class="bento-grid-2">
+        <article class="card stack-sm" style="border-left:5px solid var(--accent-rose);">
+          <span class="badge badge-l4">Enfoque Improvisado (Baja Asertividad)</span>
+          <h3>"Hazme una página para hacer cotizaciones con descuentos e IVA"</h3>
+          <ul class="stack-sm">
+            <li><strong>Qué ocurre mientras esperas:</strong> Miras la pantalla pasivamente sin tener un Caso Testigo calculado.</li>
+            <li><strong>Fallo matemático oculto:</strong> El agente suele restar el descuento después del IVA o calcular el margen dividiendo sobre el costo en lugar del precio neto.</li>
+            <li><strong>Fallo de datos:</strong> Inventa precios en dólares y deja los estados vacíos mostrando <code>NaN</code>.</li>
+          </ul>
+        </article>
+
+        <article class="card stack-sm" style="border-left:5px solid var(--accent-primary);">
+          <span class="badge badge-l2">Enfoque Profesional Antigravity (100 % Verificable)</span>
+          <h3><code>/plan</code> + <code>@catalogo_productos.csv</code> + <code>GEMINI.md</code> + Caso Testigo</h3>
+          <ul class="stack-sm">
+            <li><strong>Paso 1 (Prompt con contrato):</strong> Declara la fórmula exacta <code>Margen Bruto = (Precio_Neto - Costo) / Precio_Neto</code> y conecta el catálogo local con <code>@</code>.</li>
+            <li><strong>Paso 2 (Tarea Conceptual en Paralelo):</strong> Mientras Gemini programa, calculas tu Caso Testigo: <code>Subtotal $1.000.000 - 10 % dcto ($900.000) + 19 % IVA = $1.071.000 COP</code>.</li>
+            <li><strong>Paso 3 (Auditoría con /browser):</strong> El subagente prueba los 4 estados y confirma que da exactamente <code>$1.071.000 COP</code>.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="card stack-md" aria-labelledby="builder-title">
+      <div class="flex-between flex-row-wrap" style="gap:1rem;">
+        <h2 id="builder-title">Constructor Interactivo de Artefactos para tu Proyecto</h2>
+        <div class="flex-row-wrap no-print" style="align-items:center;gap:0.4rem;">
+          <span>Plantillas de muestra:</span>
+          <button type="button" class="btn btn-secondary preset-lab-btn" data-preset="cotizador">1. Cotizador B2B</button>
+          <button type="button" class="btn btn-secondary preset-lab-btn" data-preset="conciliador">2. Conciliador Bancario</button>
+          <button type="button" class="btn btn-secondary preset-lab-btn" data-preset="inventario">3. Control Inventario ROP</button>
+        </div>
+      </div>
+
+      <div class="form-group no-print">
+        <label for="lab-exercise-selector"><strong>Cargar Ejercicio Antigravity (1 al 20):</strong></label>
+        <select id="lab-exercise-selector" class="input-control">
+          <option value="">-- Selecciona un ejercicio para autocompletar --</option>
+          <option value="1">1. Tu Primer Proyecto en Antigravity: Organizador y Clasificador Automático de Documentos Locales</option>
+          <option value="2">2. Uso de Menciones @archivo: Transformar Notas Caóticas de Clientes en una Base de Datos Limpia</option>
+          <option value="3">3. Pruebas Automáticas con el Comando /browser: Calculadora de Precios y Punto de Equilibrio</option>
+          <option value="4">4. Memoria Permanente del Proyecto con GEMINI.md: Generador de Propuestas Ejecutivas con tu Estilo</option>
+          <option value="5">5. Auditoría y Comentarios Inline sobre Artifacts: Limpiador y Unificador de Bases de Contactos</option>
+          <option value="6">6. Cotizador Comercial Inteligente con Semáforo de Rentabilidad y Protección de Margen Bruto</option>
+          <option value="7">7. Investigador y Comparador de Mercado con Matriz de Evaluación Ponderada y /browser</option>
+          <option value="8">8. Control de Inventario con Cálculo Automático de Stock de Seguridad y Punto de Reorden (ROP)</option>
+          <option value="9">9. Analizador Local de Encuestas de Satisfacción (NPS), Quejas Recurrentes y Plan de Mejora</option>
+          <option value="10">10. Automatización de Rutinas Periódicas con el Comando /schedule y Control Poka-Yoke</option>
+          <option value="11">11. Construcción de un CRM Relacional con Embudo Ponderado y Alertas de Seguimiento</option>
+          <option value="12">12. Creación de Habilidades Reutilizables (Skills en .agents/skills/) para Auditar Gastos</option>
+          <option value="13">13. Simulador de Tesorería a 12 Meses: Utilidad Contable vs. Dinero Real en Banco</option>
+          <option value="14">14. Academia Interna y Evaluador de Competencias Basado en Escenarios Ramificados</option>
+          <option value="15">15. Motor de Conciliación Automática: Cruce de Libro de Ventas vs. Extracto Bancario con Pasarela</option>
+          <option value="16">16. Orquestación de Múltiples Agentes en Paralelo desde el Agent Manager (Contratos de Datos)</option>
+          <option value="17">17. Integración Segura de Fuentes de Datos y Gobernanza MCP (Model Context Protocol)</option>
+          <option value="18">18. Optimizador Inteligente de Horarios y Turnos de Personal sin Conflictos Legales</option>
+          <option value="19">19. Simulador de Riesgo de Proyectos por Método de Monte Carlo y Estimación PERT (3 Puntos)</option>
+          <option value="20">20. Proyecto Cumbre en Antigravity: Sistema Operativo Integral Pyme con Copiloto Auditor</option>
+        </select>
+      </div>
+
+      <div class="bento-grid-2">
+        <div class="stack-md">
+          <div class="stack-sm">
+            <label for="lab-command"><strong>1. Comando inicial de Antigravity:</strong></label>
+            <select id="lab-command" class="select-control">
+              <option value="/plan">/plan — Diseñar Implementation Plan antes de tocar archivos</option>
+              <option value="/grill-me">/grill-me — Entrevista previa para descubrir casos borde</option>
+              <option value="/goal">/goal — Ejecución autónoma hasta cumplir todas las pruebas</option>
+              <option value="/boost">/boost — Razonamiento profundo multiperspectiva</option>
+            </select>
+          </div>
+
+          <div class="stack-sm">
+            <label for="lab-role"><strong>2. Rol experto asignado al agente:</strong></label>
+            <input id="lab-role" type="text" class="input-control" value="Director Comercial y Especialista en Pricing B2B">
+          </div>
+
+          <div class="stack-sm">
+            <label for="lab-goal"><strong>3. Objetivo funcional de la herramienta:</strong></label>
+            <textarea id="lab-goal" rows="2" class="textarea-control">Construir un cotizador web interactivo con semáforo de margen bruto y vista de cliente imprimible.</textarea>
+          </div>
+
+          <div class="stack-sm">
+            <label for="lab-files"><strong>4. Archivos semilla de contexto (usa @):</strong></label>
+            <input id="lab-files" type="text" class="input-control" value="@catalogo_productos.csv, @GEMINI.md">
+          </div>
+
+          <div class="stack-sm">
+            <label for="lab-constraints"><strong>5. Fórmulas, moneda y restricciones innegociables:</strong></label>
+            <textarea id="lab-constraints" rows="2" class="textarea-control">Moneda COP en formato es-CO; Margen Bruto = (Precio_Neto - Costo) / Precio_Neto; bloquear si margen &lt; 25 %.</textarea>
+          </div>
+
+          <div class="stack-sm">
+            <label for="lab-topic"><strong>6. Tema de tu Tarea Conceptual en Paralelo:</strong></label>
+            <input id="lab-topic" type="text" class="input-control" value="Diferencia entre Recargo sobre Costo (Markup) y Margen Bruto sobre Precio Neto">
+          </div>
+
+          <div class="card-elevated stack-sm">
+            <div class="flex-between">
+              <strong>Diagnóstico en vivo de tu especificación:</strong>
+              <span id="lab-score-badge" class="badge badge-l2">Calidad: 100 %</span>
+            </div>
+            <ul id="lab-checks-list" class="stack-sm" style="margin:0;padding-left:1.2rem;"></ul>
+          </div>
+        </div>
+
+        <div class="stack-md">
+          <div class="stack-sm">
+            <div class="flex-between">
+              <h3>A. Prompt Maestro para Antigravity</h3>
+              <button type="button" class="btn btn-primary copy-lab-btn" data-target="lab-out-prompt">Copiar Prompt</button>
+            </div>
+            <pre id="lab-out-prompt" class="code-block"></pre>
+          </div>
+
+          <div class="stack-sm">
+            <div class="flex-between">
+              <h3>B. Guía de Tarea Conceptual en Paralelo</h3>
+              <button type="button" class="btn btn-secondary copy-lab-btn" data-target="lab-out-guide">Copiar Guía</button>
+            </div>
+            <pre id="lab-out-guide" class="code-block"></pre>
+          </div>
+
+          <div class="stack-sm">
+            <div class="flex-between">
+              <h3>C. Archivo de Memoria <code>GEMINI.md</code></h3>
+              <button type="button" class="btn btn-secondary copy-lab-btn" data-target="lab-out-gemini">Copiar GEMINI.md</button>
+            </div>
+            <pre id="lab-out-gemini" class="code-block"></pre>
+          </div>
+
+          <div class="stack-sm">
+            <div class="flex-between">
+              <h3>D. Plantilla de Habilidad <code>SKILL.md</code></h3>
+              <button type="button" class="btn btn-secondary copy-lab-btn" data-target="lab-out-skill">Copiar SKILL.md</button>
+            </div>
+            <pre id="lab-out-skill" class="code-block"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="flex-between" style="max-width:92rem;margin-inline:auto;">
+      <div><strong>Laboratorio de Prompts y Memoria</strong> · Generación de GEMINI.md y SKILL.md</div>
+      <div><a href="ruta-canvas.html">Continuar a la Ruta Gemini Canvas (20 Ejercicios) →</a></div>
+    </div>
+  </footer>
+
+  <script src="js/data/ag-exercises-n1-n2.js"></script>
+  <script src="js/data/ag-exercises-n3-n4.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/core/prompt-builder.js"></script>
+  <script src="js/ui/nav-theme.js"></script>
+  <script src="js/ui/study-timer.js"></script>
+  <script src="js/ui/ui-enhancements.js"></script>
+  <script src="js/ui/render-canvas.js"></script>
+</body>
+</html>

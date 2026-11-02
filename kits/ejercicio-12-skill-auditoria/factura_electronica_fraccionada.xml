@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuditBatch company="Soluciones Integrales Andinas S.A.S.">
+  <SplitTransactionGroup employee="Julián Mendoza" date="2026-10-15" supplierNit="900555111-2" limitCOP="200000">
+    <Invoice id="REC-801" time="09:15:00" amountCOP="175000"/>
+    <Invoice id="REC-802" time="15:40:00" amountCOP="175000"/>
+    <CombinedTotal amountCOP="350000" status="ALERTA_CRITICA_FRACCIONAMIENTO"/>
+  </SplitTransactionGroup>
+</AuditBatch>

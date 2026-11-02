@@ -1,0 +1,31 @@
+{
+  "evento": "Cumbre Regional de Innovación y Agentes IA 2026",
+  "salones": [
+    {
+      "idSalon": "SALON-A",
+      "nombre": "Auditorio Principal Guantiva",
+      "capacidadSillas": 200,
+      "inscritosActuales": 180,
+      "sobrecupo": 0
+    },
+    {
+      "idSalon": "SALON-B",
+      "nombre": "Sala Innovación Tecnológica",
+      "capacidadSillas": 80,
+      "inscritosActuales": 120,
+      "sobrecupo": 40
+    },
+    {
+      "idSalon": "SALON-C",
+      "nombre": "Aula Taller Experimental",
+      "capacidadSillas": 60,
+      "inscritosActuales": 52,
+      "sobrecupo": 0
+    }
+  ],
+  "finanzas": {
+    "tarifaGeneralCOP": 150000,
+    "tarifaVipCOP": 300000,
+    "costoFijoEventoCOP": 28000000
+  }
+}

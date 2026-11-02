@@ -1,0 +1,7 @@
+SKU,Producto,Categoria,Costo_Interno_COP,Precio_Lista_Neto_COP,Margen_Minimo_Pct
+SER-01,Consultoria Auditoria de Procesos,Servicios,650000,1000000,35
+SER-02,Implementacion Tablero Gerencial BI,Servicios,900000,1500000,35
+LIC-01,Licencia Anual Suite Operativa Pyme,Software,480000,800000,30
+CAP-01,Taller Entrenamiento Equipos IA (16h),Formacion,325000,500000,35
+SOP-01,Bolsa Soporte Tecnico Prioritario 20h,Soporte,520000,800000,30
+EQU-01,Terminal Lectora Codigo Barras Industrial,Hardware,420000,700000,35

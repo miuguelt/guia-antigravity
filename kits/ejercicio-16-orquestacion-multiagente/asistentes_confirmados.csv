@@ -1,0 +1,5 @@
+ID_Inscripcion,Asistente,Empresa,ID_Salon,Tipo_Entrada,Valor_Pagado_COP,Estado
+INS-001,Valeria Montoya,TecnoAndes,SALON-B,VIP,300000,Confirmado
+INS-002,Santiago Mejía,AgroSantander,SALON-B,General,150000,Confirmado
+INS-003,Paula Castellanos,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-004,Andrés Villamizar,Consultores S.A.S.,SALON-B,VIP,300000,Confirmado

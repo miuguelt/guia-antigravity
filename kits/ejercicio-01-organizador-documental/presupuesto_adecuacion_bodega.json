@@ -1,0 +1,23 @@
+{
+  "documento": "Presupuesto Adecuación Bodega Central",
+  "fechaFormulacion": "2026-02-10",
+  "moneda": "COP",
+  "partidas": [
+    {
+      "codigo": "INF-01",
+      "descripcion": "Estantería pesada selectiva 4 niveles",
+      "valorCOP": 3800000
+    },
+    {
+      "codigo": "INF-02",
+      "descripcion": "Iluminación industrial LED alta eficiencia",
+      "valorCOP": 1450000
+    },
+    {
+      "codigo": "INF-03",
+      "descripcion": "Demarcación epóxica de pasillos y seguridad",
+      "valorCOP": 950000
+    }
+  ],
+  "totalPresupuestoCOP": 6200000
+}

@@ -1,0 +1,14 @@
+{
+  "ventanaCompensacionDias": 4,
+  "tasasComision": {
+    "Tarjeta_Credito": 0.04,
+    "Transferencia_PSE": 0
+  },
+  "casoTestigo": {
+    "idVenta": "V-101",
+    "montoBrutoCOP": 200000,
+    "tasaComision": 0.04,
+    "comisionDescontadaCOP": 8000,
+    "abonoNetoEsperadoCOP": 192000
+  }
+}

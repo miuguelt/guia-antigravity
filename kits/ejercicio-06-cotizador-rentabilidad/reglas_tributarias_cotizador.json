@@ -1,0 +1,14 @@
+{
+  "moneda": "COP",
+  "ivaGeneralPct": 19,
+  "retencionServiciosPct": 4,
+  "retencionComprasPct": 2.5,
+  "diasValidezOferta": 15,
+  "casoTestigo": {
+    "sku": "SER-01",
+    "costoInternoCOP": 650000,
+    "precioVentaNetoCOP": 1000000,
+    "utilidadBrutaCOP": 350000,
+    "margenBrutoRealPct": 35
+  }
+}

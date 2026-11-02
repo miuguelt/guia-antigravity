@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es-CO" data-theme="claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruta Gemini Canvas (20 Ejercicios) — Guía Progresiva con Puente Antigravity</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="devbrain-prose.css" data-devbrain-prose>
+  <script defer src="devbrain-prose.js" data-devbrain-prose-runtime></script>
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-block">
+        <span class="brand-icon" aria-hidden="true">AG</span>
+        <div>
+          <strong>Academia Gemini &amp; Google Antigravity</strong>
+          <div style="font-size:0.76rem;color:var(--text-secondary);">Ruta Complementaria: 20 Ejercicios de Ingeniería en Gemini Canvas</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal del portal">
+        <a href="index.html" class="nav-link">1. Hub Principal</a>
+        <a href="ruta-antigravity.html" class="nav-link">2. Ruta Antigravity (20)</a>
+        <a href="manual-antigravity.html" class="nav-link">3. Manual Antigravity</a>
+        <a href="laboratorio-prompts.html" class="nav-link">4. Laboratorio Prompts</a>
+        <a href="ruta-canvas.html" class="nav-link is-active">5. Ruta Canvas (20)</a>
+      </nav>
+
+      <div class="flex-row-wrap no-print">
+        <span class="badge">AG: <strong id="header-ag-count">0/20</strong></span>
+        <span class="badge">Canvas: <strong id="header-canvas-count">0/20</strong></span>
+        <button type="button" id="shortcuts-help-btn" class="btn" title="Ver atajos de teclado (F1 o ?)">⌨️ Atajos</button>
+        <button type="button" id="theme-toggle-btn" class="btn">Modo Oscuro (Noche Apacible)</button>
+        <button type="button" id="print-page-btn" class="btn">Imprimir Ejercicio</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="study-timer-bar" class="study-timer-bar no-print" role="region" aria-label="Temporizador de estudio conceptual">
+    <div class="study-timer-inner flex-between flex-row-wrap" style="align-items:center;gap:0.75rem;">
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span class="badge badge-l2">⏱️ Tarea Conceptual</span>
+        <strong id="study-timer-topic">Estudio Conceptual</strong>
+      </div>
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span id="study-timer-display" class="study-timer-display" role="timer" aria-live="off" aria-valuenow="180">03:00</span>
+        <button type="button" id="study-timer-toggle-btn" class="btn btn-sm btn-primary">Iniciar</button>
+        <button type="button" id="study-timer-reset-btn" class="btn btn-sm">Reiniciar</button>
+        <button type="button" id="study-timer-close-btn" class="btn btn-sm" aria-label="Ocultar temporizador">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenido-principal" class="page-shell stack-lg">
+    <nav aria-label="Migas de pan" class="breadcrumbs no-print"><ol><li><a href="index.html">Inicio</a></li><li><span>Ruta Gemini Canvas</span></li></ol></nav>
+    <section class="card stack-sm">
+      <div class="flex-between">
+        <div>
+          <span class="badge badge-l3">Ruta de Ingeniería de Software (20 Retos)</span>
+          <h1 style="margin-top:0.35rem;">20 Ejercicios Progresivos en Gemini Canvas con Puente hacia Antigravity IDE</h1>
+        </div>
+        <a href="ruta-antigravity.html" class="btn btn-secondary no-print">← Volver a Ruta Antigravity</a>
+      </div>
+      <p class="prose-copy">
+        Esta ruta complementa los 20 proyectos de Antigravity con 20 laboratorios de ingeniería en <strong>Gemini Canvas</strong> (desde diagnósticos SRE, búsqueda híbrida BM25, auditorías OWASP y pruebas A/B, hasta límites WIP, Circuit Breakers, física 2D, Web Audio API, consenso Raft y compiladores Mini-SQL). Cada ejercicio incluye su <strong>Puente hacia Antigravity IDE</strong> para que sepas cómo llevar cualquier prototipo de Canvas a una arquitectura modular de producción.
+      </p>
+      <div class="progress-track"><div id="canvas-route-bar" class="progress-fill" style="width:0%;"></div></div>
+      <small id="canvas-route-summary">0 de 20 completados (0 %)</small>
+    </section>
+
+    <div class="master-detail-layout">
+      <aside class="card stack-md no-print" aria-label="Filtros y lista de los 20 ejercicios de Canvas">
+        <div class="stack-sm">
+          <label for="canvas-search-input"><strong>Buscar tema de ingeniería:</strong></label>
+          <input id="canvas-search-input" type="search" class="input-control" placeholder="Ej: OWASP, Kanban, Raft, SQL, WCAG...">
+        </div>
+
+        <div class="bento-grid-2">
+          <div class="stack-sm">
+            <label for="canvas-level-filter"><strong>Nivel:</strong></label>
+            <select id="canvas-level-filter" class="select-control">
+              <option value="all">Todos (1 a 4)</option>
+              <option value="1">Nivel 1: Fundamentos (1-5)</option>
+              <option value="2">Nivel 2: Razonamiento y Datos (6-10)</option>
+              <option value="3">Nivel 3: Sistemas Complejos (11-15)</option>
+              <option value="4">Nivel 4: Maestría Extrema (16-20)</option>
+            </select>
+          </div>
+          <div class="stack-sm">
+            <label for="canvas-status-filter"><strong>Estado:</strong></label>
+            <select id="canvas-status-filter" class="select-control">
+              <option value="all">Todos</option>
+              <option value="pending">Pendientes</option>
+              <option value="done">Completados</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="canvas-list-container" class="stack-sm" style="max-height:46rem;overflow-y:auto;padding-right:0.25rem;"></div>
+      </aside>
+
+      <section id="canvas-detail-container" aria-live="polite"></section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="flex-between" style="max-width:92rem;margin-inline:auto;">
+      <div><strong>Ruta Gemini Canvas</strong> · 20 Ejercicios de Ingeniería + Puente a Antigravity IDE</div>
+      <div><a href="index.html#portafolio-evidencias">Ir al Portafolio de Evidencias en el Hub Principal →</a></div>
+    </div>
+  </footer>
+
+  <script src="js/data/canvas-exercises-n1-n2.js"></script>
+  <script src="js/data/canvas-exercises-n3-n4.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/ui/nav-theme.js"></script>
+  <script src="js/ui/study-timer.js"></script>
+  <script src="js/ui/ui-enhancements.js"></script>
+  <script src="js/ui/render-canvas.js"></script>
+</body>
+</html>

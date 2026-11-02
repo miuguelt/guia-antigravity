@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+  <ID>SETT-445109</ID>
+  <IssueDate>2025-11-02</IssueDate>
+  <AccountingSupplierParty><Name>Colombia Telecomunicaciones S.A. E.S.P.</Name><CompanyID>830122566-1</CompanyID></AccountingSupplierParty>
+  <AccountingCustomerParty><Name>Soluciones Integrales Andinas S.A.S.</Name><CompanyID>901482391-4</CompanyID></AccountingCustomerParty>
+  <LegalMonetaryTotal><PayableAmount currencyID="COP">289900.00</PayableAmount></LegalMonetaryTotal>
+  <Note>Servicio Internet Dedicado Fibra 500 Mbps Sede Vélez</Note>
+</Invoice>

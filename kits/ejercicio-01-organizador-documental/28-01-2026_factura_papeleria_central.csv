@@ -1,0 +1,4 @@
+Factura_No,Fecha_Emision,Proveedor,NIT_Proveedor,Item,Cantidad,Valor_Unitario_COP,Subtotal_COP
+FV-3092,28-01-2026,Papeleria Central de Santander S.A.S.,900331442-5,Resma Papel Carta Ecológico 75g,20,16500,330000
+FV-3092,28-01-2026,Papeleria Central de Santander S.A.S.,900331442-5,Caja Marcadores Borrables x12,2,21000,42000
+FV-3092,28-01-2026,Papeleria Central de Santander S.A.S.,900331442-5,Rollo Etiquetas Térmicas Bodega,4,10000,40000

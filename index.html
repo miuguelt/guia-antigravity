@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es-CO" data-theme="claro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hub Principal — Guía Progresiva con Gemini en Google Antigravity</title>
+  <link rel="stylesheet" href="css/vendor/devbrain-learner-sdk.css">
+  <link rel="stylesheet" href="css/vendor/devbrain-evidence.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="devbrain-prose.css" data-devbrain-prose>
+  <script defer src="devbrain-prose.js" data-devbrain-prose-runtime></script>
+</head>
+<body>
+  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-block">
+        <span class="brand-icon" aria-hidden="true">AG</span>
+        <div>
+          <strong>Academia Gemini &amp; Google Antigravity</strong>
+          <div style="font-size:0.76rem;color:var(--text-secondary);">40 Ejercicios Progresivos · Memoria Multi-IDE · SENA ADSO</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal del portal">
+        <a href="index.html" class="nav-link is-active">1. Hub Principal</a>
+        <a href="ruta-antigravity.html" class="nav-link">2. Ruta Antigravity (20)</a>
+        <a href="manual-antigravity.html" class="nav-link">3. Manual Antigravity</a>
+        <a href="laboratorio-prompts.html" class="nav-link">4. Laboratorio Prompts</a>
+        <a href="ruta-canvas.html" class="nav-link">5. Ruta Canvas (20)</a>
+      </nav>
+
+      <div class="flex-row-wrap no-print">
+        <span class="badge" title="Ejercicios Antigravity">AG: <strong id="header-ag-count">0/20</strong></span>
+        <span class="badge" title="Ejercicios Canvas">Canvas: <strong id="header-canvas-count">0/20</strong></span>
+        <button type="button" id="shortcuts-help-btn" class="btn" title="Ver atajos de teclado (F1 o ?)">⌨️ Atajos</button>
+        <button type="button" id="theme-toggle-btn" class="btn">Modo Oscuro (Noche Apacible)</button>
+        <button type="button" id="print-page-btn" class="btn">Imprimir Guía</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="study-timer-bar" class="study-timer-bar no-print" role="region" aria-label="Temporizador de estudio conceptual">
+    <div class="study-timer-inner flex-between flex-row-wrap" style="align-items:center;gap:0.75rem;">
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span class="badge badge-l2">⏱️ Tarea Conceptual</span>
+        <strong id="study-timer-topic">Estudio Conceptual</strong>
+      </div>
+      <div class="flex-row-wrap" style="align-items:center;gap:0.5rem;">
+        <span id="study-timer-display" class="study-timer-display" role="timer" aria-live="off" aria-valuenow="180">03:00</span>
+        <button type="button" id="study-timer-toggle-btn" class="btn btn-sm btn-primary">Iniciar</button>
+        <button type="button" id="study-timer-reset-btn" class="btn btn-sm">Reiniciar</button>
+        <button type="button" id="study-timer-close-btn" class="btn btn-sm" aria-label="Ocultar temporizador">✕</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenido-principal" class="page-shell stack-lg">
+    <nav aria-label="Migas de pan" class="breadcrumbs no-print"><ol><li><a href="index.html">Inicio</a></li><li><span>Portal Principal</span></li></ol></nav>
+    <div class="notice-banner" role="note">
+      <strong>Aviso sobre materiales de práctica:</strong> Todos los casos, cifras, documentos y archivos semilla incluidos en este portal se prepararon con fines de aprendizaje y no contienen datos personales ni registros empresariales reales.
+    </div>
+
+    <section class="card stack-md" aria-labelledby="hero-title">
+      <div class="flex-between">
+        <span class="badge badge-l2">Portal Multipágina Offline-First · Versión 2.0</span>
+        <span class="badge">Código Curricular: 228118 · RAP-01 a RAP-04</span>
+      </div>
+      <h1 id="hero-title">Domina Google Antigravity y Gemini: De Cero Código a Sistemas Empresariales Verificados</h1>
+      <p class="prose-copy">
+        Bienvenido al recorrido formativo diseñado para que cualquier persona —sin importar si viene de administración, finanzas, operaciones o desarrollo de software— aprenda a dirigir agentes de inteligencia artificial en <strong>Google Antigravity</strong>. Aprenderás a combinar el <em>Agent Manager</em>, el <em>Editor View</em>, los archivos de contexto <code>@semilla</code>, las reglas permanentes en <code>GEMINI.md</code>, las habilidades <code>SKILL.md</code> y las pruebas visuales con <code>/browser</code> mientras aplicas la técnica de la <strong>Tarea Conceptual en Paralelo</strong>.
+      </p>
+      <div class="flex-row-wrap no-print">
+        <a href="ruta-antigravity.html" class="btn btn-primary">Iniciar los 20 Ejercicios en Antigravity →</a>
+        <a href="manual-antigravity.html" class="btn btn-secondary">Explorar las 12 Herramientas de Antigravity</a>
+        <a href="laboratorio-prompts.html" class="btn">Abrir Constructor de Prompts y GEMINI.md</a>
+        <a href="#portafolio-evidencias" class="btn">Ir al Portafolio de Evidencias</a>
+      </div>
+    </section>
+
+    <section class="stack-md" aria-labelledby="kpis-title">
+      <div class="flex-between">
+        <h2 id="kpis-title">Tablero de Progreso Global del Aprendiz</h2>
+        <div class="flex-row-wrap no-print">
+          <button type="button" id="export-progress-btn" class="btn btn-secondary">Copiar Respaldo JSON de Progreso</button>
+          <button type="button" id="import-progress-btn" class="btn btn-secondary">Restaurar Respaldo JSON</button>
+          <button type="button" id="reset-all-progress-btn" class="btn">Reiniciar Progreso</button>
+        </div>
+      </div>
+
+      <div class="bento-grid-4">
+        <article class="card stack-sm">
+          <span class="badge badge-l1">Ruta Principal</span>
+          <h3>Ejercicios Antigravity</h3>
+          <div style="font-size:1.6rem;font-weight:800;" id="kpi-ag-done">0 / 20</div>
+          <div class="progress-track"><div id="kpi-ag-bar" class="progress-fill" style="width:0%;"></div></div>
+          <small>Avance en Antigravity: <strong id="kpi-ag-pct">0 %</strong></small>
+        </article>
+
+        <article class="card stack-sm">
+          <span class="badge badge-l2">Verificación Matemática</span>
+          <h3>Casos Testigo Validados</h3>
+          <div style="font-size:1.6rem;font-weight:800;" id="kpi-witness-done">0 / 20</div>
+          <p class="prose-copy" style="margin:0;font-size:0.85rem;">Cálculos manuales contrastados contra el simulador determinista.</p>
+        </article>
+
+        <article class="card stack-sm">
+          <span class="badge badge-l3">Ruta Complementaria</span>
+          <h3>Ejercicios Gemini Canvas</h3>
+          <div style="font-size:1.6rem;font-weight:800;" id="kpi-canvas-done">0 / 20</div>
+          <p class="prose-copy" style="margin:0;font-size:0.85rem;">Laboratorios de ingeniería con puente hacia Antigravity IDE.</p>
+        </article>
+
+        <article class="card stack-sm">
+          <span class="badge badge-l4">Dominio Total</span>
+          <h3>Total Acumulado (40)</h3>
+          <div style="font-size:1.6rem;font-weight:800;" id="kpi-total-done">0 / 40</div>
+          <div class="progress-track"><div id="kpi-total-bar" class="progress-fill" style="width:0%;"></div></div>
+          <small>Porcentaje total: <strong id="kpi-total-pct">0 %</strong></small>
+        </article>
+      </div>
+    </section>
+
+    <section class="stack-md" aria-labelledby="routes-title">
+      <h2 id="routes-title">Mapa de las 5 Superficies del Portal</h2>
+      <div class="bento-grid-2">
+        <article class="card stack-sm">
+          <span class="badge badge-l1">Módulo Central · No-Desarrolladores y Profesionales</span>
+          <h3><a href="ruta-antigravity.html">Ruta 1: 20 Ejercicios Progresivos en Google Antigravity</a></h3>
+          <p class="prose-copy">Va desde organizar una carpeta local con <code>/plan</code> (Nivel 1) y construir cotizadores e inventarios con punto de reorden (Nivel 2), hasta crear un CRM relacional, habilidades en <code>.agents/skills/</code>, conciliadores bancarios (Nivel 3) y un Sistema Operativo Pyme completo (Nivel 4). Incluye descarga de archivos semilla <code>@</code> y simulador de Caso Testigo.</p>
+        </article>
+
+        <article class="card stack-sm">
+          <span class="badge badge-l2">Referencia Técnica Operativa</span>
+          <h3><a href="manual-antigravity.html">Manual Completo de Herramientas y Protocolo de 6 Pasos</a></h3>
+          <p class="prose-copy">Domina las 12 herramientas de Antigravity: diferencia entre <em>Agent Manager</em> y <em>Editor View</em>, autocompletado con <code>Tab</code>, edición en línea <code>Ctrl+I</code>, comentarios sobre artefactos, comandos <code>/plan</code>, <code>/grill-me</code>, <code>/browser</code>, <code>/goal</code>, <code>/boost</code>, <code>/schedule</code>, <code>/compact</code>, <code>/learn</code> y conectores MCP.</p>
+        </article>
+
+        <article class="card stack-sm">
+          <span class="badge badge-l3">Taller Práctico en Vivo</span>
+          <h3><a href="laboratorio-prompts.html">Laboratorio Constructor de Prompts, GEMINI.md y SKILL.md</a></h3>
+          <p class="prose-copy">Compara el enfoque improvisado frente al enfoque profesional con Tarea Conceptual en Paralelo. Construye en tiempo real tus propios prompts estructurados, tu archivo de memoria <code>GEMINI.md</code> y tus habilidades <code>SKILL.md</code> con evaluación automática de calidad.</p>
+        </article>
+
+        <article class="card stack-sm">
+          <span class="badge badge-l4">Profundización en Ingeniería</span>
+          <h3><a href="ruta-canvas.html">Ruta 2: 20 Ejercicios de Ingeniería en Gemini Canvas + Puente IDE</a></h3>
+          <p class="prose-copy">20 retos progresivos de arquitectura de software, seguridad OWASP, pruebas A/B, límites WIP, Circuit Breakers, física 2D, Web Audio API, consenso Raft y compiladores Mini-SQL, cada uno con instrucciones para modularizarlo en Antigravity IDE.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card stack-md" aria-labelledby="memory-title">
+      <h2 id="memory-title">Memoria Multi-IDE y Coherencia de Archivos del Proyecto</h2>
+      <p class="prose-copy">
+        Para que cualquier inteligencia artificial trabaje sobre tus proyectos sin perder el rumbo ni dañar lo que ya construiste —sin importar si abres la carpeta en <strong>Google Antigravity</strong>, <strong>Cursor</strong>, <strong>Windsurf</strong> o <strong>VS Code</strong>—, este repositorio mantiene sincronizados sus archivos de memoria y gobernanza:
+      </p>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Archivo en el Proyecto</th>
+              <th>Propósito y Función para el Aprendiz y la IA</th>
+              <th>Cuándo se Consulta o Actualiza</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>AI-PROJECT-MEMORY.md</code></td>
+              <td>Memoria viva transversal: registra qué está construido, qué falta, el mapa de archivos y los invariantes que ningún cambio puede romper.</td>
+              <td>Al iniciar y al cerrar cada sesión de trabajo en cualquier IDE.</td>
+            </tr>
+            <tr>
+              <td><code>GEMINI.md</code> y <code>AGENTS.md</code></td>
+              <td>Reglas operativas leídas automáticamente por Google Antigravity y agentes compatibles (idioma <code>es-CO</code>, tope de 250 líneas, cero datos simulados).</td>
+              <td>Cargado automáticamente por el agente en cada prompt.</td>
+            </tr>
+            <tr>
+              <td><code>.cursorrules</code> y <code>.windsurfrules</code></td>
+              <td>Espejos de reglas para los editores Cursor y Windsurf que apuntan a <code>AI-PROJECT-MEMORY.md</code> y preservan el estándar de calidad.</td>
+              <td>Cuando abres el mismo proyecto en otro IDE.</td>
+            </tr>
+            <tr>
+              <td><code>guide.manifest.json</code> y <code>deliverables.registry.json</code></td>
+              <td>Alineación curricular SENA y registro oficial de las 5 estaciones de evidencia (<code>MG-A01</code> a <code>MG-A05</code>), sincronizado en <code>js/registro-entregables.js</code>.</td>
+              <td>Al auditar entregables y exportar tu Portafolio de Evidencias.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="stack-md" aria-labelledby="stations-title">
+      <h2 id="stations-title">Las 5 Estaciones de Aprendizaje y Registro de Evidencias</h2>
+      <p class="prose-copy">
+        A medida que completes cada nivel de ejercicios, abre la guía de estudio de la estación correspondiente y registra tus hallazgos, tus Casos Testigo verificados y tu reflexión en cada tarjeta. Todo queda guardado localmente en tu navegador y alimenta tu <strong>Portafolio de Evidencias</strong> al final de la página.
+      </p>
+
+      <section id="m01-fundamentos" class="card stack-sm station">
+        <div class="flex-between">
+          <span class="badge badge-l1">Estación 01 · Nivel 1 (Ejercicios 01 al 05)</span>
+          <a href="docs/01-fundamentos.md" class="btn btn-secondary">Leer Guía de Estación 01</a>
+        </div>
+        <h3>01 · Fundamentos: Despegue Sin Código, @Menciones y Tarea Conceptual</h3>
+        <p class="prose-copy">Organización ISO-8601 con <code>/plan</code>, extracción de notas a tablas en Primera Forma Normal (1NF), Punto de Equilibrio auditado con <code>/browser</code>, memoria en <code>GEMINI.md</code> y deduplicación de contactos.</p>
+        <div data-db-evidence="MG-A01"></div>
+      </section>
+
+      <section id="m02-diseno" class="card stack-sm station">
+        <div class="flex-between">
+          <span class="badge badge-l2">Estación 02 · Nivel 2 (Ejercicios 06 al 10)</span>
+          <a href="docs/02-diseno.md" class="btn btn-secondary">Leer Guía de Estación 02</a>
+        </div>
+        <h3>02 · Diseño: Herramientas Operativas de Negocio, /grill-me y /schedule</h3>
+        <p class="prose-copy">Cotizador con protección de Margen Bruto Real, comparador multicriterio ponderado, inventario con Punto de Reorden (ROP), analizador oficial de NPS y cierres semanales Poka-Yoke.</p>
+        <div data-db-evidence="MG-A02"></div>
+      </section>
+
+      <section id="m03-implementacion" class="card stack-sm station">
+        <div class="flex-between">
+          <span class="badge badge-l3">Estación 03 · Nivel 3 (Ejercicios 11 al 15)</span>
+          <a href="docs/03-implementacion.md" class="btn btn-secondary">Leer Guía de Estación 03</a>
+        </div>
+        <h3>03 · Implementación: Sistemas Relacionales, Habilidades SKILL.md y Conciliación</h3>
+        <p class="prose-copy">CRM relacional con embudo ponderado, creación de habilidades en <code>.agents/skills/</code> para detectar fraccionamiento de gastos, simulador de flujo de caja a 12 meses, academia de escenarios y conciliador bancario.</p>
+        <div data-db-evidence="MG-A03"></div>
+      </section>
+
+      <section id="m04-validacion" class="card stack-sm station">
+        <div class="flex-between">
+          <span class="badge badge-l4">Estación 04 · Nivel 4 (Ejercicios 16 al 20 + Ruta Canvas)</span>
+          <a href="docs/04-validacion.md" class="btn btn-secondary">Leer Guía de Estación 04</a>
+        </div>
+        <h3>04 · Validación: Orquestación Multi-Agente, Gobernanza MCP, Monte Carlo y Puente Canvas</h3>
+        <p class="prose-copy">Coordinación de subsistemas sin colisiones en el Agent Manager, conectores MCP con confirmación humana (Human-in-the-Loop), optimizador de turnos, simulación PERT/Monte Carlo y transferencia desde Gemini Canvas.</p>
+        <div data-db-evidence="MG-A04"></div>
+      </section>
+
+      <section id="m05-cierre" class="card stack-sm station">
+        <div class="flex-between">
+          <span class="badge badge-l2">Estación 05 · Graduación y Sustentación</span>
+          <div class="flex-row-wrap">
+            <a href="docs/05-cierre.md" class="btn btn-secondary">Leer Guía de Cierre</a>
+            <a href="docs/evidencias-template.md" class="btn">Ver Plantilla Maestra</a>
+          </div>
+        </div>
+        <h3>05 · Cierre: Suite Empresarial Pyme, Memoria Multi-IDE y Sustentación Final</h3>
+        <p class="prose-copy">Integración de los 4 módulos de la Suite Operativa Pyme (Comercial, Inventario, Tesorería y Copiloto Auditor), verificación de la memoria multi-IDE y preparación para la sustentación ante el instructor.</p>
+        <div data-db-evidence="MG-A05"></div>
+      </section>
+
+      <section id="portafolio-evidencias" class="card stack-sm" data-db-evidence-dossier>
+        <h2>Portafolio de Evidencias</h2>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="flex-between" style="max-width:92rem;margin-inline:auto;">
+      <div><strong>Academia Gemini &amp; Google Antigravity</strong> · Portal Educativo Offline-First SENA ADSO</div>
+      <div>5 Estaciones · 40 Ejercicios Progresivos · Memoria Multi-IDE Sincronizada</div>
+    </div>
+  </footer>
+
+  <script src="js/vendor/devbrain-learner-sdk.js"></script>
+  <script src="js/vendor/devbrain-evidence.js"></script>
+  <script src="js/registro-entregables.js"></script>
+  <script src="js/core/store.js"></script>
+  <script src="js/ui/nav-theme.js"></script>
+  <script src="js/ui/study-timer.js"></script>
+  <script src="js/ui/ui-enhancements.js"></script>
+  <script src="js/ui/render-dashboard.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (window.DevBrainEvidence) {
+        window.DevBrainEvidence.montar({
+          registro: window.DevBrainRegistroEntregables || 'deliverables.registry.json',
+          prefijo: 'guia_gemini_antigravity'
+        });
+      }
+    });
+  </script>
+</body>
+</html>
