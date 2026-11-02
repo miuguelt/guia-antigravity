@@ -18,7 +18,8 @@
 # --- DevBrain baseline: build-irrelevant content ---
 *.md
 !README.md
-docs/
+!docs/**/*.md
+!docs/*.md
 tests/
 logs/
 tmp/
