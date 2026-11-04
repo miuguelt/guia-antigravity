@@ -1,13 +1,31 @@
 {
   "proyecto": "Apertura Nueva Planta Tostadora Vélez",
   "formulaPert": "(Optimista + 4 * Mas_Probable + Pesimista) / 6",
-  "casoTestigoEtapa1": {
-    "etapa": "Permisos y Licencias Ambientales",
-    "optimista": 5,
-    "masProbable": 8,
-    "pesimista": 20,
-    "calculoNumerador": 57,
-    "duracionEsperadaPertDias": 9.5
-  },
-  "iteracionesMonteCarlo": 5000
+  "dependencias": [
+    {
+      "etapa": "ET-01",
+      "dependeDe": []
+    },
+    {
+      "etapa": "ET-02",
+      "dependeDe": [
+        "ET-01"
+      ]
+    },
+    {
+      "etapa": "ET-03",
+      "dependeDe": [
+        "ET-01"
+      ]
+    },
+    {
+      "etapa": "ET-04",
+      "dependeDe": [
+        "ET-02",
+        "ET-03"
+      ]
+    }
+  ],
+  "plazoCompromisoDias": 30,
+  "penalidadPorDiaAtrasoCOP": 350000
 }

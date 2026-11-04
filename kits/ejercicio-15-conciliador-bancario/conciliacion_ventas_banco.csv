@@ -1,4 +1,6 @@
-ID_Venta,Fecha_Venta,Cliente,Monto_Bruto_COP,Medio_Pago,Comision_Pasarela_Pct,Fecha_Abono_Banco,Abono_Neto_Banco_COP,Estado_Esperado
-V-101,2026-10-10,Restaurante La Casona,200000,Tarjeta_Credito,4,2026-10-12,192000,Conciliado_Con_Comision
-V-102,2026-10-11,Hotel Guantiva Real,500000,Transferencia_PSE,0,2026-10-11,500000,Conciliado_Exacto
-V-103,2026-10-30,Cafetería Central,350000,Tarjeta_Credito,4,,0,En_Transito_Cierre_Mes
+ID_Venta,Fecha_Venta,Cliente,Monto_Bruto_COP,Medio_Pago
+V-101,2026-10-10,Restaurante La Casona,200000,Tarjeta_Credito
+V-102,2026-10-11,Hotel Guantiva Real,500000,Transferencia_PSE
+V-104,2026-10-20,Ferretería El Puente,150000,Tarjeta_Credito
+V-105,2026-10-20,Panadería San José,100000,Tarjeta_Credito
+V-103,2026-10-30,Cafetería Central,350000,Tarjeta_Credito

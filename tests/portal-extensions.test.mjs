@@ -17,15 +17,15 @@ const ALL_AG_EXERCISES = [...AG_EXERCISES_N1_N2, ...AG_EXERCISES_N3_N4];
    1. kitGenerator.buildAllKitsBundle
    ========================================================================== */
 
-test('1. kitGenerator.buildAllKitsBundle consolida exactamente los 20 kits semilla con metadatos correlativos', () => {
+test('1. kitGenerator.buildAllKitsBundle consolida exactamente los 26 kits semilla con metadatos correlativos', () => {
   const bundle = kitGen.buildAllKitsBundle();
 
   assert.equal(bundle.version, '2.1', 'La versión global del bundle debe ser 2.1');
-  assert.equal(bundle.totalKits, 20, 'El total de kits debe ser exactamente 20');
+  assert.equal(bundle.totalKits, 26, 'El total de kits debe ser exactamente 26');
   assert.ok(typeof bundle.generatedAt === 'string', 'generatedAt debe ser una cadena ISO');
   assert.ok(!Number.isNaN(Date.parse(bundle.generatedAt)), 'generatedAt debe representar una fecha ISO válida');
   assert.ok(Array.isArray(bundle.kits), 'bundle.kits debe ser un arreglo');
-  assert.equal(bundle.kits.length, 20, 'El arreglo kits debe tener 20 elementos');
+  assert.equal(bundle.kits.length, 26, 'El arreglo kits debe tener 26 elementos');
 
   bundle.kits.forEach((kit, idx) => {
     const expectedId = idx + 1;
@@ -51,8 +51,8 @@ test('2. kitGenerator.triggerAllKitsDownload retorna JSON serializado en entorno
   assert.equal(typeof rawStringNull, 'string', 'Debe retornar un string JSON al recibir null');
   const parsedNull = JSON.parse(rawStringNull);
   assert.equal(parsedNull.version, '2.1');
-  assert.equal(parsedNull.totalKits, 20);
-  assert.equal(parsedNull.kits.length, 20);
+  assert.equal(parsedNull.totalKits, 26);
+  assert.equal(parsedNull.kits.length, 26);
 
   const rawStringNoArgs = kitGen.triggerAllKitsDownload();
   assert.equal(typeof rawStringNoArgs, 'string', 'Debe retornar un string JSON sin argumentos');
@@ -110,7 +110,7 @@ test('3. kitGenerator.triggerAllKitsDownload simula la descarga reactiva y revoc
 
     assert.equal(result.downloaded, true, 'El resultado debe reportar downloaded = true');
     assert.equal(result.filename, 'todos_los_kits_semilla_antigravity.json', 'Nombre de archivo descargado incorrecto');
-    assert.equal(result.bundle.totalKits, 20, 'El bundle adjunto debe contener 20 kits');
+    assert.equal(result.bundle.totalKits, 26, 'El bundle adjunto debe contener 26 kits');
     assert.equal(createdTag, 'a', 'Debe crear un elemento de enlace virtual <a>');
     assert.equal(mockLink.download, 'todos_los_kits_semilla_antigravity.json', 'El atributo download del enlace debe ser el esperado');
     assert.equal(mockLink.href, createdUrl, 'El atributo href debe vincularse al URL del Blob');
@@ -600,8 +600,8 @@ test('13. studyTimer.initStudyTimerBar y startStudyTimer gestionan el ciclo de v
    6. promptBuilder.exerciseToPromptSpec
    ========================================================================== */
 
-test('14. promptBuilder.exerciseToPromptSpec transforma los 20 ejercicios y todos alcanzan 100 puntos («Profesional Asertivo»)', () => {
-  assert.equal(ALL_AG_EXERCISES.length, 20, 'Deben existir 20 ejercicios de Antigravity en el catálogo');
+test('14. promptBuilder.exerciseToPromptSpec transforma los 26 ejercicios y todos alcanzan 100 puntos («Profesional Asertivo»)', () => {
+  assert.equal(ALL_AG_EXERCISES.length, 26, 'Deben existir 26 ejercicios de Antigravity en el catálogo');
 
   ALL_AG_EXERCISES.forEach((ex) => {
     const spec = promptBuilder.exerciseToPromptSpec(ex);

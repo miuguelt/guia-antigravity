@@ -4,11 +4,25 @@
   "costoProblemaMensualCOP": 2500000,
   "inversionProyectoCOP": 5000000,
   "ahorroMensualEstimadoCOP": 2500000,
-  "mesesRecuperacionPayback": 2,
-  "roiMensualPct": 50,
   "entregables": [
-    "Estandarización de captura",
-    "Validador automático de cartera",
-    "Tablero gerencial"
-  ]
+    {
+      "fase": "Fase 1 — Captura",
+      "entregable": "Estandarización de captura de pedidos",
+      "mesEntrega": 2,
+      "pagoPct": 50
+    },
+    {
+      "fase": "Fase 1 — Captura",
+      "entregable": "Validador automático de cartera",
+      "mesEntrega": 2,
+      "pagoPct": 0
+    },
+    {
+      "fase": "Fase 2 — Control",
+      "entregable": "Tablero gerencial y acta de conformidad",
+      "mesEntrega": 4,
+      "pagoPct": 50
+    }
+  ],
+  "reglaPagos": "Cada pago se libera solo con acta de conformidad firmada al cierre de su fase"
 }

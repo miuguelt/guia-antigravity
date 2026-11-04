@@ -1,0 +1,3 @@
+Codigo_Amparo,Nombre_Amparo,Porcentaje_Exigido_Pct,Base_Calculo,Vigencia_Minima
+AMP-01,Cumplimiento General del Contrato,30,Valor del contrato,Fecha fin del contrato + 6 meses
+AMP-02,Pago de Salarios y Prestaciones Sociales,20,Valor del contrato,Fecha fin del contrato + 3 años

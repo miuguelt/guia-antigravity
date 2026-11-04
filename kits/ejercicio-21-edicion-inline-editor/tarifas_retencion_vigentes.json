@@ -1,0 +1,7 @@
+{
+  "moneda": "COP",
+  "ivaGeneralPct": 19,
+  "retefuenteComprasPct": 2.5,
+  "baseRetefuente": "La retención en la fuente se calcula sobre el subtotal antes de IVA",
+  "reglaRedondeo": "Redondear cada impuesto al peso más cercano"
+}

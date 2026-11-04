@@ -1,7 +1,7 @@
-SKU,Producto,Categoria_ABC,Stock_Actual,Venta_Diaria_Promedio,Venta_Diaria_Maxima,Tiempo_Entrega_Dias,Costo_Unitario_COP
-CAF-500,Cafe Especial Origen Santander 500g,A,68,10,14,5,28000
-CAF-250,Cafe Molido Tradicional 250g,A,95,12,15,4,15500
-FIL-100,Filtros Papel Biodegradable x100,B,120,8,12,4,9500
-EMP-500,Bolsa Valvula Desgasificadora x50,B,85,15,20,6,32000
-MOL-01,Molino Acero Inoxidable Manual,C,15,1,2,7,145000
-TER-02,Termo Barista Control Temperatura,C,22,2,3,5,85000
+SKU,Producto,Stock_Actual,Tiempo_Entrega_Dias,Costo_Unitario_COP
+CAF-500,Cafe Especial Origen Santander 500g,68,5,28000
+CAF-250,Cafe Molido Tradicional 250g,95,4,15500
+FIL-100,Filtros Papel Biodegradable x100,120,4,9500
+EMP-500,Bolsa Valvula Desgasificadora x50,85,6,32000
+MOL-01,Molino Acero Inoxidable Manual,15,7,145000
+TER-02,Termo Barista Control Temperatura,22,5,85000

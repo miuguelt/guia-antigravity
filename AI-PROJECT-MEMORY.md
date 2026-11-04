@@ -1,6 +1,6 @@
 # AI-PROJECT-MEMORY — Fuente Única de Verdad (SSoT) Multi-IDE (`guia-gemini-antigravity`)
 
-**Versión:** 2.1.0 · **Estado:** Activo y Sincronizado · **Estándar:** DevBrain v8.10 / SENA ADSO (228118)
+**Versión:** 2.2.0 · **Estado:** Activo y Sincronizado · **Estándar:** DevBrain v8.10 / SENA ADSO (228118)
 
 > **Instrucción para cualquier Inteligencia Artificial o IDE (Google Antigravity, Cursor, Windsurf, Claude Code, VS Code, OpenCode):**
 > Lee este archivo antes de proponer o ejecutar cualquier cambio en este repositorio. Su propósito es que tengas memoria inmediata de qué se ha construido, por qué existe cada archivo, cuáles son las reglas innegociables y hacia dónde evoluciona el proyecto sin causar regresiones.
@@ -11,10 +11,12 @@
 
 Este repositorio contiene el **Portal Educativo Oficial de Google Antigravity y Gemini Canvas** (`guia-gemini-antigravity`), diseñado para aprendices del SENA (Tecnólogo ADSO, Centro de Gestión Agroempresarial del Oriente - CGAO Subsede Vélez) y profesionales de cualquier disciplina.
 
-El portal enseña de forma progresiva cómo dirigir agentes de IA para construir soluciones reales de software y automatización mediante **40 ejercicios prácticos divididos en dos rutas**:
-1. **Ruta 1 · 20 Ejercicios Progresivos en Google Antigravity (`ruta-antigravity.html`):** Desde organización documental sin saber programar (Nivel 1), herramientas de negocio y `/browser` (Nivel 2), sistemas relacionales y `Skills` (Nivel 3), hasta orquestación multi-agente, conectores MCP, simulación de Monte Carlo y una Suite Operativa Integral ERP (Nivel 4). Cada ejercicio incluye:
-   - **Kit de Archivos Semilla descargable al instante** (`@archivos` reales listos para colocar en la carpeta de trabajo), tanto de forma individual como mediante el paquete consolidado (`todos_los_kits_semilla_antigravity.json`).
-   - **Simulador determinista del «Caso Testigo»** (evaluación matemática real en 4 estados: válido, inválido, vacío y reinicio).
+El portal enseña de forma progresiva cómo dirigir agentes de IA para construir soluciones reales de software y automatización mediante **46 ejercicios prácticos divididos en dos rutas**:
+1. **Ruta 1 · 26 Ejercicios Progresivos en Google Antigravity (`ruta-antigravity.html`):** Cubre las **12 capacidades oficiales de Google Antigravity** (Agent Manager, Editor View `Tab`/`Ctrl+I`, Artifacts, Terminal Sandbox, `/plan`, `/grill-me`, `/browser`, `/goal`, `/boost`, `/schedule`, `/compact`, `/learn`, `@menciones`, `GEMINI.md`, `Skills` y `MCP`). Incluye:
+   - **Guía de Inicio Rápido en 4 pasos** («Antes de empezar») para la preparación del entorno.
+   - **Kit de Archivos Semilla descargable al instante** (84 archivos físicos en `kits/ejercicio-01/` a `kits/ejercicio-26/`), tanto en `.zip` por ejercicio como mediante el paquete consolidado (`todos_los_kits_semilla_antigravity.json`).
+   - **Lista de Verificación del Artefacto** («Verifica lo que construyó el agente») y guía de recuperación («Si algo sale mal en Antigravity»).
+   - **Simulador determinista del «Caso Testigo»** (evaluación matemática real en 4 estados: válido, inválido, vacío y reinicio, sin botón de autocompletado automático para fomentar el cálculo activo).
    - **Botón de Tarea Conceptual** para iniciar el temporizador de estudio en paralelo.
    - **Copia de Evidencias Markdown** estructurada directamente para las estaciones `MG-A01` a `MG-A05` del Portafolio de Evidencias.
 2. **Ruta 2 · 20 Ejercicios Progresivos de Ingeniería en Gemini Canvas (`ruta-canvas.html`):** Ingeniería de prompts, OWASP, estadística IQR, pruebas A/B, Regex, Kanban con Ley de Little, algoritmos Big-O, resiliencia con Circuit Breaker, accesibilidad WCAG 2.1, Unit Economics SaaS, física 2D, síntesis de audio DSP, consenso distribuido Raft, compilador Mini-SQL y centro de comando LLM, con **Puente de Transferencia hacia Antigravity IDE**.
@@ -41,23 +43,25 @@ Todos los archivos propios de código en `css/` y `js/` cumplen estrictamente el
 ### 2.3 Módulos JavaScript (`js/` — Límite < 250 líneas por archivo)
 - **Capa de Datos (`js/data/`):**
   - `ag-exercises-n1-n2.js` (235 líneas): Ejercicios Antigravity 1 al 10 enriquecidos con Kits Semilla multi-archivo y parámetros de Caso Testigo.
-  - `ag-exercises-n3-n4.js` (232 líneas): Ejercicios Antigravity 11 al 20 enriquecidos con Kits Semilla multi-archivo y parámetros de Caso Testigo.
-  - `kits-n1.js`, `kits-n2.js`, `kits-n3.js`, `kits-n4.js`: Catálogo de 66 archivos semilla reales y diversos (`.html`, `.xml`, `.sql`, `.yaml`, `.json`, `.csv`, `.md`, `.log`, `.txt`) para los 20 ejercicios de Antigravity.
+  - `ag-exercises-n3-n4.js` (235 líneas): Ejercicios Antigravity 11 al 20 (concatena automáticamente `ag-exercises-n4-plus.js`).
+  - `ag-exercises-n4-plus.js` (134 líneas): Ejercicios Antigravity 21 al 26 (`Tab`/`Ctrl+I`, `/grill-me`, `Terminal Sandbox`, `/compact`+`/learn`, `/boost` y `/goal`).
+  - `kits-n1.js`, `kits-n2.js`, `kits-n3.js`, `kits-n4.js`, `kits-n5.js`: Catálogo de 84 archivos semilla reales y diversos (`.html`, `.xml`, `.sql`, `.yaml`, `.json`, `.csv`, `.md`, `.log`, `.txt`, `.js`) para los 26 ejercicios de Antigravity.
   - `canvas-exercises-n1-n2.js` (236 líneas): Ejercicios Canvas 1 al 10 con puentes de transferencia a Antigravity.
   - `canvas-exercises-n3-n4.js` (236 líneas): Ejercicios Canvas 11 al 20 con puentes de transferencia a Antigravity.
-  - `antigravity-tools-map.js` (116 líneas): Catálogo estructurado de las 12 herramientas, atajos y comandos slash de Antigravity.
+  - `antigravity-tools-map.js` (129 líneas): Catálogo estructurado de las 12 herramientas, atajos, comandos slash y enlaces `practicedIn` hacia los ejercicios donde se practican.
 - **Capa de Dominio / Motores Puros (`js/core/` — 100 % cubiertos por pruebas unitarias):**
-  - `store.js` (248 líneas): Persistencia en `localStorage` del progreso (40 ejercicios), preferencia de tema visual, resultados de Casos Testigo verificados y exportación/importación JSON.
-  - `simulator-engine.js` (141 líneas): Motor matemático determinista que evalúa los Casos Testigo de los 20 ejercicios de Antigravity en sus 4 estados obligatorios (`valido`, `invalido`, `vacio`, `reset`).
+  - `store.js` (228 líneas): Persistencia en `localStorage` del progreso (46 ejercicios), lista de verificación (`agChecklist`), preferencia de tema visual, resultados de Casos Testigo verificados y exportación/importación JSON.
+  - `simulator-engine.js` (212 líneas): Motor matemático determinista que evalúa los Casos Testigo de los 26 ejercicios de Antigravity en sus 4 estados obligatorios (`valido`, `invalido`, `vacio`, `reset`).
   - `zip-builder.js` (141 líneas): Micro-generador determinista de archivos PKZIP (`.zip`) con CRC-32 y soporte UTF-8 sin dependencias externas.
-  - `kit-generator.js` (171 líneas): Orquestador de descarga individual por archivo, descarga de Kit Completo (`.zip`) por ejercicio, pack maestro de 20 kits y generador de bloque de evidencia (`buildEvidenceSnippet`).
+  - `kit-generator.js` (235 líneas): Orquestador de descarga individual por archivo, descarga de Kit Completo (`.zip`) por ejercicio, pack maestro de 26 kits y generador de bloque de evidencia (`buildEvidenceSnippet`).
   - `prompt-builder.js` (200 líneas): Evaluador de calidad (0 a 100), transformador universal de ejercicios a especificaciones de prompt (`exerciseToPromptSpec` con 100 pts garantizados) y ensamblador de prompts estructurados, plantillas `GEMINI.md` y `SKILL.md`.
 - **Capa de Interfaz (`js/ui/`):**
   - `nav-theme.js` (135 líneas): Barra de navegación compartida, conmutador de tema Claro/Oscuro, atajos globales y notificaciones Toast.
   - `study-timer.js` (136 líneas): Máquina de estados determinista pura (`createTimerState`, `tickTimer`, `formatTime`, `resetTimer`), gestor de atajos de teclado accesibles (`Alt+T`, `Alt+P`, `Alt+Flechas`, `/`, `Ctrl+K`) y controlador DOM de la barra interactiva `#study-timer-bar`.
-  - `ui-enhancements.js` (210 líneas): Diálogos modales accesibles, vista previa rápida in-situ de los 66 archivos del kit, modal de importación de progreso JSON con validación en vivo, guía de atajos de teclado (`F1` / `?`) y feedback háptico/visual en botones (`flashCopiedButton`).
-  - `render-dashboard.js` (140 líneas): Renderizador del Hub Principal (`index.html`) con respaldo e importación de progreso JSON y catálogo de herramientas (`manual-antigravity.html`).
-  - `render-antigravity.js` (249 líneas): Renderizador interactivo de `ruta-antigravity.html` (filtros, pasos, prompts copiables con feedback localizado, botones de inspección rápida "Ver", descarga ZIP y pulso de éxito en Caso Testigo).
+  - `ui-enhancements.js` (210 líneas): Diálogos modales accesibles, vista previa rápida in-situ de los 84 archivos del kit, modal de importación de progreso JSON con validación en vivo, guía de atajos de teclado (`F1` / `?`) y feedback háptico/visual en botones (`flashCopiedButton`).
+  - `render-dashboard.js` (145 líneas): Renderizador del Hub Principal (`index.html`) con respaldo e importación de progreso JSON y catálogo de herramientas (`manual-antigravity.html`) con enlaces directos a los ejercicios prácticos.
+  - `render-ag-tabs.js` (115 líneas): Constructor de navegación por pestañas ARIA (`role="tablist"`, `role="tab"`, `aria-selected`), lista de verificación del artefacto (`getArtifactChecklist`) y guía de solución de problemas (`getTroubleshootingTips`).
+  - `render-antigravity.js` (216 líneas): Renderizador interactivo de `ruta-antigravity.html` (filtros, pestañas accesibles por teclado, prompts copiables, descarga ZIP y validador de Caso Testigo).
   - `render-canvas.js` (232 líneas): Renderizador interactivo de `ruta-canvas.html` y controlador del constructor en `laboratorio-prompts.html`.
 - **Artefactos Generados y Vendor (`js/`):**
   - `js/registro-entregables.js` (366 líneas): Generado automáticamente por `Publish-GuideEvidenceRegistry.ps1` a partir de `deliverables.registry.json` para que las estaciones funcionen con `file://`.

@@ -1,4 +1,4 @@
-/* Script determinista para materializar los 20 Kits de Archivos Semilla en la carpeta física kits/ */
+/* Script determinista para materializar los 26 Kits de Archivos Semilla en la carpeta física kits/ */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,7 +15,7 @@ fs.mkdirSync(kitsRoot, { recursive: true });
 
 let totalFiles = 0;
 const indexLines = [
-  '# Catálogo Físico de Kits de Archivos Semilla (Ejercicios 01 al 20)',
+  '# Catálogo Físico de Kits de Archivos Semilla (Ejercicios 01 al 26)',
   '',
   '> **Aviso sobre materiales de práctica:** Todos los documentos, facturas, contratos, esquemas SQL y registros contenidos en estas carpetas fueron preparados con fines exclusivamente pedagógicos para aprender Google Antigravity y no contienen datos personales ni empresariales reales.',
   '',
@@ -23,7 +23,7 @@ const indexLines = [
   '| :--- | :--- | :--- | :--- |'
 ];
 
-for (let id = 1; id <= 20; id++) {
+for (let id = 1; id <= 26; id++) {
   const meta = kitGen.getKitMetadata(id);
   const files = kitGen.getKitFiles(id);
   const folderPath = path.join(kitsRoot, meta.folderName);
@@ -41,4 +41,4 @@ for (let id = 1; id <= 20; id++) {
 }
 
 fs.writeFileSync(path.join(kitsRoot, 'README.md'), indexLines.join('\n') + '\n', 'utf8');
-console.log(`Exportados 20 kits en ${kitsRoot} (${totalFiles} archivos físicos listos).`);
+console.log(`Exportados 26 kits en ${kitsRoot} (${totalFiles} archivos físicos listos).`);

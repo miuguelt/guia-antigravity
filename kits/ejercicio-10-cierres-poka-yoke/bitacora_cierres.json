@@ -1,12 +1,16 @@
 {
-  "semanaActual": "2026-W44",
-  "idempotencyKey": "CIERRE-2026-W44-SIA",
-  "controlCuadre": {
-    "ventasRegistradasCOP": 12500000,
-    "ingresosBancosCOP": 9000000,
-    "cuentasPorCobrarCOP": 3500000,
-    "diferenciaCOP": 0
-  },
+  "semanasPorCerrar": [
+    {
+      "semana": "2026-W44",
+      "idempotencyKey": "CIERRE-2026-W44-SIA",
+      "ventasRegistradasCOP": 12500000
+    },
+    {
+      "semana": "2026-W45",
+      "idempotencyKey": "CIERRE-2026-W45-SIA",
+      "ventasRegistradasCOP": 13000000
+    }
+  ],
   "historicoSemanas": [
     {
       "semana": "2026-W41",

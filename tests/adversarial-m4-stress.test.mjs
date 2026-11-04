@@ -124,10 +124,10 @@ test('M4-ADV-04: Fuzzing masivo de parseFlexibleNumber (10.000 iteraciones aleat
    SUITE 2: Verificación Empírica de los 4 Estados Deterministas (20 Ejercicios)
    ========================================================================== */
 
-test('M4-ADV-05: Estado Válido en los 20 ejercicios y ausencia estricta de "dossier"', () => {
-  assert.equal(ALL_AG_EXERCISES.length, 20, 'Deben existir 20 ejercicios Antigravity');
+test('M4-ADV-05: Estado Válido en los 26 ejercicios y ausencia estricta de "dossier"', () => {
+  assert.equal(ALL_AG_EXERCISES.length, 26, 'Deben existir 26 ejercicios Antigravity');
 
-  for (let id = 1; id <= 20; id++) {
+  for (let id = 1; id <= 26; id++) {
     const spec = simulator.getWitnessSpec(id);
     assert.ok(spec, `Spec debe existir para ejercicio ${id}`);
 
@@ -269,7 +269,7 @@ test('M4-ADV-09: Estado Reset determinista y síncrono en los 20 ejercicios', ()
    ========================================================================== */
 
 test('M4-ADV-10: getWitnessSpec maneja IDs fuera de rango con fallback seguro', () => {
-  const edgeIds = [0, -1, 21, 999, 'abc', null, undefined, NaN, {}, []];
+  const edgeIds = [0, -1, 27, 999, 'abc', null, undefined, NaN, {}, []];
 
   for (const edgeId of edgeIds) {
     let spec = null;
@@ -410,8 +410,8 @@ test('M4-ADV-15: simulator-engine.js cumple estrictamente presupuesto modular (<
   );
 });
 
-test('M4-ADV-16: Sincronización exacta entre testCase de los 20 ejercicios y WITNESS_SPECS', () => {
-  for (let i = 0; i < 20; i++) {
+test('M4-ADV-16: Sincronización exacta entre testCase de los 26 ejercicios y WITNESS_SPECS', () => {
+  for (let i = 0; i < 26; i++) {
     const ex = ALL_AG_EXERCISES[i];
     const id = i + 1;
     assert.equal(ex.id, id, `Ejercicio en índice ${i} debe tener id ${id}`);

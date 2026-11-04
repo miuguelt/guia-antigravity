@@ -1,15 +1,10 @@
 {
   "evaluacion": "Criterio Operativo y Servicio al Cliente",
-  "resultadosCasoTestigo": [
-    100,
-    100,
-    100,
-    60
-  ],
-  "promedioEsperado": 90,
+  "umbralCertificacion": 80,
   "escenarios": [
     {
       "id": "ESC-01",
+      "nivelBloom": "Aplicar",
       "titulo": "Cliente corporativo reclama lote húmedo",
       "optima100": "Activar garantía inmediata con lote de respaldo y auditar transporte",
       "aceptable60": "Pedir fotos y esperar 48h al comité de calidad",
@@ -17,6 +12,7 @@
     },
     {
       "id": "ESC-02",
+      "nivelBloom": "Analizar",
       "titulo": "Caída temporal de facturación electrónica DIAN",
       "optima100": "Activar contingencia numerada y sincronizar XML al restablecer",
       "aceptable60": "Detener despachos hasta que vuelva el portal",
@@ -24,6 +20,7 @@
     },
     {
       "id": "ESC-03",
+      "nivelBloom": "Evaluar",
       "titulo": "Solicitud de descuento que rompe margen mínimo",
       "optima100": "Mantener margen ofreciendo valor agregado o ajuste de volumen",
       "aceptable60": "Escalar a gerencia retrasando la oferta 2 días",
@@ -31,6 +28,7 @@
     },
     {
       "id": "ESC-04",
+      "nivelBloom": "Analizar",
       "titulo": "Diferencia de inventario en conteo cíclico",
       "optima100": "Cruzar kárdex de remisiones antes de ajustar",
       "aceptable60": "Programar reconteo general el fin de semana",

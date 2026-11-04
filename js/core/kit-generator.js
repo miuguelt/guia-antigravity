@@ -1,4 +1,4 @@
-/* Orquestador puro de Kits de Archivos Semilla multi-formato y empaquetador ZIP (Ejercicios 1 al 20) */
+/* Orquestador puro de Kits de Archivos Semilla multi-formato y empaquetador ZIP (Ejercicios 1 al 26) */
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) {
     const z = require('./zip-builder.js');
@@ -6,18 +6,20 @@
     const k2 = require('../data/kits-n2.js');
     const k3 = require('../data/kits-n3.js');
     const k4 = require('../data/kits-n4.js');
-    module.exports = factory(z, k1.KITS_N1, k2.KITS_N2, k3.KITS_N3, k4.KITS_N4);
+    const k5 = require('../data/kits-n5.js');
+    module.exports = factory(z, k1.KITS_N1, k2.KITS_N2, k3.KITS_N3, k4.KITS_N4, k5.KITS_N5);
   } else {
     root.AGPortal = root.AGPortal || {};
     Object.assign(
       root.AGPortal,
-      factory(root.AGPortal, root.AGPortal.KITS_N1, root.AGPortal.KITS_N2, root.AGPortal.KITS_N3, root.AGPortal.KITS_N4)
+      factory(root.AGPortal, root.AGPortal.KITS_N1, root.AGPortal.KITS_N2, root.AGPortal.KITS_N3, root.AGPortal.KITS_N4, root.AGPortal.KITS_N5)
     );
   }
-})(typeof globalThis !== 'undefined' ? globalThis : this, function (zipLib, n1, n2, n3, n4) {
+})(typeof globalThis !== 'undefined' ? globalThis : this, function (zipLib, n1, n2, n3, n4, n5) {
   'use strict';
 
-  const KIT_CATALOG = Object.assign({}, n1 || {}, n2 || {}, n3 || {}, n4 || {});
+  const KIT_CATALOG = Object.assign({}, n1 || {}, n2 || {}, n3 || {}, n4 || {}, n5 || {});
+  const TOTAL_KITS = 26;
 
   function resolveEntry(exerciseId) {
     const id = Number(exerciseId);
@@ -101,7 +103,7 @@
 
   function buildAllKitsBundle() {
     const list = [];
-    for (let id = 1; id <= 20; id++) {
+    for (let id = 1; id <= TOTAL_KITS; id++) {
       const kit = buildKitContent(id, 0);
       list.push({
         exerciseId: id,
@@ -115,7 +117,7 @@
     }
     return {
       version: '2.1',
-      totalKits: 20,
+      totalKits: TOTAL_KITS,
       generatedAt: new Date().toISOString(),
       kits: list
     };
@@ -184,12 +186,18 @@
     17: { id: 'MG-A04', title: 'Orquestación y MCP (Nivel 4)' },
     18: { id: 'MG-A04', title: 'Orquestación y MCP (Nivel 4)' },
     19: { id: 'MG-A04', title: 'Orquestación y MCP (Nivel 4)' },
-    20: { id: 'MG-A05', title: 'Proyecto Cumbre ERP y Cierre (Nivel 4)' }
+    20: { id: 'MG-A05', title: 'Proyecto Cumbre ERP y Cierre (Nivel 4)' },
+    21: { id: 'MG-A01', title: 'Fundamentos de Antigravity (Nivel 1)' },
+    22: { id: 'MG-A02', title: 'Herramientas de Negocio (Nivel 2)' },
+    23: { id: 'MG-A02', title: 'Herramientas de Negocio (Nivel 2)' },
+    24: { id: 'MG-A03', title: 'Sistemas Relacionales y Skills (Nivel 3)' },
+    25: { id: 'MG-A04', title: 'Orquestación y MCP (Nivel 4)' },
+    26: { id: 'MG-A05', title: 'Proyecto Cumbre ERP y Cierre (Nivel 4)' }
   };
 
   function buildEvidenceSnippet(exerciseId, evalResult) {
     const rawId = Number(exerciseId);
-    const validId = (rawId >= 1 && rawId <= 20) ? rawId : 1;
+    const validId = (Number.isInteger(rawId) && rawId >= 1 && rawId <= TOTAL_KITS) ? rawId : 1;
     const meta = getKitMetadata(validId);
     const st = STATIONS[validId] || STATIONS[1];
     const fileNames = meta.files.map(function (f) { return '@' + f.filename; }).join(', ');

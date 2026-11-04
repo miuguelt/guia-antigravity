@@ -1,5 +1,362 @@
 ID_Inscripcion,Asistente,Empresa,ID_Salon,Tipo_Entrada,Valor_Pagado_COP,Estado
-INS-001,Valeria Montoya,TecnoAndes,SALON-B,VIP,300000,Confirmado
-INS-002,Santiago Mejía,AgroSantander,SALON-B,General,150000,Confirmado
-INS-003,Paula Castellanos,Clínica Oriental,SALON-A,General,150000,Confirmado
-INS-004,Andrés Villamizar,Consultores S.A.S.,SALON-B,VIP,300000,Confirmado
+INS-001,Santiago Villamizar,AgroSantander,SALON-A,General,150000,Confirmado
+INS-002,Paula Ardila,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-003,Andrés Quintero,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-004,Camila Castellanos,Café Vélez,SALON-A,General,150000,Confirmado
+INS-005,Mateo Pinzón,Logística del Fonce,SALON-A,VIP,300000,Confirmado
+INS-006,Laura Gélvez,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-007,Julián Mejía,AgroSantander,SALON-A,General,150000,Confirmado
+INS-008,Sofía Rueda,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-009,Diego Serrano,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-010,Daniela Montoya,Café Vélez,SALON-A,VIP,300000,Confirmado
+INS-011,Felipe Villamizar,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-012,Valeria Ardila,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-013,Santiago Quintero,AgroSantander,SALON-A,General,150000,Confirmado
+INS-014,Paula Castellanos,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-015,Andrés Pinzón,Consultores Guanentá,SALON-A,VIP,300000,Confirmado
+INS-016,Camila Gélvez,Café Vélez,SALON-A,General,150000,Confirmado
+INS-017,Mateo Mejía,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-018,Laura Rueda,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-019,Julián Serrano,AgroSantander,SALON-A,General,150000,Confirmado
+INS-020,Sofía Montoya,Clínica Oriental,SALON-A,VIP,300000,Confirmado
+INS-021,Diego Villamizar,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-022,Daniela Ardila,Café Vélez,SALON-A,General,150000,Confirmado
+INS-023,Felipe Quintero,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-024,Valeria Castellanos,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-025,Santiago Pinzón,AgroSantander,SALON-A,VIP,300000,Confirmado
+INS-026,Paula Gélvez,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-027,Andrés Mejía,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-028,Camila Rueda,Café Vélez,SALON-A,General,150000,Confirmado
+INS-029,Mateo Serrano,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-030,Laura Montoya,TecnoAndes,SALON-A,VIP,300000,Confirmado
+INS-031,Julián Villamizar,AgroSantander,SALON-A,General,150000,Confirmado
+INS-032,Sofía Ardila,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-033,Diego Quintero,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-034,Daniela Castellanos,Café Vélez,SALON-A,General,150000,Confirmado
+INS-035,Felipe Pinzón,Logística del Fonce,SALON-A,VIP,300000,Confirmado
+INS-036,Valeria Gélvez,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-037,Santiago Mejía,AgroSantander,SALON-A,General,150000,Confirmado
+INS-038,Paula Rueda,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-039,Andrés Serrano,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-040,Camila Montoya,Café Vélez,SALON-A,VIP,300000,Confirmado
+INS-041,Mateo Villamizar,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-042,Laura Ardila,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-043,Julián Quintero,AgroSantander,SALON-A,General,150000,Confirmado
+INS-044,Sofía Castellanos,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-045,Diego Pinzón,Consultores Guanentá,SALON-A,VIP,300000,Confirmado
+INS-046,Daniela Gélvez,Café Vélez,SALON-A,General,150000,Confirmado
+INS-047,Felipe Mejía,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-048,Valeria Rueda,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-049,Santiago Serrano,AgroSantander,SALON-A,General,150000,Confirmado
+INS-050,Paula Montoya,Clínica Oriental,SALON-A,VIP,300000,Confirmado
+INS-051,Andrés Villamizar,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-052,Camila Ardila,Café Vélez,SALON-A,General,150000,Confirmado
+INS-053,Mateo Quintero,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-054,Laura Castellanos,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-055,Julián Pinzón,AgroSantander,SALON-A,VIP,300000,Confirmado
+INS-056,Sofía Gélvez,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-057,Diego Mejía,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-058,Daniela Rueda,Café Vélez,SALON-A,General,150000,Confirmado
+INS-059,Felipe Serrano,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-060,Valeria Montoya,TecnoAndes,SALON-A,VIP,300000,Confirmado
+INS-061,Santiago Villamizar,AgroSantander,SALON-A,General,150000,Confirmado
+INS-062,Paula Ardila,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-063,Andrés Quintero,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-064,Camila Castellanos,Café Vélez,SALON-A,General,150000,Confirmado
+INS-065,Mateo Pinzón,Logística del Fonce,SALON-A,VIP,300000,Confirmado
+INS-066,Laura Gélvez,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-067,Julián Mejía,AgroSantander,SALON-A,General,150000,Confirmado
+INS-068,Sofía Rueda,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-069,Diego Serrano,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-070,Daniela Montoya,Café Vélez,SALON-A,VIP,300000,Confirmado
+INS-071,Felipe Villamizar,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-072,Valeria Ardila,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-073,Santiago Quintero,AgroSantander,SALON-A,General,150000,Confirmado
+INS-074,Paula Castellanos,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-075,Andrés Pinzón,Consultores Guanentá,SALON-A,VIP,300000,Confirmado
+INS-076,Camila Gélvez,Café Vélez,SALON-A,General,150000,Confirmado
+INS-077,Mateo Mejía,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-078,Laura Rueda,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-079,Julián Serrano,AgroSantander,SALON-A,General,150000,Confirmado
+INS-080,Sofía Montoya,Clínica Oriental,SALON-A,VIP,300000,Confirmado
+INS-081,Diego Villamizar,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-082,Daniela Ardila,Café Vélez,SALON-A,General,150000,Confirmado
+INS-083,Felipe Quintero,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-084,Valeria Castellanos,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-085,Santiago Pinzón,AgroSantander,SALON-A,VIP,300000,Confirmado
+INS-086,Paula Gélvez,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-087,Andrés Mejía,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-088,Camila Rueda,Café Vélez,SALON-A,General,150000,Confirmado
+INS-089,Mateo Serrano,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-090,Laura Montoya,TecnoAndes,SALON-A,VIP,300000,Confirmado
+INS-091,Julián Villamizar,AgroSantander,SALON-A,General,150000,Confirmado
+INS-092,Sofía Ardila,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-093,Diego Quintero,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-094,Daniela Castellanos,Café Vélez,SALON-A,General,150000,Confirmado
+INS-095,Felipe Pinzón,Logística del Fonce,SALON-A,VIP,300000,Confirmado
+INS-096,Valeria Gélvez,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-097,Santiago Mejía,AgroSantander,SALON-A,General,150000,Confirmado
+INS-098,Paula Rueda,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-099,Andrés Serrano,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-100,Camila Montoya,Café Vélez,SALON-A,VIP,300000,Confirmado
+INS-101,Mateo Villamizar,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-102,Laura Ardila,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-103,Julián Quintero,AgroSantander,SALON-A,General,150000,Confirmado
+INS-104,Sofía Castellanos,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-105,Diego Pinzón,Consultores Guanentá,SALON-A,VIP,300000,Confirmado
+INS-106,Daniela Gélvez,Café Vélez,SALON-A,General,150000,Confirmado
+INS-107,Felipe Mejía,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-108,Valeria Rueda,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-109,Santiago Serrano,AgroSantander,SALON-A,General,150000,Confirmado
+INS-110,Paula Montoya,Clínica Oriental,SALON-A,VIP,300000,Confirmado
+INS-111,Andrés Villamizar,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-112,Camila Ardila,Café Vélez,SALON-A,General,150000,Confirmado
+INS-113,Mateo Quintero,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-114,Laura Castellanos,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-115,Julián Pinzón,AgroSantander,SALON-A,VIP,300000,Confirmado
+INS-116,Sofía Gélvez,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-117,Diego Mejía,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-118,Daniela Rueda,Café Vélez,SALON-A,General,150000,Confirmado
+INS-119,Felipe Serrano,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-120,Valeria Montoya,TecnoAndes,SALON-A,VIP,300000,Confirmado
+INS-121,Santiago Villamizar,AgroSantander,SALON-A,General,150000,Confirmado
+INS-122,Paula Ardila,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-123,Andrés Quintero,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-124,Camila Castellanos,Café Vélez,SALON-A,General,150000,Confirmado
+INS-125,Mateo Pinzón,Logística del Fonce,SALON-A,VIP,300000,Confirmado
+INS-126,Laura Gélvez,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-127,Julián Mejía,AgroSantander,SALON-A,General,150000,Confirmado
+INS-128,Sofía Rueda,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-129,Diego Serrano,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-130,Daniela Montoya,Café Vélez,SALON-A,VIP,300000,Confirmado
+INS-131,Felipe Villamizar,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-132,Valeria Ardila,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-133,Santiago Quintero,AgroSantander,SALON-A,General,150000,Confirmado
+INS-134,Paula Castellanos,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-135,Andrés Pinzón,Consultores Guanentá,SALON-A,VIP,300000,Confirmado
+INS-136,Camila Gélvez,Café Vélez,SALON-A,General,150000,Confirmado
+INS-137,Mateo Mejía,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-138,Laura Rueda,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-139,Julián Serrano,AgroSantander,SALON-A,General,150000,Confirmado
+INS-140,Sofía Montoya,Clínica Oriental,SALON-A,VIP,300000,Confirmado
+INS-141,Diego Villamizar,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-142,Daniela Ardila,Café Vélez,SALON-A,General,150000,Confirmado
+INS-143,Felipe Quintero,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-144,Valeria Castellanos,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-145,Santiago Pinzón,AgroSantander,SALON-A,VIP,300000,Confirmado
+INS-146,Paula Gélvez,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-147,Andrés Mejía,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-148,Camila Rueda,Café Vélez,SALON-A,General,150000,Confirmado
+INS-149,Mateo Serrano,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-150,Laura Montoya,TecnoAndes,SALON-A,VIP,300000,Confirmado
+INS-151,Julián Villamizar,AgroSantander,SALON-A,General,150000,Confirmado
+INS-152,Sofía Ardila,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-153,Diego Quintero,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-154,Daniela Castellanos,Café Vélez,SALON-A,General,150000,Confirmado
+INS-155,Felipe Pinzón,Logística del Fonce,SALON-A,VIP,300000,Confirmado
+INS-156,Valeria Gélvez,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-157,Santiago Mejía,AgroSantander,SALON-A,General,150000,Confirmado
+INS-158,Paula Rueda,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-159,Andrés Serrano,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-160,Camila Montoya,Café Vélez,SALON-A,VIP,300000,Confirmado
+INS-161,Mateo Villamizar,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-162,Laura Ardila,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-163,Julián Quintero,AgroSantander,SALON-A,General,150000,Confirmado
+INS-164,Sofía Castellanos,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-165,Diego Pinzón,Consultores Guanentá,SALON-A,VIP,300000,Confirmado
+INS-166,Daniela Gélvez,Café Vélez,SALON-A,General,150000,Confirmado
+INS-167,Felipe Mejía,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-168,Valeria Rueda,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-169,Santiago Serrano,AgroSantander,SALON-A,General,150000,Confirmado
+INS-170,Paula Montoya,Clínica Oriental,SALON-A,VIP,300000,Confirmado
+INS-171,Andrés Villamizar,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-172,Camila Ardila,Café Vélez,SALON-A,General,150000,Confirmado
+INS-173,Mateo Quintero,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-174,Laura Castellanos,TecnoAndes,SALON-A,General,150000,Confirmado
+INS-175,Julián Pinzón,AgroSantander,SALON-A,VIP,300000,Confirmado
+INS-176,Sofía Gélvez,Clínica Oriental,SALON-A,General,150000,Confirmado
+INS-177,Diego Mejía,Consultores Guanentá,SALON-A,General,150000,Confirmado
+INS-178,Daniela Rueda,Café Vélez,SALON-A,General,150000,Confirmado
+INS-179,Felipe Serrano,Logística del Fonce,SALON-A,General,150000,Confirmado
+INS-180,Valeria Montoya,TecnoAndes,SALON-A,VIP,300000,Confirmado
+INS-181,Santiago Villamizar,AgroSantander,SALON-A,General,0,Cancelado
+INS-182,Paula Ardila,Clínica Oriental,SALON-A,General,0,Cancelado
+INS-183,Andrés Quintero,Consultores Guanentá,SALON-A,General,0,Cancelado
+INS-184,Camila Castellanos,Café Vélez,SALON-B,General,150000,Confirmado
+INS-185,Mateo Pinzón,Logística del Fonce,SALON-B,VIP,300000,Confirmado
+INS-186,Laura Gélvez,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-187,Julián Mejía,AgroSantander,SALON-B,General,150000,Confirmado
+INS-188,Sofía Rueda,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-189,Diego Serrano,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-190,Daniela Montoya,Café Vélez,SALON-B,VIP,300000,Confirmado
+INS-191,Felipe Villamizar,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-192,Valeria Ardila,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-193,Santiago Quintero,AgroSantander,SALON-B,General,150000,Confirmado
+INS-194,Paula Castellanos,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-195,Andrés Pinzón,Consultores Guanentá,SALON-B,VIP,300000,Confirmado
+INS-196,Camila Gélvez,Café Vélez,SALON-B,General,150000,Confirmado
+INS-197,Mateo Mejía,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-198,Laura Rueda,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-199,Julián Serrano,AgroSantander,SALON-B,General,150000,Confirmado
+INS-200,Sofía Montoya,Clínica Oriental,SALON-B,VIP,300000,Confirmado
+INS-201,Diego Villamizar,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-202,Daniela Ardila,Café Vélez,SALON-B,General,150000,Confirmado
+INS-203,Felipe Quintero,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-204,Valeria Castellanos,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-205,Santiago Pinzón,AgroSantander,SALON-B,VIP,300000,Confirmado
+INS-206,Paula Gélvez,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-207,Andrés Mejía,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-208,Camila Rueda,Café Vélez,SALON-B,General,150000,Confirmado
+INS-209,Mateo Serrano,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-210,Laura Montoya,TecnoAndes,SALON-B,VIP,300000,Confirmado
+INS-211,Julián Villamizar,AgroSantander,SALON-B,General,150000,Confirmado
+INS-212,Sofía Ardila,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-213,Diego Quintero,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-214,Daniela Castellanos,Café Vélez,SALON-B,General,150000,Confirmado
+INS-215,Felipe Pinzón,Logística del Fonce,SALON-B,VIP,300000,Confirmado
+INS-216,Valeria Gélvez,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-217,Santiago Mejía,AgroSantander,SALON-B,General,150000,Confirmado
+INS-218,Paula Rueda,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-219,Andrés Serrano,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-220,Camila Montoya,Café Vélez,SALON-B,VIP,300000,Confirmado
+INS-221,Mateo Villamizar,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-222,Laura Ardila,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-223,Julián Quintero,AgroSantander,SALON-B,General,150000,Confirmado
+INS-224,Sofía Castellanos,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-225,Diego Pinzón,Consultores Guanentá,SALON-B,VIP,300000,Confirmado
+INS-226,Daniela Gélvez,Café Vélez,SALON-B,General,150000,Confirmado
+INS-227,Felipe Mejía,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-228,Valeria Rueda,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-229,Santiago Serrano,AgroSantander,SALON-B,General,150000,Confirmado
+INS-230,Paula Montoya,Clínica Oriental,SALON-B,VIP,300000,Confirmado
+INS-231,Andrés Villamizar,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-232,Camila Ardila,Café Vélez,SALON-B,General,150000,Confirmado
+INS-233,Mateo Quintero,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-234,Laura Castellanos,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-235,Julián Pinzón,AgroSantander,SALON-B,VIP,300000,Confirmado
+INS-236,Sofía Gélvez,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-237,Diego Mejía,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-238,Daniela Rueda,Café Vélez,SALON-B,General,150000,Confirmado
+INS-239,Felipe Serrano,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-240,Valeria Montoya,TecnoAndes,SALON-B,VIP,300000,Confirmado
+INS-241,Santiago Villamizar,AgroSantander,SALON-B,General,150000,Confirmado
+INS-242,Paula Ardila,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-243,Andrés Quintero,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-244,Camila Castellanos,Café Vélez,SALON-B,General,150000,Confirmado
+INS-245,Mateo Pinzón,Logística del Fonce,SALON-B,VIP,300000,Confirmado
+INS-246,Laura Gélvez,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-247,Julián Mejía,AgroSantander,SALON-B,General,150000,Confirmado
+INS-248,Sofía Rueda,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-249,Diego Serrano,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-250,Daniela Montoya,Café Vélez,SALON-B,VIP,300000,Confirmado
+INS-251,Felipe Villamizar,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-252,Valeria Ardila,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-253,Santiago Quintero,AgroSantander,SALON-B,General,150000,Confirmado
+INS-254,Paula Castellanos,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-255,Andrés Pinzón,Consultores Guanentá,SALON-B,VIP,300000,Confirmado
+INS-256,Camila Gélvez,Café Vélez,SALON-B,General,150000,Confirmado
+INS-257,Mateo Mejía,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-258,Laura Rueda,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-259,Julián Serrano,AgroSantander,SALON-B,General,150000,Confirmado
+INS-260,Sofía Montoya,Clínica Oriental,SALON-B,VIP,300000,Confirmado
+INS-261,Diego Villamizar,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-262,Daniela Ardila,Café Vélez,SALON-B,General,150000,Confirmado
+INS-263,Felipe Quintero,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-264,Valeria Castellanos,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-265,Santiago Pinzón,AgroSantander,SALON-B,VIP,300000,Confirmado
+INS-266,Paula Gélvez,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-267,Andrés Mejía,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-268,Camila Rueda,Café Vélez,SALON-B,General,150000,Confirmado
+INS-269,Mateo Serrano,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-270,Laura Montoya,TecnoAndes,SALON-B,VIP,300000,Confirmado
+INS-271,Julián Villamizar,AgroSantander,SALON-B,General,150000,Confirmado
+INS-272,Sofía Ardila,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-273,Diego Quintero,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-274,Daniela Castellanos,Café Vélez,SALON-B,General,150000,Confirmado
+INS-275,Felipe Pinzón,Logística del Fonce,SALON-B,VIP,300000,Confirmado
+INS-276,Valeria Gélvez,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-277,Santiago Mejía,AgroSantander,SALON-B,General,150000,Confirmado
+INS-278,Paula Rueda,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-279,Andrés Serrano,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-280,Camila Montoya,Café Vélez,SALON-B,VIP,300000,Confirmado
+INS-281,Mateo Villamizar,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-282,Laura Ardila,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-283,Julián Quintero,AgroSantander,SALON-B,General,150000,Confirmado
+INS-284,Sofía Castellanos,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-285,Diego Pinzón,Consultores Guanentá,SALON-B,VIP,300000,Confirmado
+INS-286,Daniela Gélvez,Café Vélez,SALON-B,General,150000,Confirmado
+INS-287,Felipe Mejía,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-288,Valeria Rueda,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-289,Santiago Serrano,AgroSantander,SALON-B,General,150000,Confirmado
+INS-290,Paula Montoya,Clínica Oriental,SALON-B,VIP,300000,Confirmado
+INS-291,Andrés Villamizar,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-292,Camila Ardila,Café Vélez,SALON-B,General,150000,Confirmado
+INS-293,Mateo Quintero,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-294,Laura Castellanos,TecnoAndes,SALON-B,General,150000,Confirmado
+INS-295,Julián Pinzón,AgroSantander,SALON-B,VIP,300000,Confirmado
+INS-296,Sofía Gélvez,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-297,Diego Mejía,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-298,Daniela Rueda,Café Vélez,SALON-B,General,150000,Confirmado
+INS-299,Felipe Serrano,Logística del Fonce,SALON-B,General,150000,Confirmado
+INS-300,Valeria Montoya,TecnoAndes,SALON-B,VIP,300000,Confirmado
+INS-301,Santiago Villamizar,AgroSantander,SALON-B,General,150000,Confirmado
+INS-302,Paula Ardila,Clínica Oriental,SALON-B,General,150000,Confirmado
+INS-303,Andrés Quintero,Consultores Guanentá,SALON-B,General,150000,Confirmado
+INS-304,Camila Castellanos,Café Vélez,SALON-B,General,0,Cancelado
+INS-305,Mateo Pinzón,Logística del Fonce,SALON-B,VIP,0,Cancelado
+INS-306,Laura Gélvez,TecnoAndes,SALON-B,General,0,Cancelado
+INS-307,Julián Mejía,AgroSantander,SALON-B,General,0,Cancelado
+INS-308,Sofía Rueda,Clínica Oriental,SALON-C,General,150000,Confirmado
+INS-309,Diego Serrano,Consultores Guanentá,SALON-C,General,150000,Confirmado
+INS-310,Daniela Montoya,Café Vélez,SALON-C,VIP,300000,Confirmado
+INS-311,Felipe Villamizar,Logística del Fonce,SALON-C,General,150000,Confirmado
+INS-312,Valeria Ardila,TecnoAndes,SALON-C,General,150000,Confirmado
+INS-313,Santiago Quintero,AgroSantander,SALON-C,General,150000,Confirmado
+INS-314,Paula Castellanos,Clínica Oriental,SALON-C,General,150000,Confirmado
+INS-315,Andrés Pinzón,Consultores Guanentá,SALON-C,VIP,300000,Confirmado
+INS-316,Camila Gélvez,Café Vélez,SALON-C,General,150000,Confirmado
+INS-317,Mateo Mejía,Logística del Fonce,SALON-C,General,150000,Confirmado
+INS-318,Laura Rueda,TecnoAndes,SALON-C,General,150000,Confirmado
+INS-319,Julián Serrano,AgroSantander,SALON-C,General,150000,Confirmado
+INS-320,Sofía Montoya,Clínica Oriental,SALON-C,VIP,300000,Confirmado
+INS-321,Diego Villamizar,Consultores Guanentá,SALON-C,General,150000,Confirmado
+INS-322,Daniela Ardila,Café Vélez,SALON-C,General,150000,Confirmado
+INS-323,Felipe Quintero,Logística del Fonce,SALON-C,General,150000,Confirmado
+INS-324,Valeria Castellanos,TecnoAndes,SALON-C,General,150000,Confirmado
+INS-325,Santiago Pinzón,AgroSantander,SALON-C,VIP,300000,Confirmado
+INS-326,Paula Gélvez,Clínica Oriental,SALON-C,General,150000,Confirmado
+INS-327,Andrés Mejía,Consultores Guanentá,SALON-C,General,150000,Confirmado
+INS-328,Camila Rueda,Café Vélez,SALON-C,General,150000,Confirmado
+INS-329,Mateo Serrano,Logística del Fonce,SALON-C,General,150000,Confirmado
+INS-330,Laura Montoya,TecnoAndes,SALON-C,VIP,300000,Confirmado
+INS-331,Julián Villamizar,AgroSantander,SALON-C,General,150000,Confirmado
+INS-332,Sofía Ardila,Clínica Oriental,SALON-C,General,150000,Confirmado
+INS-333,Diego Quintero,Consultores Guanentá,SALON-C,General,150000,Confirmado
+INS-334,Daniela Castellanos,Café Vélez,SALON-C,General,150000,Confirmado
+INS-335,Felipe Pinzón,Logística del Fonce,SALON-C,VIP,300000,Confirmado
+INS-336,Valeria Gélvez,TecnoAndes,SALON-C,General,150000,Confirmado
+INS-337,Santiago Mejía,AgroSantander,SALON-C,General,150000,Confirmado
+INS-338,Paula Rueda,Clínica Oriental,SALON-C,General,150000,Confirmado
+INS-339,Andrés Serrano,Consultores Guanentá,SALON-C,General,150000,Confirmado
+INS-340,Camila Montoya,Café Vélez,SALON-C,VIP,300000,Confirmado
+INS-341,Mateo Villamizar,Logística del Fonce,SALON-C,General,150000,Confirmado
+INS-342,Laura Ardila,TecnoAndes,SALON-C,General,150000,Confirmado
+INS-343,Julián Quintero,AgroSantander,SALON-C,General,150000,Confirmado
+INS-344,Sofía Castellanos,Clínica Oriental,SALON-C,General,150000,Confirmado
+INS-345,Diego Pinzón,Consultores Guanentá,SALON-C,VIP,300000,Confirmado
+INS-346,Daniela Gélvez,Café Vélez,SALON-C,General,150000,Confirmado
+INS-347,Felipe Mejía,Logística del Fonce,SALON-C,General,150000,Confirmado
+INS-348,Valeria Rueda,TecnoAndes,SALON-C,General,150000,Confirmado
+INS-349,Santiago Serrano,AgroSantander,SALON-C,General,150000,Confirmado
+INS-350,Paula Montoya,Clínica Oriental,SALON-C,VIP,300000,Confirmado
+INS-351,Andrés Villamizar,Consultores Guanentá,SALON-C,General,150000,Confirmado
+INS-352,Camila Ardila,Café Vélez,SALON-C,General,150000,Confirmado
+INS-353,Mateo Quintero,Logística del Fonce,SALON-C,General,150000,Confirmado
+INS-354,Laura Castellanos,TecnoAndes,SALON-C,General,150000,Confirmado
+INS-355,Julián Pinzón,AgroSantander,SALON-C,VIP,300000,Confirmado
+INS-356,Sofía Gélvez,Clínica Oriental,SALON-C,General,150000,Confirmado
+INS-357,Diego Mejía,Consultores Guanentá,SALON-C,General,150000,Confirmado
+INS-358,Daniela Rueda,Café Vélez,SALON-C,General,150000,Confirmado
+INS-359,Felipe Serrano,Logística del Fonce,SALON-C,General,150000,Confirmado
+INS-360,Valeria Montoya,TecnoAndes,SALON-C,VIP,0,Cancelado
+INS-361,Santiago Villamizar,AgroSantander,SALON-C,General,0,Cancelado

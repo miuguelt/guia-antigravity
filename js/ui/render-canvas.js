@@ -23,7 +23,7 @@
       searchQuery: state.canvasSearchQuery, completedIds: state.canvasCompletedIds
     });
 
-    const stats = AG.getProgressStats(state, 20, 20);
+    const stats = AG.getProgressStats(state, 26, 20);
     const barEl = document.getElementById('canvas-route-bar');
     const txtEl = document.getElementById('canvas-route-summary');
     if (barEl) barEl.style.width = stats.canvasPct + '%';

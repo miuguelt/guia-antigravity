@@ -5,7 +5,7 @@ regla_supervivencia:
   nombre: "conservar la cadena con mayor longitud y tildes completas"
   ciudad: "rescatar el valor no vacío entre las fichas fusionadas"
   cargo: "priorizar el cargo más específico o reciente"
-resultado_esperado:
-  filas_brutas_entrada: 10
-  duplicados_detectados: 3
-  contactos_unicos_maestros: 7
+clave_coincidencia:
+  regla: "dos filas son la misma persona si comparten el teléfono normalizado o el correo normalizado"
+  correo_normalizado: "minúsculas, sin espacios y sin puntos antes de la arroba"
+  advertencia: "una persona puede escribir su correo de dos formas; el teléfono es la clave más confiable"

@@ -1,0 +1,10 @@
+{
+  "periodoActivo": "2026-10",
+  "llaveUnicidad": "Cuenta_Bancaria + Periodo",
+  "reglaDuplicado": "Si dos giros comparten la llave, se conserva el de menor ID_Giro y el otro pasa a un archivo de rechazados",
+  "salidasEsperadas": [
+    "lote_autorizado.csv",
+    "giros_rechazados.csv",
+    "reporte_auditoria.txt"
+  ]
+}

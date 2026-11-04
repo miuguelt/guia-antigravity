@@ -6,37 +6,31 @@
       "pedido": "PED-901",
       "cliente": "Comercial del Valle S.A.S.",
       "montoCOP": 4800000,
-      "diasMora": 22,
-      "requiereFirmaHumana": true
+      "diasMora": 22
     },
     {
       "pedido": "PED-902",
       "cliente": "Distribuidora Andina Ltda.",
       "montoCOP": 1950000,
-      "diasMora": 0,
-      "requiereFirmaHumana": false
+      "diasMora": 0
     },
     {
       "pedido": "PED-903",
       "cliente": "Insumos del Caribe S.A.S.",
       "montoCOP": 6200000,
-      "diasMora": 30,
-      "requiereFirmaHumana": true
+      "diasMora": 30
     },
     {
       "pedido": "PED-904",
       "cliente": "Logística Central S.A.",
       "montoCOP": 1100000,
-      "diasMora": 5,
-      "requiereFirmaHumana": false
+      "diasMora": 15
     },
     {
       "pedido": "PED-905",
       "cliente": "Grupo Santandereano S.A.S.",
       "montoCOP": 3400000,
-      "diasMora": 19,
-      "requiereFirmaHumana": true
+      "diasMora": 19
     }
-  ],
-  "pedidosRetenidosEsperados": 3
+  ]
 }

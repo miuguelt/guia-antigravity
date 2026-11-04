@@ -3,8 +3,6 @@ moneda: "COP"
 costos_fijos_totales_mes: 3000000
 costo_variable_unitario: 20000
 precio_venta_lista: 50000
-punto_equilibrio_esperado_unidades: 100
-punto_equilibrio_esperado_cop: 5000000
 meta_utilidad_mensual_cop: 1500000
 escenarios_descuento_pct:
   - 5

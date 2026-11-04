@@ -7,4 +7,5 @@ servers:
     mode: "controlled_write"
     human_in_the_loop_condition: "dias_mora > 15"
   notificaciones_externas:
-    mode: "require_explicit_approval"
+    mode: "human_in_the_loop"
+    allowed_tools: ["send_customer_email"]

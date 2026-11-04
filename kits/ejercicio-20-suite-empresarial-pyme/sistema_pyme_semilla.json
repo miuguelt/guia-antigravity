@@ -2,12 +2,74 @@
   "empresa": "Soluciones Integrales Andinas S.A.S.",
   "nit": "901.482.391-4",
   "sede": "Vélez, Santander, Colombia",
-  "tesoreriaMesActual": {
-    "ingresosCobradosCOP": 12000000,
-    "egresosOperativosCOP": 7800000,
-    "utilidadOperativaCOP": 4200000,
-    "reservaImpositivaPct": 15,
-    "reservaImpositivaCOP": 630000,
-    "flujoCajaNetoDisponibleCOP": 3570000
-  }
+  "periodo": "2026-10",
+  "reservaImpositivaPct": 15,
+  "pedidos": [
+    {
+      "id": "PV-301",
+      "cliente": "Supermercados Oriente",
+      "sku": "CAF-500",
+      "cantidad": 90,
+      "totalCOP": 4500000,
+      "estadoCobro": "Cobrado"
+    },
+    {
+      "id": "PV-302",
+      "cliente": "Hoteles del Fonce S.A.S.",
+      "sku": "SER-01",
+      "cantidad": 3,
+      "totalCOP": 3200000,
+      "estadoCobro": "Cobrado"
+    },
+    {
+      "id": "PV-303",
+      "cliente": "Clínica Metropolitana",
+      "sku": "CAF-500",
+      "cantidad": 40,
+      "totalCOP": 2000000,
+      "estadoCobro": "Cobrado"
+    },
+    {
+      "id": "PV-304",
+      "cliente": "Corporación Educativa Vélez",
+      "sku": "MOL-01",
+      "cantidad": 6,
+      "totalCOP": 1500000,
+      "estadoCobro": "Cobrado"
+    },
+    {
+      "id": "PV-305",
+      "cliente": "Cafetería Central",
+      "sku": "CAF-500",
+      "cantidad": 16,
+      "totalCOP": 800000,
+      "estadoCobro": "Cobrado"
+    },
+    {
+      "id": "PV-306",
+      "cliente": "Restaurante La Casona",
+      "sku": "SER-01",
+      "cantidad": 2,
+      "totalCOP": 2500000,
+      "estadoCobro": "Por cobrar"
+    }
+  ],
+  "egresos": [
+    {
+      "concepto": "Nómina y seguridad social",
+      "valorCOP": 4200000
+    },
+    {
+      "concepto": "Compra de café pergamino",
+      "valorCOP": 2100000
+    },
+    {
+      "concepto": "Arriendo de bodega",
+      "valorCOP": 1000000
+    },
+    {
+      "concepto": "Servicios públicos e internet",
+      "valorCOP": 500000
+    }
+  ]
 }

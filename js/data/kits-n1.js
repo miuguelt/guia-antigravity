@@ -71,7 +71,7 @@
       files: [
         {
           filename: 'notas_crudas_pedidos.txt', ext: 'txt', mime: 'text/plain;charset=utf-8',
-          role: 'Exportación cruda de mensajes de WhatsApp con 4 pedidos ($2.450.000 COP total)',
+          role: 'Exportación cruda de mensajes de WhatsApp con 4 pedidos, algunos sin dirección',
           content: 'EXPORTACIÓN DE CHAT — WHATSAPP VENTAS CORPORATIVAS (DATOS DE PRÁCTICA)\n[14/10/2026, 08:15:22] +57 310 555 1234: Hola soy maria gomez (tel 310-555-1234), necesito 4 sillas ergonomicas para el martes, pago $1200000 URGENTE\n[14/10/2026, 09:42:10] +57 315 888 9900: Buen día, habla carlos ruiz 315 888 9900, envíame 2 escritorios ejecutivos por valor de $450000 prioridad media, dirección Cra 15 #88-10 Bogotá\n[14/10/2026, 11:05:49] +57 300 444 5566: Pedido de ana lopez tel 3004445566: 8 lamparas led de escritorio total $320000 urgencia baja, entregar en Calle 34 #12-08 Bucaramanga\n[14/10/2026, 14:20:03] +57 320 111 2233: Urgente! Jorge Perez (320-111-2233) solicita 3 archivadores metalicos total $480000, falta confirmar dirección de entrega\n'
         },
         {
@@ -101,8 +101,8 @@
       files: [
         {
           filename: 'costos_base_negocio.csv', ext: 'csv', mime: 'text/csv;charset=utf-8',
-          role: 'Estructura base para auditar el Punto de Equilibrio (100 unidades)',
-          content: 'Concepto,Tipo,Valor_COP,Observacion\nArriendo Bodega y Servicios,Costo_Fijo_Mensual,1800000,Sede principal Vélez\nNomina Administrativa y Seguros,Costo_Fijo_Mensual,1200000,Sueldo base mensual fijo\nCosto Variable por Unidad,Costo_Variable_Unitario,20000,Café tostado + bolsa válvula + etiqueta\nPrecio de Venta Unitario,Precio_Venta,50000,Margen de contribución unitario $30.000 COP\n'
+          role: 'Costos fijos, costo variable y precio para calcular el Punto de Equilibrio',
+          content: 'Concepto,Tipo,Valor_COP,Observacion\nArriendo Bodega y Servicios,Costo_Fijo_Mensual,1800000,Sede principal Vélez\nNomina Administrativa y Seguros,Costo_Fijo_Mensual,1200000,Sueldo base mensual fijo\nCosto Variable por Unidad,Costo_Variable_Unitario,20000,Café tostado + bolsa válvula + etiqueta\nPrecio de Venta Unitario,Precio_Venta,50000,Precio de lista antes de descuentos\n'
         },
         {
           filename: 'desglose_costo_unitario.json', ext: 'json', mime: 'application/json;charset=utf-8',
@@ -121,7 +121,7 @@
         {
           filename: 'metas_rentabilidad.yaml', ext: 'yaml', mime: 'text/yaml;charset=utf-8',
           role: 'Parámetros de simulación financiera y descuentos promocionales',
-          content: 'empresa: "Café Especial Santander S.A.S."\nmoneda: "COP"\ncostos_fijos_totales_mes: 3000000\ncosto_variable_unitario: 20000\nprecio_venta_lista: 50000\npunto_equilibrio_esperado_unidades: 100\npunto_equilibrio_esperado_cop: 5000000\nmeta_utilidad_mensual_cop: 1500000\nescenarios_descuento_pct:\n  - 5\n  - 10\n  - 15\n'
+          content: 'empresa: "Café Especial Santander S.A.S."\nmoneda: "COP"\ncostos_fijos_totales_mes: 3000000\ncosto_variable_unitario: 20000\nprecio_venta_lista: 50000\nmeta_utilidad_mensual_cop: 1500000\nescenarios_descuento_pct:\n  - 5\n  - 10\n  - 15\n'
         }
       ]
     },
@@ -133,25 +133,28 @@
         {
           filename: 'GEMINI.md', ext: 'md', mime: 'text/markdown;charset=utf-8',
           role: 'Reglas permanentes de estilo, estructura SCQA, moneda COP e impresión',
-          content: '# Reglas Permanentes del Proyecto (GEMINI.md)\n\n1. **Audiencia y Estructura:** Redacta toda propuesta ejecutiva aplicando la Pirámide de Minto (SCQA: Situación, Complicación, Pregunta y Respuesta con ROI al inicio).\n2. **Idioma y Moneda:** Español de Colombia (`es-CO`) y Pesos Colombianos (`COP`) con separador de miles.\n3. **Diseño e Impresión:** Paleta serena con contraste accesible (>= 4.5:1) y hoja `@media print` tamaño carta limpia.\n4. **Veracidad Determinista:** Prohibido inventar cifras o dejar marcadores vacíos como `[Insertar dato]`.\n'
+          content: '# Reglas Permanentes del Proyecto (GEMINI.md)\n\n1. **Audiencia y Estructura:** Redacta toda propuesta ejecutiva aplicando la Pirámide de Minto (SCQA: Situación, Complicación, Pregunta y Respuesta). La Respuesta abre con la recomendación y el tiempo de recuperación, calculado solo con las cifras del diagnóstico.\n2. **Idioma y Moneda:** Español de Colombia (`es-CO`) y Pesos Colombianos (`COP`) con separador de miles.\n3. **Diseño e Impresión:** Paleta serena con contraste accesible (>= 4.5:1) y hoja `@media print` tamaño carta limpia.\n4. **Veracidad Determinista:** Prohibido inventar cifras o dejar marcadores vacíos como `[Insertar dato]`.\n'
         },
         {
           filename: 'diagnostico_operativo_cliente.md', ext: 'md', mime: 'text/markdown;charset=utf-8',
           role: 'Levantamiento real del problema del cliente para estructurar la propuesta SCQA',
-          content: '# Diagnóstico Operativo — Distribuidora Agroindustrial del Carare S.A.S.\n\n- **Situación actual:** La empresa procesa 400 pedidos mensuales manualmente desde hojas de cálculo sueltas.\n- **Complicación cuantificada:** Los errores de digitación y despachos cruzados generan pérdidas y reprocesos por **$2.500.000 COP al mes** ($30.000.000 COP al año).\n- **Pregunta clave:** ¿Cómo eliminar el reproceso operativo recuperando la inversión en el primer trimestre?\n- **Propuesta e Inversión:** Automatización integral del flujo de pedidos con inversión única de **$5.000.000 COP**.\n- **Ahorro mensual directo:** **$2.500.000 COP/mes** (Recuperación exacta de la inversión en **2 meses**).\n'
+          content: '# Diagnóstico Operativo — Distribuidora Agroindustrial del Carare S.A.S.\n\n- **Situación actual:** La empresa procesa 400 pedidos mensuales manualmente desde hojas de cálculo sueltas.\n- **Complicación cuantificada:** Los errores de digitación y despachos cruzados generan pérdidas y reprocesos por **$2.500.000 COP al mes** ($30.000.000 COP al año).\n- **Pregunta clave:** ¿Cómo eliminar el reproceso operativo recuperando la inversión en el primer trimestre?\n- **Propuesta e Inversión:** Automatización integral del flujo de pedidos con inversión única de **$5.000.000 COP**.\n- **Ahorro mensual directo:** **$2.500.000 COP/mes**.\n'
         },
         {
           filename: 'parametros_propuesta_roi.json', ext: 'json', mime: 'application/json;charset=utf-8',
-          role: 'Datos estructurados del Caso Testigo y cronograma de entregables',
+          role: 'Cifras del cliente y entregables agrupados por fase contractual',
           content: JSON.stringify({
             cliente: 'Distribuidora Agroindustrial del Carare S.A.S.',
             nit: '900.741.258-9',
             costoProblemaMensualCOP: 2500000,
             inversionProyectoCOP: 5000000,
             ahorroMensualEstimadoCOP: 2500000,
-            mesesRecuperacionPayback: 2,
-            roiMensualPct: 50,
-            entregables: ['Estandarización de captura', 'Validador automático de cartera', 'Tablero gerencial']
+            entregables: [
+              { fase: 'Fase 1 — Captura', entregable: 'Estandarización de captura de pedidos', mesEntrega: 2, pagoPct: 50 },
+              { fase: 'Fase 1 — Captura', entregable: 'Validador automático de cartera', mesEntrega: 2, pagoPct: 0 },
+              { fase: 'Fase 2 — Control', entregable: 'Tablero gerencial y acta de conformidad', mesEntrega: 4, pagoPct: 50 }
+            ],
+            reglaPagos: 'Cada pago se libera solo con acta de conformidad firmada al cierre de su fase'
           }, null, 2)
         }
       ]
@@ -159,12 +162,12 @@
     5: {
       zipName: 'kit-ej05-deduplicacion-contactos.zip',
       folderName: 'ejercicio-05-consolidador-contactos',
-      summary: 'Base de 10 contactos con 3 duplicados (.csv), registros complementarios de feria (.json) y reglas de supervivencia (.yaml).',
+      summary: 'Base de 10 contactos con duplicados exactos y aproximados (.csv), registros complementarios de feria (.json) y reglas de supervivencia (.yaml).',
       files: [
         {
           filename: 'contactos_duplicados.csv', ext: 'csv', mime: 'text/csv;charset=utf-8',
-          role: '10 registros brutos de formularios web e históricos con 3 duplicados (quedan 7 únicos)',
-          content: 'ID_Origen,Nombre,Correo,Telefono,Ciudad,Cargo\nWEB-01,Ana María López,ANA.LOPEZ@EMPRESA.CO,(315) 222-3344,,Directora Comercial\nEVT-01,Ana M. Lopez,ana.lopez@empresa.co,3152223344,Bucaramanga,\nWEB-02,Carlos Andrés Pérez,cperez@logistica.co,310-444-5566,Bogotá,Jefe de Bodega\nHIS-01,Carlos A. Perez,CPEREZ@LOGISTICA.CO,3104445566,Bogotá,Gerente de Operaciones\nWEB-03,Laura Sofía Gómez,lgomez@clinica.co,3209998877,Medellín,Coordinadora\nEVT-02,Laura Gomez,lgomez@clinica.co,(320) 999-8877,,Coordinadora Médica\nWEB-04,Mateo Vargas,mvargas@constructora.co,3001112233,Cali,Ingeniero Residente\nWEB-05,Valentina Rojas,vrojas@estudio.co,3112223344,Barranquilla,Arquitecta\nWEB-06,Diego Fernando Castro,dcastro@agro.co,3123334455,Pereira,Administrador\nWEB-07,Camila Andrea Silva,csilva@educacion.co,3145556677,Manizales,Rectora\n'
+          role: '10 registros de formularios web, feria e histórico, con duplicados exactos y aproximados',
+          content: 'ID_Origen,Nombre,Correo,Telefono,Ciudad,Cargo\nWEB-01,Ana María López,ANA.LOPEZ@EMPRESA.CO,(315) 222-3344,,Directora Comercial\nEVT-01,Ana M. Lopez,ana.lopez@empresa.co,3152223344,Bucaramanga,\nWEB-02,Carlos Andrés Pérez,cperez@logistica.co,310-444-5566,Bogotá,Jefe de Bodega\nHIS-01,Carlos A. Perez,C.PEREZ@LOGISTICA.CO ,310 444 5566,Bogota,\nWEB-03,Laura Sofía Gómez,lgomez@clinica.co,3209998877,Medellín,Coordinadora\nEVT-02,Laura Gomez,laura.gomez@clinica.co,(320) 999-8877,,Coordinadora Médica\nWEB-04,Mateo Vargas,mvargas@constructora.co,3001112233,Cali,Ingeniero Residente\nWEB-05,Valentina Rojas,vrojas@estudio.co,3112223344,Barranquilla,Arquitecta\nWEB-06,Diego Fernando Castro,dcastro@agro.co,3123334455,Pereira,Administrador\nWEB-07,Camila Andrea Silva,csilva@educacion.co,3145556677,Manizales,Rectora\n'
         },
         {
           filename: 'asistentes_rueda_negocios.json', ext: 'json', mime: 'application/json;charset=utf-8',
@@ -173,15 +176,15 @@
             evento: 'Rueda de Negocios Santander Compra Santander 2026',
             registros: [
               { idEvento: 'EVT-01', correo: 'ana.lopez@empresa.co', ciudadRescatada: 'Bucaramanga', interes: 'Compra Mayorista' },
-              { idEvento: 'HIS-01', correo: 'cperez@logistica.co', cargoActualizado: 'Gerente de Operaciones', interes: 'Contrato Anual' },
-              { idEvento: 'EVT-02', correo: 'lgomez@clinica.co', cargoActualizado: 'Coordinadora Médica', interes: 'Dotación Sedes' }
+              { idEvento: 'EVT-03', correo: 'cperez@logistica.co', cargoActualizado: 'Gerente de Operaciones', interes: 'Contrato Anual' },
+              { idEvento: 'EVT-02', correo: 'laura.gomez@clinica.co', cargoActualizado: 'Coordinadora Médica', interes: 'Dotación Sedes' }
             ]
           }, null, 2)
         },
         {
           filename: 'reglas_supervivencia_crm.yaml', ext: 'yaml', mime: 'text/yaml;charset=utf-8',
           role: 'Reglas deterministas de normalización y supervivencia de atributos',
-          content: 'normalizacion:\n  correo: "convertir a minúsculas y eliminar espacios extremos"\n  telefono: "conservar únicamente los 10 dígitos numéricos móviles de Colombia"\nregla_supervivencia:\n  nombre: "conservar la cadena con mayor longitud y tildes completas"\n  ciudad: "rescatar el valor no vacío entre las fichas fusionadas"\n  cargo: "priorizar el cargo más específico o reciente"\nresultado_esperado:\n  filas_brutas_entrada: 10\n  duplicados_detectados: 3\n  contactos_unicos_maestros: 7\n'
+          content: 'normalizacion:\n  correo: "convertir a minúsculas y eliminar espacios extremos"\n  telefono: "conservar únicamente los 10 dígitos numéricos móviles de Colombia"\nregla_supervivencia:\n  nombre: "conservar la cadena con mayor longitud y tildes completas"\n  ciudad: "rescatar el valor no vacío entre las fichas fusionadas"\n  cargo: "priorizar el cargo más específico o reciente"\nclave_coincidencia:\n  regla: "dos filas son la misma persona si comparten el teléfono normalizado o el correo normalizado"\n  correo_normalizado: "minúsculas, sin espacios y sin puntos antes de la arroba"\n  advertencia: "una persona puede escribir su correo de dos formas; el teléfono es la clave más confiable"\n'
         }
       ]
     }

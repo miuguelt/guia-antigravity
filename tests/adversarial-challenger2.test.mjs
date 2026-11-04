@@ -286,8 +286,8 @@ test('CHALLENGER 2.9: promptBuilder.exerciseToPromptSpec con tipos corruptos en 
    SECCIÓN 3: VERIFICACIÓN EXHAUSTIVA DE LOS 20 EJERCICIOS ANTIGRAVITY
    ========================================================================== */
 
-test('CHALLENGER 2.10: Los 20 ejercicios de Antigravity pasan scorePromptSpec con 100 puntos sin excepción', () => {
-  assert.equal(ALL_AG_EXERCISES.length, 20, 'Deben existir exactamente 20 ejercicios de Antigravity');
+test('CHALLENGER 2.10: Los 26 ejercicios de Antigravity pasan scorePromptSpec con 100 puntos sin excepción', () => {
+  assert.equal(ALL_AG_EXERCISES.length, 26, 'Deben existir exactamente 26 ejercicios de Antigravity');
 
   const scores = [];
 
@@ -327,6 +327,6 @@ test('CHALLENGER 2.10: Los 20 ejercicios de Antigravity pasan scorePromptSpec co
     assert.ok(evalResult.checks.every(c => c.ok), `Todos los checks deben estar aprobados en ejercicio ${ex.id}`);
   });
 
-  assert.equal(scores.length, 20);
-  assert.ok(scores.every(s => s.score === 100), 'Los 20 ejercicios obtuvieron exactamente 100 puntos');
+  assert.equal(scores.length, 26);
+  assert.ok(scores.every(s => s.score === 100), 'Los 26 ejercicios obtuvieron exactamente 100 puntos');
 });

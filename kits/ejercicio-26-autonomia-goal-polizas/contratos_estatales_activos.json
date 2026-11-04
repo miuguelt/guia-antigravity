@@ -1,0 +1,42 @@
+{
+  "contratos": [
+    {
+      "numero": "CTO-2026-088",
+      "entidad": "Municipio de Vélez — Secretaría de Desarrollo",
+      "valorContratoCOP": 80000000,
+      "fechaInicio": "2026-11-15",
+      "fechaFin": "2027-05-15",
+      "polizasPresentadas": [
+        {
+          "amparo": "AMP-01",
+          "valorAseguradoCOP": 24000000,
+          "vigenciaHasta": "2027-11-15"
+        },
+        {
+          "amparo": "AMP-02",
+          "valorAseguradoCOP": 16000000,
+          "vigenciaHasta": "2030-05-15"
+        }
+      ]
+    },
+    {
+      "numero": "CTO-2026-091",
+      "entidad": "Gobernación de Santander — Secretaría TIC",
+      "valorContratoCOP": 50000000,
+      "fechaInicio": "2026-12-01",
+      "fechaFin": "2027-03-31",
+      "polizasPresentadas": [
+        {
+          "amparo": "AMP-01",
+          "valorAseguradoCOP": 12000000,
+          "vigenciaHasta": "2027-09-30"
+        },
+        {
+          "amparo": "AMP-02",
+          "valorAseguradoCOP": 10000000,
+          "vigenciaHasta": "2029-03-31"
+        }
+      ]
+    }
+  ]
+}

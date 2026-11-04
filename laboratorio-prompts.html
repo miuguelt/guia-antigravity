@@ -25,14 +25,14 @@
 
       <nav class="main-nav" aria-label="Navegación principal del portal">
         <a href="index.html" class="nav-link">1. Hub Principal</a>
-        <a href="ruta-antigravity.html" class="nav-link">2. Ruta Antigravity (20)</a>
+        <a href="ruta-antigravity.html" class="nav-link">2. Ruta Antigravity (26)</a>
         <a href="manual-antigravity.html" class="nav-link">3. Manual Antigravity</a>
         <a href="laboratorio-prompts.html" class="nav-link is-active">4. Laboratorio Prompts</a>
         <a href="ruta-canvas.html" class="nav-link">5. Ruta Canvas (20)</a>
       </nav>
 
       <div class="flex-row-wrap no-print">
-        <span class="badge">AG: <strong id="header-ag-count">0/20</strong></span>
+        <span class="badge">AG: <strong id="header-ag-count">0/26</strong></span>
         <span class="badge">Canvas: <strong id="header-canvas-count">0/20</strong></span>
         <button type="button" id="shortcuts-help-btn" class="btn" title="Ver atajos de teclado (F1 o ?)">⌨️ Atajos</button>
         <button type="button" id="theme-toggle-btn" class="btn">Modo Oscuro (Noche Apacible)</button>
@@ -103,7 +103,7 @@
       </div>
 
       <div class="form-group no-print">
-        <label for="lab-exercise-selector"><strong>Cargar Ejercicio Antigravity (1 al 20):</strong></label>
+        <label for="lab-exercise-selector"><strong>Cargar Ejercicio Antigravity (1 al 26):</strong></label>
         <select id="lab-exercise-selector" class="input-control">
           <option value="">-- Selecciona un ejercicio para autocompletar --</option>
           <option value="1">1. Tu Primer Proyecto en Antigravity: Organizador y Clasificador Automático de Documentos Locales</option>
@@ -126,6 +126,12 @@
           <option value="18">18. Optimizador Inteligente de Horarios y Turnos de Personal sin Conflictos Legales</option>
           <option value="19">19. Simulador de Riesgo de Proyectos por Método de Monte Carlo y Estimación PERT (3 Puntos)</option>
           <option value="20">20. Proyecto Cumbre en Antigravity: Sistema Operativo Integral Pyme con Copiloto Auditor</option>
+          <option value="21">21. Dominio del Editor View: Autocompletado con Tab y Edición Quirúrgica con Ctrl+I</option>
+          <option value="22">22. Descubrimiento de Requisitos y Casos Borde con el Comando /grill-me</option>
+          <option value="23">23. Ejecución Segura en Terminal con Sandbox y Validación de Comandos</option>
+          <option value="24">24. Higiene de Contexto con Resumen de Traspaso y Regla Permanente en GEMINI.md</option>
+          <option value="25">25. Razonamiento Profundo y Multiperspectiva en Modo Planning (EVA y WACC)</option>
+          <option value="26">26. Ejecución Autónoma Verificada de Extremo a Extremo con el Comando /goal</option>
         </select>
       </div>
 
@@ -137,7 +143,6 @@
               <option value="/plan">/plan — Diseñar Implementation Plan antes de tocar archivos</option>
               <option value="/grill-me">/grill-me — Entrevista previa para descubrir casos borde</option>
               <option value="/goal">/goal — Ejecución autónoma hasta cumplir todas las pruebas</option>
-              <option value="/boost">/boost — Razonamiento profundo multiperspectiva</option>
             </select>
           </div>
 
@@ -220,6 +225,7 @@
   </footer>
 
   <script src="js/data/ag-exercises-n1-n2.js"></script>
+  <script src="js/data/ag-exercises-n4-plus.js"></script>
   <script src="js/data/ag-exercises-n3-n4.js"></script>
   <script src="js/core/store.js"></script>
   <script src="js/core/prompt-builder.js"></script>

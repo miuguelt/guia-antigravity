@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="es-CO"><head><meta charset="utf-8"><title>Liquidador Factura B2B</title></head>
+<body>
+  <h1>Liquidación de Factura Electrónica</h1>
+  <script>
+    // Tasa heredada de 2016: revisar contra tarifas_retencion_vigentes.json
+    function calcularNetoFactura(subtotal) {
+      const iva = subtotal * 0.16;
+      return subtotal + iva;
+    }
+  </script>
+</body></html>

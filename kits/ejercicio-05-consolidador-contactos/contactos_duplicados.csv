@@ -2,9 +2,9 @@ ID_Origen,Nombre,Correo,Telefono,Ciudad,Cargo
 WEB-01,Ana María López,ANA.LOPEZ@EMPRESA.CO,(315) 222-3344,,Directora Comercial
 EVT-01,Ana M. Lopez,ana.lopez@empresa.co,3152223344,Bucaramanga,
 WEB-02,Carlos Andrés Pérez,cperez@logistica.co,310-444-5566,Bogotá,Jefe de Bodega
-HIS-01,Carlos A. Perez,CPEREZ@LOGISTICA.CO,3104445566,Bogotá,Gerente de Operaciones
+HIS-01,Carlos A. Perez,C.PEREZ@LOGISTICA.CO ,310 444 5566,Bogota,
 WEB-03,Laura Sofía Gómez,lgomez@clinica.co,3209998877,Medellín,Coordinadora
-EVT-02,Laura Gomez,lgomez@clinica.co,(320) 999-8877,,Coordinadora Médica
+EVT-02,Laura Gomez,laura.gomez@clinica.co,(320) 999-8877,,Coordinadora Médica
 WEB-04,Mateo Vargas,mvargas@constructora.co,3001112233,Cali,Ingeniero Residente
 WEB-05,Valentina Rojas,vrojas@estudio.co,3112223344,Barranquilla,Arquitecta
 WEB-06,Diego Fernando Castro,dcastro@agro.co,3123334455,Pereira,Administrador

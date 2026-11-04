@@ -81,11 +81,11 @@
 
   function updateHeaderProgressBadges(state) {
     if (!AG.getProgressStats) return;
-    const stats = AG.getProgressStats(state, 20, 20);
+    const stats = AG.getProgressStats(state, 26, 20);
     const agEl = document.getElementById('header-ag-count');
     const cvEl = document.getElementById('header-canvas-count');
     const totEl = document.getElementById('header-total-pct');
-    if (agEl) agEl.textContent = stats.agDone + '/20';
+    if (agEl) agEl.textContent = stats.agDone + '/26';
     if (cvEl) cvEl.textContent = stats.canvasDone + '/20';
     if (totEl) totEl.textContent = stats.totalPct + ' %';
   }

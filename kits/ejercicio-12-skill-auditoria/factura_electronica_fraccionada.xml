@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<AuditBatch company="Soluciones Integrales Andinas S.A.S.">
-  <SplitTransactionGroup employee="Julián Mendoza" date="2026-10-15" supplierNit="900555111-2" limitCOP="200000">
-    <Invoice id="REC-801" time="09:15:00" amountCOP="175000"/>
-    <Invoice id="REC-802" time="15:40:00" amountCOP="175000"/>
-    <CombinedTotal amountCOP="350000" status="ALERTA_CRITICA_FRACCIONAMIENTO"/>
-  </SplitTransactionGroup>
-</AuditBatch>
+<InvoiceBatch supplier="Suministros Eléctricos Andinos" supplierNit="900555111-2" buyer="Soluciones Integrales Andinas S.A.S.">
+  <Invoice id="REC-801" date="2026-10-15" time="09:15:00" buyerEmployee="Julián Mendoza" amountCOP="175000"/>
+  <Invoice id="REC-802" date="2026-10-15" time="15:40:00" buyerEmployee="Julián Mendoza" amountCOP="175000"/>
+  <Invoice id="REC-805" date="2026-10-17" time="10:05:00" buyerEmployee="Laura Gómez" amountCOP="90000"/>
+  <Invoice id="REC-806" date="2026-10-17" time="16:20:00" buyerEmployee="Laura Gómez" amountCOP="80000"/>
+  <Invoice id="REC-808" date="2026-10-18" time="11:45:00" buyerEmployee="Julián Mendoza" amountCOP="110000"/>
+</InvoiceBatch>

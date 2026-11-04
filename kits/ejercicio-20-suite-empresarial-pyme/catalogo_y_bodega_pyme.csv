@@ -1,4 +1,4 @@
-SKU,Producto,Stock_Actual,Punto_Reorden_ROP,Costo_Unitario_COP,Precio_Venta_COP,Estado_Stock
-CAF-500,Cafe Especial Origen Santander 500g,68,70,28000,50000,PEDIR_HOY
-SER-01,Consultoria Auditoria Procesos,999,0,650000,1000000,DISPONIBLE
-MOL-01,Molino Acero Inoxidable,15,12,145000,240000,OPTIMO
+SKU,Producto,Tipo,Stock_Actual,Venta_Diaria_Promedio,Venta_Diaria_Maxima,Tiempo_Entrega_Dias,Costo_Unitario_COP,Precio_Venta_COP
+CAF-500,Cafe Especial Origen Santander 500g,Producto,68,10,14,5,28000,50000
+SER-01,Consultoria Auditoria Procesos,Servicio,,,,,650000,1000000
+MOL-01,Molino Acero Inoxidable,Producto,15,1,2,7,145000,240000

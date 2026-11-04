@@ -16,6 +16,7 @@ const zipBuilder = require('../js/core/zip-builder.js');
 const kitGen = require('../js/core/kit-generator.js');
 const promptBuilder = require('../js/core/prompt-builder.js');
 const uiEnhancements = require('../js/ui/ui-enhancements.js');
+const agTabs = require('../js/ui/render-ag-tabs.js');
 
 function createMockStorage() {
   const map = new Map();
@@ -25,13 +26,13 @@ function createMockStorage() {
   };
 }
 
-test('1. Catálogo de 20 ejercicios Antigravity está completo y progresivo (IDs 1..20)', () => {
+test('1. Catálogo de 26 ejercicios Antigravity está completo y progresivo (IDs 1..26)', () => {
   const allAg = [...AG_EXERCISES_N1_N2, ...AG_EXERCISES_N3_N4];
-  assert.equal(allAg.length, 20);
+  assert.equal(allAg.length, 26);
   allAg.forEach((ex, idx) => {
     assert.equal(ex.id, idx + 1);
     assert.ok(ex.title && ex.title.length > 10);
-    assert.ok(ex.initialPrompt.includes('/plan'));
+    assert.ok([ex.initialPrompt, ...ex.antigravitySteps].join(' ').match(/Planning|\/grill-me|\/goal/), `Ejercicio ${ex.id}: debe planear en modo Planning, /grill-me o /goal`);
     assert.ok(ex.kit && ex.kit.filename);
     assert.ok(ex.testCase && typeof ex.testCase.expectedValue === 'number');
   });
@@ -113,7 +114,7 @@ test('7. store.resetRouteProgress limpia cada ruta o ambas sin romper el esquema
 test('8. store.filterExercises filtra por nivel, estado y búsqueda textual', () => {
   const allAg = [...AG_EXERCISES_N1_N2, ...AG_EXERCISES_N3_N4];
   const level2 = store.filterExercises(allAg, { levelFilter: '2', statusFilter: 'all', searchQuery: '', completedIds: [6] });
-  assert.equal(level2.length, 5);
+  assert.equal(level2.length, 7);
   const doneOnly = store.filterExercises(allAg, { levelFilter: '2', statusFilter: 'done', searchQuery: '', completedIds: [6] });
   assert.equal(doneOnly.length, 1);
   assert.equal(doneOnly[0].id, 6);
@@ -126,16 +127,23 @@ test('9. store.exportProgressJson e importProgressJson exportan y restauran resp
   const mock = createMockStorage();
   const st = store.createDefaultState();
   store.toggleExercise(st, 'antigravity', 3, mock);
+  const chk = store.toggleChecklistItem(st, 3, 1, mock);
+  assert.deepEqual(chk, [1]);
+  const chkRemoved = store.toggleChecklistItem(st, 3, 1, mock);
+  assert.deepEqual(chkRemoved, []);
+  store.toggleChecklistItem(st, 3, 2, mock);
+  assert.deepEqual(store.toggleChecklistItem(null, 99, -1, mock), []);
   const exported = store.exportProgressJson(st);
   const fresh = store.createDefaultState();
   const imported = store.importProgressJson(fresh, exported, mock);
   assert.equal(imported.ok, true);
   assert.deepEqual(fresh.agCompletedIds, [3]);
+  assert.deepEqual(fresh.agChecklist[3], [2]);
   assert.equal(store.importProgressJson(fresh, '', mock).ok, false);
 });
 
-test('10. simulator.evaluateWitnessCase valida Estado Válido en los 20 ejercicios Antigravity', () => {
-  for (let id = 1; id <= 20; id++) {
+test('10. simulator.evaluateWitnessCase valida Estado Válido en los 26 ejercicios Antigravity', () => {
+  for (let id = 1; id <= 26; id++) {
     const spec = simulator.getWitnessSpec(id);
     const res = simulator.evaluateWitnessCase(id, spec.sampleInput);
     assert.equal(res.status, 'valido', `Fallo en ejercicio ${id}`);
@@ -222,9 +230,9 @@ test('12. simulator.resetWitnessCase devuelve el Estado Reset determinista', () 
   assert.equal(rst.expectedValue, 70);
 });
 
-test('13. kitGen.getKitMetadata, getKitFiles y buildKitContent generan los 20 kits multi-archivo con variedad de formatos', () => {
+test('13. kitGen.getKitMetadata, getKitFiles y buildKitContent generan los 26 kits multi-archivo con variedad de formatos', () => {
   const extensions = new Set();
-  for (let id = 1; id <= 20; id++) {
+  for (let id = 1; id <= 26; id++) {
     const meta = kitGen.getKitMetadata(id);
     const files = kitGen.getKitFiles(id);
     const firstFile = kitGen.buildKitContent(id, 0);
@@ -359,4 +367,32 @@ test('18. uiEnhancements gestiona microinteracciones de copia, modales accesible
 
   uiEnhancements.closeModal(mockDoc);
   assert.equal(mockDoc.getElementById('ag-active-modal'), null);
+});
+
+test('19. render-ag-tabs construye pestañas ARIA accesibles, lista de verificación de artefacto y guía de recuperación', () => {
+  const ex = AG_EXERCISES_N1_N2[0];
+  const spec = simulator.getWitnessSpec(1);
+
+  assert.equal(agTabs.getExerciseMinutes({ duration: '20 min de práctica' }), 20);
+  assert.equal(agTabs.getExerciseMinutes({}), 3);
+
+  const checklist = agTabs.getArtifactChecklist(ex, spec);
+  assert.equal(checklist.length, 4);
+  assert.ok(checklist[0].includes('@15-03-2026_factura_enel_energia.html'));
+
+  const tips = agTabs.getTroubleshootingTips(ex);
+  assert.equal(tips.length, 3);
+
+  const navHtml = agTabs.renderExerciseTabsNav(8);
+  assert.ok(navHtml.includes('role="tablist"'));
+  assert.ok(navHtml.includes('role="tab"'));
+  assert.ok(navHtml.includes('aria-selected="true"'));
+  assert.ok(navHtml.includes('aria-controls="tab-kit"'));
+
+  const cardHtml = agTabs.renderArtifactVerificationCard(ex, spec, [0, 2]);
+  assert.ok(cardHtml.includes('Verifica lo que construyó el agente'));
+  assert.ok(cardHtml.includes('checked'));
+
+  const troubleHtml = agTabs.renderTroubleshootingCard(ex);
+  assert.ok(troubleHtml.includes('Si algo sale mal en Antigravity'));
 });

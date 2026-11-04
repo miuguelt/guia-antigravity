@@ -14,8 +14,8 @@ test('ADV-01: buildAllKitsBundle integridad estructural, orden correlativo y uni
   const bundle = kitGen.buildAllKitsBundle();
 
   assert.equal(bundle.version, '2.1', 'La versión canónica del bundle debe ser 2.1');
-  assert.equal(bundle.totalKits, 20, 'El total registrado debe ser exactamente 20');
-  assert.equal(bundle.kits.length, 20, 'El array de kits debe contener 20 elementos');
+  assert.equal(bundle.totalKits, 26, 'El total registrado debe ser exactamente 26');
+  assert.equal(bundle.kits.length, 26, 'El array de kits debe contener 26 elementos');
 
   const seenIds = new Set();
   const seenFilenames = new Set();
@@ -51,15 +51,15 @@ test('ADV-01: buildAllKitsBundle integridad estructural, orden correlativo y uni
     }
   });
 
-  assert.equal(seenIds.size, 20, 'Deben existir exactamente 20 IDs únicos');
+  assert.equal(seenIds.size, 26, 'Deben existir exactamente 26 IDs únicos');
 });
 
 test('ADV-02: buildAllKitsBundle idempotencia, serialización y estrés en ráfaga (1.000 ciclos)', () => {
   const start = Date.now();
   for (let i = 0; i < 1000; i++) {
     const b = kitGen.buildAllKitsBundle();
-    assert.equal(b.totalKits, 20);
-    assert.equal(b.kits.length, 20);
+    assert.equal(b.totalKits, 26);
+    assert.equal(b.kits.length, 26);
   }
   const duration = Date.now() - start;
   assert.ok(duration < 2000, `1.000 ciclos deben ejecutarse en menos de 2.000 ms (duró ${duration} ms)`);
@@ -69,7 +69,7 @@ test('ADV-02: buildAllKitsBundle idempotencia, serialización y estrés en ráfa
   const serialized = JSON.stringify(bundle);
   const deserialized = JSON.parse(serialized);
   assert.deepEqual(deserialized.totalKits, bundle.totalKits);
-  assert.equal(deserialized.kits.length, 20);
+  assert.equal(deserialized.kits.length, 26);
   assert.equal(deserialized.kits[19].exerciseId, 20);
 });
 

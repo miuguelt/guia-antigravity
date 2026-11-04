@@ -1,0 +1,12 @@
+{
+  "metaIndividualCOP": 10000000,
+  "tasaBasePct": 5,
+  "tasaAceleradorExcedentePct": 8,
+  "actaComiteParaResponderAlAgente": {
+    "instruccion": "No entregues este bloque al agente: úsalo para contestar sus preguntas durante /grill-me",
+    "baseComision": "Venta neta = ventas brutas - notas crédito emitidas en el trimestre",
+    "devolucionesDeOtroTrimestre": "Se descuentan en el trimestre en que se emite la nota crédito",
+    "bajoLaMeta": "Quien no alcanza la meta cobra solo el tramo base sobre su venta neta",
+    "tope": "No hay tope de comisión"
+  }
+}

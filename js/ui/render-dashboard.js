@@ -6,16 +6,16 @@
 
   function renderDashboardKpis(state) {
     if (!AG.getProgressStats) return;
-    const stats = AG.getProgressStats(state, 20, 20);
+    const stats = AG.getProgressStats(state, 26, 20);
     const setEl = function (id, val) {
       const el = document.getElementById(id);
       if (el) el.textContent = val;
     };
-    setEl('kpi-ag-done', stats.agDone + ' / 20');
+    setEl('kpi-ag-done', stats.agDone + ' / 26');
     setEl('kpi-ag-pct', stats.agPct + ' %');
-    setEl('kpi-witness-done', stats.witnessDone + ' / 20');
+    setEl('kpi-witness-done', stats.witnessDone + ' / 26');
     setEl('kpi-canvas-done', stats.canvasDone + ' / 20');
-    setEl('kpi-total-done', stats.totalDone + ' / 40');
+    setEl('kpi-total-done', stats.totalDone + ' / 46');
     setEl('kpi-total-pct', stats.totalPct + ' %');
 
     const barAg = document.getElementById('kpi-ag-bar');
@@ -32,6 +32,10 @@
       : AG.ANTIGRAVITY_TOOLS;
 
     container.innerHTML = list.map(function (t) {
+      const prac = Array.isArray(t.practicedIn) && t.practicedIn.length > 0
+        ? '<p class="prose-copy" style="margin:0.25rem 0 0;font-size:0.86rem;"><strong>Se practica en Ruta Antigravity:</strong> ' +
+          t.practicedIn.map(function (id) { return '<a href="ruta-antigravity.html">Ejercicio ' + id + '</a>'; }).join(', ') + '</p>'
+        : '';
       return [
         '<article class="card stack-sm">',
         '  <div class="flex-between">',
@@ -41,6 +45,7 @@
         '  <h3>' + AG.escapeHtml(t.title) + '</h3>',
         '  <p class="prose-copy">' + AG.escapeHtml(t.summary) + '</p>',
         '  <p class="prose-copy"><strong>Cuándo usarla:</strong> ' + AG.escapeHtml(t.whenToUse) + '</p>',
+        prac,
         '  <div class="card-elevated stack-sm">',
         '    <div class="flex-between"><strong>Ejemplo práctico:</strong>',
         '      <button type="button" class="btn btn-secondary copy-cmd-btn" data-cmd="' + AG.escapeHtml(t.exampleCommand) + '">Copiar comando</button>',

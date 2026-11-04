@@ -1,9 +1,12 @@
 {
   "saldoInicialEneroCOP": 50000000,
-  "ventasMensualesFacturadasCOP": 60000000,
-  "egresosMensualesContadoCOP": 40000000,
-  "utilidadContableMensualCOP": 20000000,
-  "plazoCarteraDias": 60,
-  "brechaLiquidezFebreroCOP": -30000000,
-  "explicacion": "En enero y febrero entran $0 de las nuevas ventas pero salen $80.000.000 de contado ($50M - $80M = -$30M)."
+  "plazoCarteraActualDias": 60,
+  "plazosParaSimularDias": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "reglaCobro": "La venta facturada en un mes se cobra completa N/30 meses después; la empresa inicia operación en enero, sin cartera de años anteriores",
+  "notaPagos": "Junio y diciembre incluyen la prima legal de servicios"
 }

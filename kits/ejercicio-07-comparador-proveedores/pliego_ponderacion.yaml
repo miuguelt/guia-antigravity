@@ -3,5 +3,4 @@ pesos_oficiales:
   calidad_y_garantia: 0.35
   rapidez_entrega: 0.25
 puntaje_minimo_aprobacion: 7.0
-ganador_esperado_id: "PROV-B"
-puntaje_ganador_esperado: 7.95
+regla_empate: "gana el proveedor con mayor nota de calidad"

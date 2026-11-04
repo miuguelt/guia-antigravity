@@ -64,15 +64,16 @@ const REQUIRED_TESTCASE_PROPERTIES = [
   'formulaHint'
 ];
 
-test('AG-M4-01: Los 20 ejercicios de Antigravity contienen estrictamente las 21 propiedades requeridas', () => {
-  assert.equal(ALL_AG_EXERCISES.length, 20, 'Deben existir exactamente 20 ejercicios de Antigravity');
+test('AG-M4-01: Los 26 ejercicios de Antigravity contienen estrictamente las 21 propiedades requeridas', () => {
+  assert.equal(ALL_AG_EXERCISES.length, 26, 'Deben existir exactamente 26 ejercicios de Antigravity');
 
   ALL_AG_EXERCISES.forEach((ex, idx) => {
     const expectedId = idx + 1;
     assert.equal(ex.id, expectedId, `Ejercicio Antigravity #${expectedId}: ID correlativo esperado`);
 
-    const keys = Object.keys(ex);
-    assert.equal(keys.length, 21, `Ejercicio Antigravity #${expectedId}: debe contener exactamente 21 propiedades`);
+    const keys = Object.keys(ex).filter((k) => k !== 'hasUserInputs');
+    assert.equal(keys.length, 21, `Ejercicio Antigravity #${expectedId}: debe contener exactamente 21 propiedades (más hasUserInputs opcional)`);
+    if ('hasUserInputs' in ex) assert.equal(typeof ex.hasUserInputs, 'boolean', `Ejercicio Antigravity #${expectedId}: hasUserInputs debe ser booleano`);
 
     REQUIRED_AG_PROPERTIES.forEach(prop => {
       assert.ok(prop in ex, `Ejercicio Antigravity #${expectedId}: propiedad requerida faltante: "${prop}"`);
@@ -176,13 +177,13 @@ test('CANON-M4-01: Erradicación absoluta de la palabra «dossier» en los 40 ej
    GRUPO 4: INTEGRACIÓN Y ESTRÉS DE KIT GENERATOR
    ========================================================================== */
 
-test('KIT-M4-01: kitGenerator.buildAllKitsBundle genera exitosamente los 20 kits completos sin fallos', () => {
+test('KIT-M4-01: kitGenerator.buildAllKitsBundle genera exitosamente los 26 kits completos sin fallos', () => {
   const bundle = kitGenerator.buildAllKitsBundle();
 
   assert.ok(bundle && typeof bundle === 'object', 'buildAllKitsBundle debe retornar un objeto');
   assert.equal(bundle.version, '2.1', 'Bundle debe tener version 2.1');
-  assert.equal(bundle.totalKits, 20, 'totalKits debe ser exactamente 20');
-  assert.ok(Array.isArray(bundle.kits) && bundle.kits.length === 20, 'kits debe ser un arreglo de 20 elementos');
+  assert.equal(bundle.totalKits, 26, 'totalKits debe ser exactamente 26');
+  assert.ok(Array.isArray(bundle.kits) && bundle.kits.length === 26, 'kits debe ser un arreglo de 26 elementos');
 
   // Validar cada kit generado en el bundle
   bundle.kits.forEach((k, idx) => {
@@ -198,7 +199,7 @@ test('KIT-M4-01: kitGenerator.buildAllKitsBundle genera exitosamente los 20 kits
   // Prueba de serialización y deserialización sin pérdidas
   const jsonString = JSON.stringify(bundle);
   const parsed = JSON.parse(jsonString);
-  assert.equal(parsed.kits.length, 20);
+  assert.equal(parsed.kits.length, 26);
   assert.equal(parsed.kits[3].filename, 'GEMINI.md');
 });
 
@@ -335,9 +336,9 @@ test('SIM-M4-02: simulatorEngine robustez ante separadores colombianos de miles 
   const rFasesTexto = simulatorEngine.evaluateWitnessCase(4, '2,00 fases', ALL_AG_EXERCISES);
   assert.equal(rFasesTexto.status, 'valido');
 
-  // Ejercicio 18 (rediseñado: 220 horas ordinarias semanales)
-  const rHoras = simulatorEngine.evaluateWitnessCase(18, '220', ALL_AG_EXERCISES);
+  // Ejercicio 18 (Ley 2101 de 2021 vigencia 2026: 5 × 42 = 210 horas ordinarias semanales)
+  const rHoras = simulatorEngine.evaluateWitnessCase(18, '210', ALL_AG_EXERCISES);
   assert.equal(rHoras.status, 'valido');
-  const rHorasTexto = simulatorEngine.evaluateWitnessCase(18, '220 h ordinarias', ALL_AG_EXERCISES);
+  const rHorasTexto = simulatorEngine.evaluateWitnessCase(18, '210 h ordinarias', ALL_AG_EXERCISES);
   assert.equal(rHorasTexto.status, 'valido');
 });

@@ -1,5 +1,5 @@
-ID_Etapa,Etapa,Dias_Optimista,Dias_Mas_Probable,Dias_Pesimista,Dias_Esperados_PERT,Costo_Base_COP
-ET-01,Permisos y Licencias Ambientales,5,8,20,9.5,4500000
-ET-02,Adecuacion Fisica y Redes,6,9,18,10.0,12000000
-ET-03,Instalacion Equipos Tostion,4,6,14,7.0,18500000
-ET-04,Pruebas e Integracion de Software,3,5,13,6.0,6000000
+ID_Etapa,Etapa,Dias_Optimista,Dias_Mas_Probable,Dias_Pesimista,Costo_Base_COP,Costo_Por_Dia_Adicional_COP
+ET-01,Permisos y Licencias Ambientales,5,8,20,4500000,150000
+ET-02,Adecuacion Fisica y Redes,6,9,18,12000000,600000
+ET-03,Instalacion Equipos Tostion,4,6,14,18500000,900000
+ET-04,Pruebas e Integracion de Software,3,5,13,6000000,250000

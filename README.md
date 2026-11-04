@@ -1,6 +1,6 @@
-# Academia Gemini & Google Antigravity v2.1 — Portal Educativo Multipágina (`guia-gemini-antigravity`)
+# Academia Gemini & Google Antigravity v2.2 — Portal Educativo Multipágina (`guia-gemini-antigravity`)
 
-Portal educativo interactivo 100 % **Offline-First (`file://`)** diseñado para que aprendices del SENA (Tecnología en Análisis y Desarrollo de Software — ADSO `228118`), profesionales no-desarrolladores y equipos técnicos dominen el flujo de trabajo con agentes en **Google Antigravity** y **Gemini Canvas** mediante **40 ejercicios progresivos**, **Kits de Contexto Semilla (`@archivos`)**, **Tareas Conceptuales en Paralelo**, **Simuladores Deterministas de Casos Testigo**, **Temporizador de Estudio con Atajos de Teclado** y **Memoria Persistente Multi-IDE**.
+Portal educativo interactivo 100 % **Offline-First (`file://`)** diseñado para que aprendices del SENA (Tecnología en Análisis y Desarrollo de Software — ADSO `228118`), profesionales no-desarrolladores y equipos técnicos dominen el flujo de trabajo con agentes en **Google Antigravity** y **Gemini Canvas** mediante **46 ejercicios progresivos** (26 en Antigravity cubriendo las 12 capacidades oficiales + 20 en Gemini Canvas), **84 Archivos Semilla (`@archivos`)**, **Tareas Conceptuales en Paralelo**, **Simuladores Deterministas de Casos Testigo**, **Temporizador de Estudio con Atajos de Teclado** y **Memoria Persistente Multi-IDE**.
 
 ---
 
@@ -70,6 +70,9 @@ node --test tests/portal-extensions.test.mjs
 
 # 3. Ejecución conjunta de ambas suites (30/30 pruebas aprobadas con cobertura funcional)
 node --test --experimental-test-coverage tests/portal-core.test.mjs tests/portal-extensions.test.mjs
+
+# 3b. Suite completa, incluida la coherencia de los 26 ejercicios con sus kits
+node --test tests/*.test.mjs
 
 # 4. Auditoría estática de ancho y legibilidad del texto (Regla 7.4)
 node tools/text-layout/scripts/text-layout-audit.mjs .

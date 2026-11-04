@@ -1,3 +1,5 @@
-Participante,Cargo,Escenario_1,Escenario_2,Escenario_3,Escenario_4,Promedio_Final,Estado_Certificacion
-Participante_Testigo,Coordinador Operativo,100,100,100,60,90,CERTIFICADO
-Analista_Junior_02,Auxiliar Bodega,100,60,60,60,70,REQUIERE_REFUERZO
+Participante,Cargo,Escenario_1,Escenario_2,Escenario_3,Escenario_4
+Coordinador_01,Coordinador Operativo,100,100,100,60
+Auxiliar_02,Auxiliar Bodega,100,60,60,60
+Vendedora_03,Asesora Comercial,100,100,0,100
+Analista_04,Analista de Inventarios,60,100,100,100

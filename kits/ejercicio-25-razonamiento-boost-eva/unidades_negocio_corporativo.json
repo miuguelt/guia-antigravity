@@ -1,0 +1,40 @@
+{
+  "formulaEVA": "NOPAT_COP - (Capital_Invertido_COP * (WACC_Pct / 100))",
+  "unidades": [
+    {
+      "id": "UN-01",
+      "nombre": "División Agroexportadora",
+      "nopatCOP": 38000000,
+      "capitalInvertidoCOP": 200000000,
+      "utilidadContableCOP": 41000000
+    },
+    {
+      "id": "UN-02",
+      "nombre": "División Maquila Tradicional",
+      "nopatCOP": 18000000,
+      "capitalInvertidoCOP": 180000000,
+      "utilidadContableCOP": 22500000
+    },
+    {
+      "id": "UN-03",
+      "nombre": "División Tiendas de Café",
+      "nopatCOP": 9500000,
+      "capitalInvertidoCOP": 75000000,
+      "utilidadContableCOP": 11800000
+    }
+  ],
+  "escenariosSensibilidad": [
+    {
+      "nombre": "Base",
+      "ajusteWaccPuntos": 0
+    },
+    {
+      "nombre": "Subida de tasas",
+      "ajusteWaccPuntos": 3
+    },
+    {
+      "nombre": "Refinanciación favorable",
+      "ajusteWaccPuntos": -2
+    }
+  ]
+}

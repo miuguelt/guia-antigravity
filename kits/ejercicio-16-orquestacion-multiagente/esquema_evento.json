@@ -4,25 +4,41 @@
     {
       "idSalon": "SALON-A",
       "nombre": "Auditorio Principal Guantiva",
-      "capacidadSillas": 200,
-      "inscritosActuales": 180,
-      "sobrecupo": 0
+      "capacidadSillas": 200
     },
     {
       "idSalon": "SALON-B",
       "nombre": "Sala Innovación Tecnológica",
-      "capacidadSillas": 80,
-      "inscritosActuales": 120,
-      "sobrecupo": 40
+      "capacidadSillas": 80
     },
     {
       "idSalon": "SALON-C",
       "nombre": "Aula Taller Experimental",
-      "capacidadSillas": 60,
-      "inscritosActuales": 52,
-      "sobrecupo": 0
+      "capacidadSillas": 60
     }
   ],
+  "reglaAforo": "Solo cuentan las inscripciones con Estado = Confirmado",
+  "integracion": {
+    "archivoFinal": "sistema_eventos_integrado.html",
+    "modulos": [
+      {
+        "archivo": "modulo_registro.js",
+        "exporta": "window.Eventos.registro.cargarInscritos(csvTexto)",
+        "devuelve": "arreglo de inscripciones confirmadas"
+      },
+      {
+        "archivo": "modulo_salones.js",
+        "exporta": "window.Eventos.salones.calcularAforo(inscritos, salones)",
+        "devuelve": "arreglo { idSalon, inscritos, capacidad, exceso }"
+      },
+      {
+        "archivo": "modulo_finanzas.js",
+        "exporta": "window.Eventos.finanzas.resumen(inscritos, finanzas)",
+        "devuelve": "{ recaudoCOP, costoFijoCOP, utilidadCOP }"
+      }
+    ],
+    "reglaParalelo": "Ningún módulo lee ni modifica el archivo de otro; solo se comunican con estas firmas"
+  },
   "finanzas": {
     "tarifaGeneralCOP": 150000,
     "tarifaVipCOP": 300000,

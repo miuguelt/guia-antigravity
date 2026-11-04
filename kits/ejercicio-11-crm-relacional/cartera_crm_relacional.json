@@ -22,7 +22,6 @@
       "titulo": "Renovación Equipos Diagnóstico",
       "valorCOP": 10000000,
       "probabilidadPct": 50,
-      "valorPonderadoCOP": 5000000,
       "etapa": "Propuesta Enviada",
       "proximoContacto": "2026-11-05"
     },
@@ -32,13 +31,18 @@
       "titulo": "Licencia Telemedicina Anual",
       "valorCOP": 4000000,
       "probabilidadPct": 25,
-      "valorPonderadoCOP": 1000000,
       "etapa": "Diagnóstico",
+      "proximoContacto": ""
+    },
+    {
+      "idNegocio": "OP-201",
+      "idEmpresa": "EMP-02",
+      "titulo": "Trazabilidad de Lotes de Exportación",
+      "valorCOP": 7500000,
+      "probabilidadPct": 0,
+      "etapa": "Cerrado Perdido",
       "proximoContacto": ""
     }
   ],
-  "resumenCasoTestigo": {
-    "valorNominalTotalCOP": 14000000,
-    "valorPonderadoTotalCOP": 6000000
-  }
+  "reglaEmbudo": "Las oportunidades en etapa Cerrado Perdido no suman al embudo ni generan alerta de seguimiento"
 }

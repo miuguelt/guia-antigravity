@@ -1,5 +1,8 @@
-Tipo_Soporte,Referencia,Tercero,Monto_COP,Estado_Conciliacion
-Banco_Transferencia,PSE-7741,Supermercados Oriente,5200000,Confirmado en Extracto
-Banco_Transferencia,PSE-7789,Hoteles del Fonce S.A.S.,3800000,Confirmado en Extracto
-Cuenta_Por_Cobrar,FE-4510,Clínica Metropolitana,2000000,Crédito 30 días
-Cuenta_Por_Cobrar,FE-4518,Corporación Educativa Vélez,1500000,Crédito 30 días
+Semana,Tipo_Soporte,Referencia,Tercero,Monto_COP,Estado_Conciliacion
+2026-W44,Banco_Transferencia,PSE-7741,Supermercados Oriente,5200000,Confirmado en Extracto
+2026-W44,Banco_Transferencia,PSE-7789,Hoteles del Fonce S.A.S.,3800000,Confirmado en Extracto
+2026-W44,Cuenta_Por_Cobrar,FE-4510,Clínica Metropolitana,2000000,Crédito 30 días
+2026-W44,Cuenta_Por_Cobrar,FE-4518,Corporación Educativa Vélez,1500000,Crédito 30 días
+2026-W45,Banco_Transferencia,PSE-7902,Supermercados Oriente,6100000,Confirmado en Extracto
+2026-W45,Banco_Transferencia,PSE-7915,Hoteles del Fonce S.A.S.,4300000,Confirmado en Extracto
+2026-W45,Cuenta_Por_Cobrar,FE-4561,Clínica Metropolitana,2000000,Crédito 30 días
