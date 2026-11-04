@@ -13,7 +13,7 @@
   3. **Comandos reales:** `/plan` pasa a modo Planning; el ejercicio 24 usa resumen de traspaso y regla en `GEMINI.md`; el 25 usa modo Planning con el modelo de mayor razonamiento.
   4. **Ruta por nivel:** `sortExercisesForRoute` y `getAdjacentExerciseId` en `js/ui/render-ag-tabs.js`.
 - **Verificación:** nueva suite `tests/exercises-pedagogy.test.mjs`, que recalcula los 26 Casos Testigo desde los archivos del kit; suite completa en verde (97 pruebas).
-- **Pendiente:** el Laboratorio de Prompts (`js/core/prompt-builder.js`) todavía genera prompts que empiezan con `/plan`.
+- **Laboratorio de Prompts:** `js/core/prompt-builder.js` usa el modo Planning por defecto (sin prefijo), pide el Implementation Plan dentro del prompt y solo da puntaje a modos y comandos confirmados (`planning`, `/grill-me`, `/goal`, `/schedule`, `/browser`). Los ejercicios 22 y 26 heredan `/grill-me` y `/goal`.
 
 ## Iteración 2.2.0 — Cobertura Integral de las 12 Capacidades de Antigravity (26 Ejercicios), Guía de Inicio Rápido y Checklist de Artefactos
 - **Fecha:** 2026-11-03

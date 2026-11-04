@@ -81,7 +81,7 @@
 
         <article class="card stack-sm" style="border-left:5px solid var(--accent-primary);">
           <span class="badge badge-l2">Enfoque Profesional Antigravity (100 % Verificable)</span>
-          <h3><code>/plan</code> + <code>@catalogo_productos.csv</code> + <code>GEMINI.md</code> + Caso Testigo</h3>
+          <h3>Modo Planning + <code>@catalogo_productos.csv</code> + <code>GEMINI.md</code> + Caso Testigo</h3>
           <ul class="stack-sm">
             <li><strong>Paso 1 (Prompt con contrato):</strong> Declara la fórmula exacta <code>Margen Bruto = (Precio_Neto - Costo) / Precio_Neto</code> y conecta el catálogo local con <code>@</code>.</li>
             <li><strong>Paso 2 (Tarea Conceptual en Paralelo):</strong> Mientras Gemini programa, calculas tu Caso Testigo: <code>Subtotal $1.000.000 - 10 % dcto ($900.000) + 19 % IVA = $1.071.000 COP</code>.</li>
@@ -138,11 +138,12 @@
       <div class="bento-grid-2">
         <div class="stack-md">
           <div class="stack-sm">
-            <label for="lab-command"><strong>1. Comando inicial de Antigravity:</strong></label>
+            <label for="lab-command"><strong>1. Modo o comando inicial de Antigravity:</strong></label>
             <select id="lab-command" class="select-control">
-              <option value="/plan">/plan — Diseñar Implementation Plan antes de tocar archivos</option>
+              <option value="planning">Modo Planning — Implementation Plan antes de tocar archivos</option>
               <option value="/grill-me">/grill-me — Entrevista previa para descubrir casos borde</option>
               <option value="/goal">/goal — Ejecución autónoma hasta cumplir todas las pruebas</option>
+              <option value="/schedule">/schedule — Tarea recurrente programada</option>
             </select>
           </div>
 

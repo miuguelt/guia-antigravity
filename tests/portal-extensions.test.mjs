@@ -613,7 +613,8 @@ test('14. promptBuilder.exerciseToPromptSpec transforma los 26 ejercicios y todo
     assert.ok(typeof spec.atFiles === 'string' && spec.atFiles.includes('@'), `atFiles del ejercicio ${ex.id} debe incluir al menos una mención @`);
     assert.ok(spec.atFiles.includes(ex.kit.filename), `atFiles del ejercicio ${ex.id} debe incluir su archivo semilla: ${ex.kit.filename}`);
     assert.equal(spec.contextFiles, spec.atFiles, `contextFiles y atFiles deben ser coherentes en el ejercicio ${ex.id}`);
-    assert.equal(spec.command, '/plan', `El comando del ejercicio ${ex.id} debe ser /plan`);
+    const expectedCmd = (ex.initialPrompt.match(/^\/(grill-me|goal)\b/) || [])[0] || 'planning';
+    assert.equal(spec.command, expectedCmd, `El comando del ejercicio ${ex.id} debe ser ${expectedCmd}`);
     assert.ok(typeof spec.constraints === 'string' && spec.constraints.length >= 12, `Las restricciones del ejercicio ${ex.id} deben tener al menos 12 caracteres`);
     assert.ok(spec.constraints.includes('es-CO'), `Las restricciones del ejercicio ${ex.id} deben especificar español de Colombia`);
     assert.ok(spec.constraints.includes('4 estados'), `Las restricciones del ejercicio ${ex.id} deben requerir los 4 estados`);

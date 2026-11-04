@@ -185,7 +185,7 @@ test('CHALLENGER 2.6: promptBuilder.exerciseToPromptSpec con entradas nulas y fa
   const specNumber = promptBuilder.exerciseToPromptSpec(12345);
   assert.ok(specNumber, 'Primitivo truthy produce un objeto de especificación por defecto');
   assert.equal(specNumber.role, 'Consultor de Automatización Antigravity');
-  assert.equal(specNumber.command, '/plan');
+  assert.equal(specNumber.command, 'planning');
   const evalNumber = promptBuilder.scorePromptSpec(specNumber);
   assert.equal(evalNumber.score, 100);
 });
@@ -197,7 +197,7 @@ test('CHALLENGER 2.7: promptBuilder.exerciseToPromptSpec con objeto vacío o cam
   assert.ok(spec, 'Debe devolver un objeto no nulo');
   assert.equal(spec.role, 'Consultor de Automatización Antigravity');
   assert.equal(spec.goal, 'Construir solución modular y verificada para el ejercicio.');
-  assert.equal(spec.command, '/plan');
+  assert.equal(spec.command, 'planning');
   assert.equal(spec.atFiles, '@datos_semilla.csv, @GEMINI.md');
   assert.equal(spec.formula, 'Validación matemática determinista');
   assert.ok(spec.constraints.includes('es-CO'));
@@ -245,7 +245,8 @@ test('CHALLENGER 2.8: promptBuilder.exerciseToPromptSpec con fórmulas complejas
 
     // Comprobar que no rompe los constructores secundarios
     const promptText = promptBuilder.buildAntigravityPrompt(spec);
-    assert.ok(promptText.includes('/plan Actúa como Matemático Cuantitativo'));
+    assert.ok(promptText.startsWith('Actúa como Matemático Cuantitativo'));
+    assert.ok(!promptText.includes('/plan'));
     assert.ok(promptText.includes(formula));
 
     const guideText = promptBuilder.buildConceptualTaskGuide(spec);
@@ -311,7 +312,8 @@ test('CHALLENGER 2.10: Los 26 ejercicios de Antigravity pasan scorePromptSpec co
     assert.ok(spec.atFiles.includes('@'), `atFiles debe contener @ en ejercicio ${ex.id}`);
     assert.ok(spec.atFiles.includes(ex.kit.filename), `atFiles debe contener ${ex.kit.filename} en ejercicio ${ex.id}`);
 
-    assert.equal(spec.command, '/plan', `Command debe ser /plan en ejercicio ${ex.id}`);
+    const expectedCmd = (ex.initialPrompt.match(/^\/(grill-me|goal)\b/) || [])[0] || 'planning';
+    assert.equal(spec.command, expectedCmd, `Command debe ser ${expectedCmd} en ejercicio ${ex.id}`);
 
     assert.ok(typeof spec.constraints === 'string', `Constraints debe ser string en ejercicio ${ex.id}`);
     assert.ok(spec.constraints.length >= 12, `Constraints en ejercicio ${ex.id} tiene menos de 12 caracteres`);

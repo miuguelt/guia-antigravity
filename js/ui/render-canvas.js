@@ -115,7 +115,7 @@
         objective: goalIn ? goalIn.value : '',
         contextFiles: filesIn ? filesIn.value : '',
         atFiles: filesIn ? filesIn.value : '',
-        command: cmdIn ? cmdIn.value : '/plan',
+        command: cmdIn ? cmdIn.value : 'planning',
         constraints: constIn ? constIn.value : '',
         conceptualTopic: topicIn ? topicIn.value : '',
         conceptualTheme: topicIn ? topicIn.value : ''
@@ -148,7 +148,7 @@
       if (roleIn) roleIn.value = s.role || '';
       if (goalIn) goalIn.value = s.goal || s.objective || '';
       if (filesIn) filesIn.value = s.contextFiles || s.atFiles || '';
-      if (cmdIn) cmdIn.value = s.command || '/plan';
+      if (cmdIn) cmdIn.value = s.command || 'planning';
       if (constIn) constIn.value = s.constraints || '';
       if (topicIn) topicIn.value = s.conceptualTopic || s.conceptualTheme || '';
       updateOutputs();

@@ -260,6 +260,15 @@ test('14. promptBuilder.scorePromptSpec califica especificaciones completas e in
   const emptyScore = promptBuilder.scorePromptSpec({ role: '', goal: '', contextFiles: '', command: 'haz', constraints: '' });
   assert.equal(emptyScore.score, 0);
   assert.equal(emptyScore.level, 'Básico Ambiguo');
+
+  // Solo cuentan los modos y comandos confirmados de Antigravity.
+  ['planning', '/grill-me', '/goal', '/schedule', '/browser'].forEach((command) => {
+    assert.equal(promptBuilder.scorePromptSpec({ ...promptBuilder.PROMPT_PRESETS.cotizador, command }).score, 100, command);
+  });
+  ['/plan', '/boost', '/compact', '/learn'].forEach((command) => {
+    assert.equal(promptBuilder.scorePromptSpec({ ...promptBuilder.PROMPT_PRESETS.cotizador, command }).score, 80, command);
+  });
+  Object.values(promptBuilder.PROMPT_PRESETS).forEach((p) => assert.equal(p.command, 'planning'));
 });
 
 test('15. promptBuilder construye Prompt Antigravity, Guía Conceptual, GEMINI.md y SKILL.md', () => {
@@ -269,7 +278,11 @@ test('15. promptBuilder construye Prompt Antigravity, Guía Conceptual, GEMINI.m
   const geminiMd = promptBuilder.buildGeminiMdTemplate(preset);
   const skillMd = promptBuilder.buildSkillMdTemplate(preset);
 
-  assert.ok(prompt.includes('/plan Actúa como'));
+  assert.ok(prompt.startsWith('Actúa como'), 'En modo Planning el prompt no lleva prefijo de comando');
+  assert.ok(!prompt.includes('/plan'), 'No debe generar el pseudo-comando /plan');
+  assert.ok(prompt.includes('Implementation Plan'), 'Debe pedir el plan antes de modificar archivos');
+  const grill = promptBuilder.buildAntigravityPrompt({ ...preset, command: '/grill-me' });
+  assert.ok(grill.startsWith('/grill-me Actúa como'));
   assert.ok(prompt.includes('@conciliacion_ventas_banco.csv'));
   assert.ok(guide.includes('TAREA CONCEPTUAL EN PARALELO'));
   assert.ok(geminiMd.includes('# GEMINI.md'));
