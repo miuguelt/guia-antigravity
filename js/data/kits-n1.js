@@ -67,7 +67,7 @@
     2: {
       zipName: 'kit-ej02-pedidos-multicanal.zip',
       folderName: 'ejercicio-02-normalizacion-pedidos',
-      summary: 'Exportación de chat de WhatsApp, correo institucional (.eml.txt) y catálogo JSON para normalizar 4 pedidos en Primera Forma Normal (1NF).',
+      summary: 'Exportación de chat de WhatsApp, correo institucional (.eml.txt) y catálogo JSON para pasar 4 pedidos a una tabla con un solo dato por casilla.',
       files: [
         {
           filename: 'notas_crudas_pedidos.txt', ext: 'txt', mime: 'text/plain;charset=utf-8',

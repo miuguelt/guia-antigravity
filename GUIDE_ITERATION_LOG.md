@@ -1,5 +1,16 @@
 # Bitácora de Iteraciones de la Guía (`GUIDE_ITERATION_LOG.md`)
 
+## Iteración 2.4.0 — Lenguaje para aprendices que no programan en la Ruta Antigravity
+- **Fecha:** 2026-11-03
+- **Cambios realizados:**
+  1. Se reformularon las tareas conceptuales, acciones paralelas, pasos y prompts paralelos de los ejercicios 2, 5, 11, 12, 16, 19, 21 y 26. Se reemplazaron términos como «Primera Forma Normal», «Survivorship Rule», «distancia de Levenshtein», «llaves primarias y foráneas», «acoplamiento y cohesión», «grafo» y «criterios deterministas» por explicaciones con ejemplos de oficina. El cálculo de cada Caso Testigo no cambia.
+  2. En los 26 ejercicios, «revisa el diff» pasó a «compara el antes y el después que muestra Antigravity».
+  3. Se alinearon con el mismo lenguaje el registro de entregables (JSON y JS), el resumen del kit 2, el mensaje del simulador y la tarjeta del Hub.
+  4. Se agregó `tests/non-programmer-language.test.mjs`, que impide volver a usar esa jerga en los textos que lee el aprendiz. Los prompts dirigidos al agente pueden conservar términos técnicos.
+- **Pendiente:** rediseñar los temas de la Ruta Canvas, que hoy están orientados a desarrolladores.
+
+---
+
 ## Iteración 2.3.0 — Ejercicios resolubles desde el kit, comandos verificados y ruta ordenada por nivel
 - **Fecha:** 2026-11-03
 - **Problema pedagógico abordado:**

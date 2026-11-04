@@ -22,24 +22,24 @@
       goal: 'Construir en Antigravity un sistema CRM comercial completo con entidades conectadas (.json, .sql y .csv) y cálculo real del Valor Ponderado del Pipeline.',
       businessChallenge: 'Eliminar el desorden comercial conectando empresas, oportunidades y actividades con proyección ponderada real de ingresos.',
       agentRoleAction: 'El agente lee cartera, esquema SQL y actividades (@) para programar crm_empresarial.html con llaves foráneas y alertas de abandono.',
-      learnerParallelAction: 'Tú revisas en el plan las llaves primarias y foráneas de las 3 tablas, y compruebas que la oportunidad cerrada no sume al embudo ni genere alerta.',
+      learnerParallelAction: 'Tú revisas en el plan que cada empresa tenga un código que no se repite y que cada oportunidad apunte a una empresa existente, y compruebas que la oportunidad cerrada no sume al embudo ni genere alerta.',
       professionalOutputCriteria: 'CRM relacional navegable con validación de llaves, embudo visual ponderado y semáforo de oportunidades sin seguimiento.',
       antigravitySteps: [
         'Paso 1 (Preparar): Descarga el Kit Completo (.zip), descomprímelo en una carpeta nueva y ábrela en Antigravity. Archivos: @cartera_crm_relacional.json, @schema_crm_relacional.sql y @actividades_seguimiento.csv.',
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Verifica que el plan respete las 3 tablas del SQL y la regla de embudo del JSON.',
-        'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: dibuja el diagrama entidad-relación de las 3 tablas.',
+        'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: dibuja en papel 3 cajas (Empresas, Oportunidades y Actividades) y une con flechas qué código conecta a cada una.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.'
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.'
       ],
       initialPrompt: 'Actúa como Arquitecto de Sistemas CRM.\nLee @cartera_crm_relacional.json, @schema_crm_relacional.sql y @actividades_seguimiento.csv y construye crm_empresarial.html con las 3 entidades del SQL: empresas, oportunidades y actividades.\n1. Valor Nominal y Valor Ponderado del embudo (Valor_COP × Probabilidad_Pct / 100), aplicando la regla de embudo del JSON.\n2. Alerta roja para oportunidades abiertas sin próximo seguimiento.\n3. Vista por empresa con sector, oportunidades y actividades relacionadas.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
-      conceptualTaskTitle: 'Bases de Datos Relacionales: Llaves Primarias, Foráneas y Valor Ponderado del Embudo',
-      conceptualTheory: 'En un modelo relacional cada Empresa se guarda una sola vez con su Llave Primaria (EMP-01) y sus Oportunidades apuntan a ese código mediante una Llave Foránea. Para proyectar ingresos realistas se multiplica el valor de cada negocio por su probabilidad de cierre.',
+      conceptualTaskTitle: 'Datos Conectados: Códigos que No se Repiten y Valor Ponderado del Embudo',
+      conceptualTheory: 'En un CRM ordenado cada Empresa se guarda una sola vez con un código propio (EMP-01) y cada Oportunidad escribe ese código para indicar a qué empresa pertenece, igual que una factura cita el NIT del cliente. Para proyectar ingresos realistas se multiplica el valor de cada negocio por su probabilidad de cierre.',
       conceptualTaskSteps: [
         'Toma la empresa EMP-01 con dos negocios abiertos: OP-101 por $10.000.000 al 50 % y OP-102 por $4.000.000 al 25 %.',
         'Multiplica cada negocio por su probabilidad: ($10.000.000 * 0,50) + ($4.000.000 * 0,25) = $5.000.000 + $1.000.000.',
         'Suma ambos resultados: el Valor Ponderado esperado es exactamente $6.000.000 COP.'
       ],
-      parallelToolPrompt: 'Explícame sin jerga técnica qué es una Llave Primaria y una Llave Foránea y por qué el Valor Ponderado del Pipeline es más confiable que sumar cotizaciones brutas.',
+      parallelToolPrompt: 'Explícame con el ejemplo de una factura que cita el NIT del cliente por qué cada empresa necesita un código único en un CRM y por qué el Valor Ponderado del Pipeline es más confiable que sumar cotizaciones brutas.',
       refinementPrompt: 'Exige que al mover una oportunidad a "Negociación" sea obligatorio registrar la fecha y hora del próximo seguimiento.',
       kit: { filename: 'cartera_crm_relacional.json', type: 'zip', description: 'Cartera relacional (.json), esquema SQL con llaves primarias y foráneas (.sql) y actividades (.csv).' },
       testCase: { label: 'Valor Ponderado del Embudo ($10.000.000×50 % + $4.000.000×25 %)', sampleInput: '6000000', expectedValue: 6000000, tolerance: 1, unit: 'COP', formulaHint: '$5.000.000 + $1.000.000 = $6.000.000 COP' }
@@ -62,18 +62,18 @@
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Comprueba que el plan instale la Skill en .agents/skills/auditoria-gastos/SKILL.md y agrupe por Empleado + Fecha + NIT.',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: explica por qué la Skill sirve para auditar cualquier semana futura sin repetir el prompt.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.',
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.',
         'Paso 6 (Reutilizar): Abre una conversación nueva y escribe solo: "Audita la relación de gastos de esta carpeta". Comprueba que el agente use la Skill sin que se la expliques.'
       ],
       initialPrompt: 'Actúa como Ingeniero de Automatización en Google Antigravity y Auditor Interno.\n1. Instala la habilidad en .agents/skills/auditoria-gastos/SKILL.md basándote en @SKILL.md.\n2. Aplícala a @relacion_gastos_viaticos.csv y al soporte @factura_electronica_fraccionada.xml para construir visor_auditoria_skill.html.\n3. El visor muestra los gastos que exceden el tope individual y los grupos fraccionados (mismo empleado, fecha y NIT, con 2 o más recibos y suma mayor a $200.000 COP), con las horas de emisión del XML.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
       conceptualTaskTitle: 'Anatomía de una Skill (SOP) y Detección de Fraccionamiento de Compras',
       conceptualTheory: 'Una Skill en Antigravity convierte un Procedimiento Operativo Estándar (SOP) en una capacidad permanente del agente. En auditoría financiera, agrupar por (Empleado + Fecha + Proveedor) permite descubrir cuando una compra de $350.000 se divide en dos facturas de $175.000 para evadir el tope de autorización de $200.000.',
       conceptualTaskSteps: [
-        'Agrupa los recibos por la llave compuesta: Empleado + Fecha + NIT_Proveedor.',
+        'Agrupa los recibos que coinciden a la vez en Empleado, Fecha y NIT del proveedor.',
         'Suma los dos recibos de $175.000 COP emitidos el mismo día: $175.000 + $175.000 = $350.000 COP.',
         'Como $350.000 > $200.000 (tope autorizado) y hay 2 recibos, el motor marca alerta crítica de fraccionamiento.'
       ],
-      parallelToolPrompt: 'Explícame cómo estructurar el encabezado YAML y las reglas de un archivo SKILL.md en Antigravity para que el agente ejecute auditorías sin ambigüedad.',
+      parallelToolPrompt: 'Explícame en lenguaje sencillo qué partes tiene un archivo SKILL.md en Antigravity y cómo redactar sus reglas como una lista de pasos para que el agente audite sin ambigüedad.',
       refinementPrompt: 'Añade en la Skill y en visor_auditoria_skill.html la validación contra una lista blanca de NIT de proveedores autorizados.',
       kit: { filename: 'SKILL.md', type: 'zip', description: 'Plantilla oficial SKILL.md (.md), relación de gastos con viáticos (.csv) y soporte XML fraccionado (.xml).' },
       testCase: { label: 'Suma detectada en compra fraccionada (2 recibos de $175.000 el mismo día)', sampleInput: '350000', expectedValue: 350000, tolerance: 1, unit: 'COP', formulaHint: '$175.000 + $175.000 = $350.000 COP (> tope de $200.000)' }
@@ -96,7 +96,7 @@
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Verifica que el plan calcule los cobros desplazando las ventas según el plazo y que no use saldos escritos a mano.',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: identifica en qué mes la empresa necesitaría un crédito con cobro a 90 días.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.'
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.'
       ],
       initialPrompt: 'Actúa como Director de Tesorería Corporativa.\nCon @flujo_tesoreria_base.csv, @calendario_cartera_60dias.json y @obligaciones_fijas_contado.yaml construye simulador_tesoreria_12m.html.\n1. Vista Contable mes a mes: ventas facturadas menos pagos.\n2. Vista de Caja en Banco: parte del saldo inicial y cobra cada venta según el plazo elegido (0, 30, 60 o 90 días) y la regla de cobro del JSON.\n3. Alerta de brecha de liquidez en cada mes con saldo menor que $0 y el monto mínimo de crédito necesario.\n4. Comprueba que los pagos del CSV coincidan con el desglose del YAML, incluida la prima de junio y diciembre.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
       conceptualTaskTitle: 'Ciclo de Conversión de Efectivo: Por Qué una Empresa Rentable en Papel Quiebra por Liquidez',
@@ -129,7 +129,7 @@
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Revisa que el plan use el umbral y la regla de refuerzo de la rúbrica, no solo el promedio.',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: diseña un dilema laboral propio con opción óptima, aceptable y riesgosa.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.'
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.'
       ],
       initialPrompt: 'Actúa como Diseñador Instruccional Senior.\nLee @escenarios_competencias.json, @rubrica_competencias_bloom.md y @resultados_equipo_piloto.csv y construye academia_evaluacion_equipos.html.\n1. Presenta cada escenario con su nivel de Bloom y 3 opciones en orden aleatorio; al elegir, muestra la consecuencia y el puntaje.\n2. Calcula el promedio final y el estado de certificación con las reglas de la rúbrica.\n3. Muestra un tablero con los resultados del equipo piloto.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
       conceptualTaskTitle: 'Diseño de Evaluaciones Aplicadas: Taxonomía de Bloom y Distractores Plausibles',
@@ -162,7 +162,7 @@
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Confirma que el plan tenga 3 pasadas y que contemple lotes que agrupan varias ventas del mismo día.',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: explica por qué el extracto no trae el número de la venta.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.'
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.'
       ],
       initialPrompt: 'Actúa como Auditor Financiero Senior.\nProcesa @conciliacion_ventas_banco.csv, @extracto_bancario_octubre.csv y @reglas_pasarela_pagos.json y construye conciliador_automatico.html con emparejamiento en 3 pasadas:\n1. Monto neto exacto (aplicando la comisión del medio de pago) y fecha dentro de la ventana de compensación.\n2. Lotes: suma de ventas con tarjeta del mismo día que coincide con un solo abono.\n3. Partidas en tránsito y cargos bancarios no registrados.\nGenera un acta de conciliación imprimible.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
       conceptualTaskTitle: 'Algoritmo de Emparejamiento Tolerante (Fuzzy Matching Financiero) en Conciliaciones',
@@ -188,7 +188,7 @@
       goal: 'Coordinar varios agentes en paralelo desde el Agent Manager, cada uno con su propio archivo, unidos por el contrato de integración del JSON.',
       businessChallenge: 'Desacoplar subsistemas operativos mediante contratos de datos estrictos para coordinar agentes de IA concurrentes sin sobrescribir archivos.',
       agentRoleAction: 'Un agente diseña el plan de integración; otros 3 agentes construyen cada módulo en paralelo con sus pruebas, y el primero los une en sistema_eventos_integrado.html.',
-      learnerParallelAction: 'Tú abres el Agent Manager, lanzas un agente por módulo y vigilas que ninguno modifique el archivo de otro; al final revisas que los 3 cumplan las firmas del contrato.',
+      learnerParallelAction: 'Tú abres el Agent Manager, lanzas un agente por módulo y vigilas que ninguno modifique el archivo de otro; al final revisas que los 3 entreguen los datos con los nombres y formatos acordados en el contrato.',
       professionalOutputCriteria: 'Sistema integrado modular desacoplado con 3 módulos independientes, alerta de aforo crítico y cálculo de margen de evento en vivo.',
       antigravitySteps: [
         'Paso 1 (Preparar): Descarga el kit (@esquema_evento.json, @contrato_interfaz_modulos.sql y @asistentes_confirmados.csv), descomprímelo y abre la carpeta en Antigravity.',
@@ -198,14 +198,14 @@
         'Paso 5 (Verificar): Revisa que el Salón B muestre el exceso de aforo contando solo los confirmados e ingresa ese valor en el simulador.'
       ],
       initialPrompt: 'Actúa como Arquitecto Principal de Sistemas en Google Antigravity.\nLee @esquema_evento.json, @contrato_interfaz_modulos.sql y @asistentes_confirmados.csv.\n1. Propón el plan de integración con 3 módulos independientes según integracion.modulos del JSON: modulo_registro.js, modulo_salones.js y modulo_finanzas.js.\n2. Define para cada módulo sus pruebas de aceptación con datos reales del CSV (por ejemplo, inscritos confirmados por salón).\n3. No implementes los módulos: otros agentes los harán en paralelo. Tu entrega es el plan y el archivo final sistema_eventos_integrado.html que los une cuando estén listos.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
-      conceptualTaskTitle: 'Desacoplamiento Modular y Contratos de Datos para Trabajo Multi-Agente sin Colisiones',
+      conceptualTaskTitle: 'Repartir el Trabajo entre Varios Agentes sin que se Estorben: Una Tarea por Agente y una Hoja de Entrega Acordada',
       conceptualTheory: 'Para que varios agentes trabajen en paralelo desde el Agent Manager sin pisarse el código, primero se fija un Contrato de Datos inmutable (`esquema_evento.json`) y se asigna un archivo distinto a cada subsistema.',
       conceptualTaskSteps: [
         'Revisa la capacidad del Salón B en el contrato: Capacidad_Maxima = 80 sillas.',
         'Inscritos actuales a la conferencia magistral en Salón B = 120 personas.',
         'Exceso de aforo detectado por el Subsistema B = 120 - 80 = 40 personas por reubicar.'
       ],
-      parallelToolPrompt: 'Explícame con una analogía empresarial qué significa Bajo Acoplamiento y Alta Cohesión al dividir un proyecto entre varios agentes en el Agent Manager.',
+      parallelToolPrompt: 'Explícame con el ejemplo de una cocina de restaurante, donde cada persona tiene su estación y una hoja de pedidos común, cómo dividir un proyecto entre varios agentes en el Agent Manager sin que se estorben.',
       refinementPrompt: 'Añade en el Subsistema B un botón de Reasignación Inteligente que sugiera mover la charla a un salón con capacidad suficiente.',
       kit: { filename: 'esquema_evento.json', type: 'zip', description: 'Contrato JSON compartido (.json), esquema SQL de salones (.sql) y lista de asistentes (.csv).' },
       testCase: { label: 'Exceso de aforo detectado (120 inscritos en salón de 80 sillas)', sampleInput: '40', expectedValue: 40, tolerance: 0, unit: 'personas', formulaHint: '120 inscritos - 80 sillas de capacidad = 40 personas de sobrecupo' }
@@ -228,7 +228,7 @@
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Comprueba que el plan distinga la política interna (YAML) de la configuración real de servidores MCP de Antigravity.',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: clasifica 5 acciones de tu trabajo en solo lectura, escritura controlada y confirmación humana.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.',
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.',
         'Paso 6 (MCP real): Abre el gestor de servidores MCP de Antigravity y revisa qué herramientas expone un servidor instalado. Compáralas con allowed_tools del YAML.'
       ],
       initialPrompt: 'Actúa como Arquitecto de Integración Empresarial y Especialista en MCP.\nCon @mcp_politicas_seguridad.json, @mcp_servers_config.yaml y @bitacora_auditoria_mcp.log construye centro_integracion_mcp.html que:\n1. Muestre por servidor su modo (read_only, controlled_write, human_in_the_loop) y sus herramientas permitidas.\n2. Retenga los pedidos con mora mayor que el umbral hasta aprobación humana.\n3. Audite cada línea de la bitácora contra la política y marque las violaciones con la regla incumplida.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
@@ -262,7 +262,7 @@
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Verifica que el plan explique cómo garantiza la cobertura de mando con 2 supervisoras y 1 especialista.',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: propón una rotación para las 3 personas de mando que cumpla la regla Noche-Mañana.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.'
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.'
       ],
       initialPrompt: 'Actúa como Especialista en Investigación de Operaciones y Legislación Laboral Colombiana.\nCon @plantilla_turnos_equipo.csv, @normativa_jornada_laboral.md y @demanda_turnos_semanal.json construye optimizador_turnos.html que genere y audite la matriz semanal:\n1. Cubre las personas requeridas por franja y día de la demanda.\n2. Respeta todas las restricciones duras de la norma (42 h semanales, 1 turno por día, nada de Mañana después de Noche, mando en cada turno).\n3. Intenta cumplir las restricciones blandas y explica cuáles no pudo cumplir.\n4. Muestra horas por persona, horas totales programadas y costo de la nómina semanal.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
       conceptualTaskTitle: 'Optimización de Turnos con Restricciones Duras (Hard Constraints) y Cumplimiento Legal (Ley 2101 — 42 h)',
@@ -288,14 +288,14 @@
       goal: 'Construir un simulador estocástico que calcule la duración esperada PERT y ejecute escenarios de Monte Carlo para definir fechas y presupuestos con 85 % de certeza.',
       businessChallenge: 'Eliminar el sesgo optimista en la estimación de cronogramas y presupuestos modelando la incertidumbre probabilística (PERT / Monte Carlo).',
       agentRoleAction: 'El agente procesa estimaciones de 3 puntos (@), crea simulador_montecarlo.html y corre 5.000 iteraciones calculando P50, P85 y P90.',
-      learnerParallelAction: 'Tú identificas la ruta crítica del grafo y explicas por qué el P85, y no el promedio, es la fecha que conviene prometer.',
+      learnerParallelAction: 'Tú identificas la cadena de etapas que más tarda (la que decide la fecha final) y explicas por qué el P85, la fecha que se cumple 85 de cada 100 veces, conviene más que el promedio para prometer.',
       professionalOutputCriteria: 'Simulador estocástico con histograma de probabilidad acumulada, percentil P85 de compromiso y diagrama de Tornado.',
       antigravitySteps: [
         'Paso 1 (Preparar): Descarga el Kit Completo (.zip), descomprímelo en una carpeta nueva y ábrela en Antigravity. Archivos: @estimaciones_pert_proyecto.csv, @grafo_ruta_critica.json y @parametros_montecarlo.yaml.',
-        'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Comprueba que el plan respete las dependencias del grafo (ET-02 y ET-03 en paralelo) y que use una semilla fija para que la simulación sea repetible.',
+        'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Comprueba que el plan respete qué etapa espera a cuál (ET-02 y ET-03 avanzan al mismo tiempo) y que use una semilla fija para que la simulación sea repetible.',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: calcula la duración PERT de una etapa y compárala con la más probable.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.'
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.'
       ],
       initialPrompt: 'Actúa como Especialista en Análisis Cuantitativo de Riesgos.\nCon @estimaciones_pert_proyecto.csv, @grafo_ruta_critica.json y @parametros_montecarlo.yaml construye simulador_montecarlo.html.\n1. Calcula la duración PERT de cada etapa.\n2. Ejecuta las iteraciones del YAML con una semilla fija, respetando las dependencias del grafo, y muestra P50, P85 y P90 del proyecto.\n3. Calcula la probabilidad de superar el plazo de compromiso y la penalidad esperada.\n4. Dibuja un Gráfico de Tornado con el costo por día adicional de cada etapa.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
       conceptualTaskTitle: 'La Falacia de los Promedios y la Estimación Ponderada PERT de 3 Puntos',
@@ -328,7 +328,7 @@
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Verifica que el plan use el esquema SQL como modelo de datos y que distinga caja (Cobrado) de cartera (Por cobrar).',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: dibuja el mapa de causa y efecto entre un pedido, el inventario y la caja.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.'
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.'
       ],
       initialPrompt: 'Actúa como CTO y Consultor Principal de Negocios.\nCon @sistema_pyme_semilla.json, @catalogo_y_bodega_pyme.csv, @esquema_erp_pyme.sql y @reglas_copiloto_auditor.md construye suite_empresarial_antigravity.html con:\n1. Módulo Comercial: pedidos con su estado de cobro.\n2. Módulo de Inventario: ROP de cada producto con la fórmula de las reglas.\n3. Módulo de Tesorería: utilidad operativa de caja, reserva y flujo neto disponible.\n4. Copiloto Auditor: las 3 decisiones prioritarias de la semana, cada una con el dato que la respalda.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
       conceptualTaskTitle: 'Pensamiento Sistémico: Conexión en Cadena entre Ventas, Inventario y Flujo de Caja Neto',

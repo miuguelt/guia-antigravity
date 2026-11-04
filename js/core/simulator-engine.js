@@ -17,7 +17,7 @@
     2: { id: 2, label: 'Suma total de los 4 pedidos válidos normalizados en COP', expectedValue: 2450000, tolerance: 1, allowNegative: false, unit: 'COP', sampleInput: '2450000',
       formulaHint: '$1.200.000 + $450.000 + $320.000 + $480.000 = $2.450.000 COP',
       stepByStep: '1. Pedido 1 (Sillas): $1.200.000 COP\n2. Pedido 2 (Escritorios): $450.000 COP\n3. Pedido 3 (Lámparas): $320.000 COP\n4. Pedido 4 (Archivadores): $480.000 COP\nTotal consolidado = $2.450.000 COP.',
-      validMsg: 'Consolidación de $2.450.000 COP en Primera Forma Normal (1NF) sin caracteres corruptos.', overMsg: 'Sobrecálculo: la IA sumó registros con importes corruptos o duplicó ítems al normalizar.', underMsg: 'Déficit en consolidación: la IA descartó filas válidas al limpiar símbolos o regex.' },
+      validMsg: 'Consolidación de $2.450.000 COP en una tabla con un dato por casilla, sin caracteres corruptos.', overMsg: 'Sobrecálculo: la IA sumó registros con importes corruptos o duplicó ítems al normalizar.', underMsg: 'Déficit en consolidación: la IA descartó filas válidas al limpiar símbolos o regex.' },
     3: { id: 3, label: 'Punto de Equilibrio en unidades (CF=$3.000.000, CV=$20.000, P=$50.000)', expectedValue: 100, tolerance: 0, allowNegative: false, unit: 'unidades', sampleInput: '100',
       formulaHint: '3.000.000 / (50.000 - 20.000) = 100 unidades exactas',
       stepByStep: '1. Margen unitario = Precio ($50.000) - Costo Variable ($20.000) = $30.000 COP/unidad.\n2. Punto de equilibrio = Costos Fijos ($3.000.000) / Margen unitario ($30.000) = 100 unidades.',

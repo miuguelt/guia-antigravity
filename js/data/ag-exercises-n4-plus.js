@@ -17,11 +17,11 @@
       goal: 'Alternar del Agent Manager al Editor View de Antigravity para corregir una fórmula tributaria directamente en el archivo usando selección en línea (Ctrl+I) y autocompletado predictivo (Tab).',
       businessChallenge: 'Actualizar en segundos una plantilla de liquidación que calcula el IVA antiguo del 16 % sin reconstruir todo el archivo ni depender de una conversación larga.',
       agentRoleAction: 'El agente genera la estructura base en modo Planning y luego, cuando seleccionas la función en el Editor View y presionas Ctrl+I, transforma únicamente las líneas seleccionadas.',
-      learnerParallelAction: 'Tú haces la corrección con tus propias manos en el Editor View: seleccionas la función, presionas Ctrl+I, describes el cambio y aceptas o rechazas el diff.',
+      learnerParallelAction: 'Tú haces la corrección con tus propias manos en el Editor View: sombreas el bloque que calcula el neto, presionas Ctrl+I, describes el cambio con tus palabras y aceptas o rechazas la comparación de antes y después.',
       professionalOutputCriteria: 'Liquidación exacta con IVA del 19 % y retención en la fuente del 2,5 % editada quirúrgicamente con Ctrl+I sin alterar el resto de la página.',
       antigravitySteps: [
         'Paso 1 (Preparar): Descarga el kit (@liquidacion_factura_borrador.html, @tarifas_retencion_vigentes.json y @orden_compra_cliente.csv) y ábrelo en el Editor View.',
-        'Paso 2 (Ctrl+I): Selecciona la función calcularNetoFactura, presiona Ctrl+I y escribe: "Usa el IVA y la retención de @tarifas_retencion_vigentes.json; la retención va sobre el subtotal". Revisa el diff y acéptalo.',
+        'Paso 2 (Ctrl+I): Sombrea con el mouse el bloque que empieza con la palabra calcularNetoFactura (es el que calcula el neto), presiona Ctrl+I y escribe: "Usa el IVA y la retención de @tarifas_retencion_vigentes.json; la retención va sobre el subtotal". Revisa la comparación de antes y después y acéptala.',
         'Paso 3 (Tab): Debajo de la función empieza a escribir function formatearCOP( y acepta con Tab la sugerencia que formatea en pesos colombianos.',
         'Paso 4 (Agente): En modo Planning pega el Prompt Inicial para que el agente arme la tabla de órdenes, escriba las pruebas y verifique con /browser.',
         'Paso 5 (Verificar): Ingresa en el simulador el neto de OC-701 que muestra la tabla.'
@@ -35,7 +35,7 @@
         'Verifica el Neto a Pagar: $2.000.000 + $380.000 - $50.000 = $2.330.000 COP.'
       ],
       parallelToolPrompt: 'Explícame cuándo conviene usar Ctrl+I y Tab dentro del Editor View de Antigravity en lugar de pedir todo desde el chat principal, y cómo se calcula el neto de una factura con IVA y Retefuente.',
-      refinementPrompt: 'En el Editor View selecciona la tabla de resultados, presiona Ctrl+I y pide una fila de totales al final. Compara el diff con lo que habría hecho el agente en una conversación completa.',
+      refinementPrompt: 'En el Editor View selecciona la tabla de resultados, presiona Ctrl+I y pide una fila de totales al final. Compara los cambios con lo que habría hecho el agente en una conversación completa.',
       kit: { filename: 'liquidacion_factura_borrador.html', type: 'zip', description: 'Plantilla HTML con tasa por corregir (.html), tarifas vigentes (.json) y orden de compra (.csv).' },
       testCase: { label: 'Neto a pagar sobre base de $2.000.000 (+19 % IVA - 2,5 % Retefuente)', sampleInput: '2330000', expectedValue: 2330000, tolerance: 1, unit: 'COP', formulaHint: '$2.000.000 + $380.000 (IVA) - $50.000 (Retefuente) = $2.330.000 COP' }
     },
@@ -90,7 +90,7 @@
         'Paso 2 (Planear): En el panel del agente selecciona el modo Planning, pega el Prompt Inicial y lee el Implementation Plan. Revisa que el plan ejecute solo comandos de la lista permitida del protocolo.',
         'Paso 3 (Trabajo en paralelo): Aprueba el plan. Mientras el agente construye, resuelve la Tarea Conceptual: clasifica 5 comandos de terminal como seguros o peligrosos.',
         'Paso 4 (Verificar): Revisa el Walkthrough: las pruebas deben pasar y debe haber capturas de /browser. Luego ingresa en el simulador el resultado que muestra la herramienta para el Caso Testigo.',
-        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y revisa el diff antes de aceptar el cambio.',
+        'Paso 5 (Refinar): Envía el Prompt de Refinamiento y compara el antes y el después que muestra Antigravity antes de aceptar el cambio.',
         'Paso 6 (Sandbox): Cuando el agente pida ejecutar un comando, compáralo con el protocolo antes de aprobarlo. Si propone borrar archivos o conectarse a internet, recházalo y pídele otra forma.'
       ],
       initialPrompt: 'Actúa como Especialista en Seguridad Operativa y Tesorería de Nómina.\nCon @dispersion_nomina_lote.csv, @reglas_control_dispersion.json y @protocolo_terminal_segura.md:\n1. Crea auditar_nomina.mjs, que lea el lote y aplique la llave de unicidad y la regla de duplicado del JSON.\n2. Ejecútalo en la terminal y genera las salidas del JSON.\n3. Construye monitor_nomina.html con total bruto, giros rechazados y neto autorizado.\nAntes de cada comando, dime cuál vas a ejecutar y por qué.\n\n[VERIFICACIÓN ANTES DE ENTREGAR]\nEscribe pruebas automáticas (node --test) para cada función de cálculo usando los datos de esta carpeta, ejecútalas en la terminal y corrige hasta que pasen. Luego abre el resultado con /browser, prueba una entrada válida, una inválida, el campo vacío y el botón Reiniciar, y resume la evidencia en el Walkthrough.',
@@ -200,7 +200,7 @@
         'Amparo de Cumplimiento exigido (30 %): $80.000.000 × 0,30 = $24.000.000 COP. Amparo de Salarios exigido (20 %): $80.000.000 × 0,20 = $16.000.000 COP.',
         'Cobertura Total Asegurada Exigida: $24.000.000 + $16.000.000 = $40.000.000 COP.'
       ],
-      parallelToolPrompt: 'Explícame cómo redactar criterios de aceptación deterministas al usar el comando /goal en Google Antigravity y cómo se calculan los amparos de una garantía única de cumplimiento.',
+      parallelToolPrompt: 'Explícame cómo redactar criterios de aceptación que cualquier persona pueda comprobar con un sí o un no al usar el comando /goal en Google Antigravity y cómo se calculan los amparos de una garantía única de cumplimiento.',
       refinementPrompt: 'Añade en revisor_polizas.html una alerta cuando falten menos de 30 días para que venza una póliza y vuelve a ejecutar las pruebas.',
       kit: { filename: 'contratos_estatales_activos.json', type: 'zip', description: 'Contratos activos (.json), anexo de garantías (.csv) y criterios de aceptación para /goal (.md).' },
       testCase: { label: 'Cobertura total asegurada en pólizas (Contrato $80M: 30 % Cumplimiento + 20 % Salarios)', sampleInput: '40000000', expectedValue: 40000000, tolerance: 1, unit: 'COP', formulaHint: '($80.000.000 × 30 %) + ($80.000.000 × 20 %) = $24.000.000 + $16.000.000 = $40.000.000 COP' }

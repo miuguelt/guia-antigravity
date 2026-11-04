@@ -29,7 +29,7 @@ window.DevBrainRegistroEntregables = {
         "artifacts": [
           "MG-A01"
         ],
-        "criterion": "Comprende y aplica el flujo de trabajo de Google Antigravity (/plan, @archivo, /browser, GEMINI.md), la norma ISO-8601, la Primera Forma Normal (1NF) y el cálculo de Punto de Equilibrio.",
+        "criterion": "Comprende y aplica el flujo de trabajo de Google Antigravity (/plan, @archivo, /browser, GEMINI.md), la norma ISO-8601, la separación de un dato por casilla al pasar notas a tablas y el cálculo de Punto de Equilibrio.",
         "instrument": "Lista de chequeo técnica de fundamentos (MG-A01)",
         "learningResult": "RAP-01"
       },
@@ -59,12 +59,12 @@ window.DevBrainRegistroEntregables = {
     {
       "id": "MG-A01",
       "code": "AG-NIVEL-1",
-      "name": "Estación 1 · Fundamentos de Antigravity, Normalización 1NF y Punto de Equilibrio (Ejercicios 1 al 5)",
+      "name": "Estación 1 · Fundamentos de Antigravity, Notas Convertidas en Tablas y Punto de Equilibrio (Ejercicios 1 al 5)",
       "purpose": "Evidenciar el dominio de los cimientos de Google Antigravity: creación de proyectos en Agent Manager, revisión de Implementation Plans con /plan, lectura de archivos reales con @archivo, pruebas automáticas con /browser y configuración de memoria permanente en GEMINI.md.",
       "inputs": [
         "Ejercicios 1 al 5 de la Ruta Antigravity (ruta-antigravity.html)",
         "Kits Semilla descargables: notas_crudas_pedidos.txt y contactos_triples.csv",
-        "Simulador de Caso Testigo de Punto de Equilibrio y Reglas de Supervivencia"
+        "Simulador de Caso Testigo de Punto de Equilibrio y Unión de Contactos Repetidos"
       ],
       "instructions": "Completa los ejercicios del Nivel 1 (1 al 5), verifica tus cálculos en el simulador de Caso Testigo y registra aquí la taxonomía ISO-8601 aplicada, el resultado de tu auditoría de Punto de Equilibrio en /browser y las reglas base de tu archivo GEMINI.md.",
       "example": "Taxonomía ISO-8601: 2026-11-01_Finanzas_ProveedorX_Pagado.pdf. Caso Testigo Ej. 3: Costos Fijos = $3.000, Costo Variable = $20, Precio = $50 -> Margen de Contribución = $30/ud -> Punto de Equilibrio = 100 unidades (confirmado con captura en el Walkthrough de /browser).",
@@ -78,9 +78,9 @@ window.DevBrainRegistroEntregables = {
       "fields": [
         {
           "key": "taxonomia_y_normalizacion",
-          "label": "1. Regla ISO-8601 y Normalización 1NF aplicada (Ejercicios 1 y 2)",
+          "label": "1. Regla ISO-8601 y notas convertidas en tabla, un dato por casilla (Ejercicios 1 y 2)",
           "type": "area",
-          "placeholder": "Escribe tus 4 categorías documentales en formato AAAA-MM-DD y cómo separaste los atributos atómicos de @notas_crudas_pedidos.txt...",
+          "placeholder": "Escribe tus 4 categorías documentales en formato AAAA-MM-DD y cómo separaste en columnas, un dato por casilla, los pedidos de @notas_crudas_pedidos.txt...",
           "hint": "Explica qué Dato_Faltante detectó el agente en los pedidos desordenados."
         },
         {
@@ -94,22 +94,22 @@ window.DevBrainRegistroEntregables = {
           "key": "reglas_gemini_md",
           "label": "3. Reglas permanentes en GEMINI.md y Deduplicación (Ejercicios 4 y 5)",
           "type": "area",
-          "placeholder": "Resume las reglas que dejaste en GEMINI.md (estructura SCQA) y la regla de supervivencia (Survivorship Rule) usada al fusionar contactos...",
+          "placeholder": "Resume las reglas que dejaste en GEMINI.md (estructura SCQA) y la regla que usaste para decidir qué dato conservar al unir contactos repetidos...",
           "hint": "Indica cómo evitaste reemplazar un campo lleno por uno vacío al consolidar CSVs."
         }
       ],
       "checklist": [
         "Verifiqué que los nombres de archivo sigan estrictamente el patrón AAAA-MM-DD para garantizar orden cronológico real.",
         "Comprobé en papel y en el simulador que el Punto de Equilibrio es Costos Fijos / (Precio - Costo Variable) y lo validé con /browser.",
-        "Configuré GEMINI.md en la raíz del proyecto y apliqué la Regla de Supervivencia de Datos sin pérdida de información."
+        "Configuré GEMINI.md en la raíz del proyecto y uní los contactos repetidos conservando el dato más completo y reciente, sin perder información."
       ],
       "criterion": "El aprendiz demuestra dominio operativo de /plan, @archivo, /browser y GEMINI.md, respaldado por cálculos exactos de su Caso Testigo.",
       "instrument": "Lista de chequeo técnica de fundamentos (MG-A01)",
       "evidence": "docs/01-fundamentos.md",
       "nextStep": "Avanza a la Estación 2 (Nivel 2: Herramientas de Negocio) para dominar cotizadores, inventarios ROP, NPS y tareas programadas con /schedule.",
       "aiAssist": {
-        "prompt": "/plan Revisa mi evidencia de Nivel 1 y verifica que la fórmula de Punto de Equilibrio y las reglas de Primera Forma Normal (1NF) estén explicadas con precisión sin inventar resultados.",
-        "verify": "Contrasta que el Margen de Contribución sea (Precio - Costo Variable) y que cada celda de la tabla normalizada contenga un único valor atómico.",
+        "prompt": "/plan Revisa mi evidencia de Nivel 1 y verifica que la fórmula de Punto de Equilibrio y la regla de un dato por casilla esté explicada con precisión sin inventar resultados.",
+        "verify": "Contrasta que el Margen de Contribución sea (Precio - Costo Variable) y que cada casilla de la tabla contenga un solo dato.",
         "log": "Verificación de fundamentos Nivel 1 registrada en la bitácora del aprendiz."
       },
       "upload": {
@@ -209,7 +209,7 @@ window.DevBrainRegistroEntregables = {
           "key": "skill_auditoria_gastos",
           "label": "2. Empaquetado de Habilidad en .agents/skills/auditoria-gastos/SKILL.md (Ejercicio 12)",
           "type": "area",
-          "placeholder": "Copia el encabezado YAML y las reglas de detección de anomalías (incluyendo Fraccionamiento / Split Transactions) de tu SKILL.md...",
+          "placeholder": "Copia la descripción y las reglas de detección de anomalías (incluyendo Fraccionamiento / Split Transactions) de tu SKILL.md...",
           "hint": "Indica cuántos recibos fraccionados o de fin de semana detectó la Skill sobre @gastos_mes_actual.csv."
         },
         {
@@ -222,7 +222,7 @@ window.DevBrainRegistroEntregables = {
       ],
       "checklist": [
         "Verifiqué la integridad referencial entre Empresas, Oportunidades y Seguimientos y el cálculo del Valor Ponderado del embudo.",
-        "Creé el archivo .agents/skills/auditoria-gastos/SKILL.md con su frontmatter YAML y detecté los casos de fraccionamiento de compras.",
+        "Creé el archivo .agents/skills/auditoria-gastos/SKILL.md con su descripción y sus reglas, y detecté los casos de fraccionamiento de compras.",
         "Comprobé que el motor de conciliación bancaria cuadra al centavo las ventas con descuento de comisión de pasarela y las partidas en tránsito."
       ],
       "criterion": "El aprendiz implementa arquitecturas relacionales locales, empaqueta Skills reutilizables bajo el estándar de Antigravity y concilia fuentes dispares con precisión.",
